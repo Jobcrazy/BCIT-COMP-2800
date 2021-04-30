@@ -33,19 +33,20 @@ export default {
   },
   methods: {
     login(profile) {
-      // Login to Homework
+      // User data has been got from google
       console.log(profile);
+
+      // Perform login
       let self = this;
       self.$toast.loading({
         message: "Loading...",
         forbidClick: true,
       });
 
-      /*
       this.$axios({
         method: "POST",
         headers: { "content-type": "application/json" },
-        url: "/user/login",
+        url: "/api/user/login",
         data: {
           gid: profile.getId(),
           fname: profile.getName(),
@@ -59,14 +60,12 @@ export default {
           if (0 != res.data.code) {
             return self.$toast.fail(res.data.message);
           }
-          this.$router.push({ name: "User_Main", query: { id: res.data.id } });
+          self.$toast.clear();
+          this.$router.push({ name: "User_Main" });
         })
         .catch(function (error) {
           self.$toast.fail(error);
         });
-        */
-       //self.$toast.clear();
-       this.$router.push({ name: "User_Main", query: { } });
     },
     attachSignin(element) {
       // Init Google Login Callback functions

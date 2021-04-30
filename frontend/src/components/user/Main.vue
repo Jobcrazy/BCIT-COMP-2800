@@ -25,7 +25,7 @@ export default {
   },
   mounted() {
     switch (this.$route.path) {
-      case "/user/main/courses":
+      case "/user/main/orders":
         this.active = 1;
         break;
       case "/user/main/me":

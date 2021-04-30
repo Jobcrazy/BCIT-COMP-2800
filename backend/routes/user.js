@@ -7,16 +7,22 @@ let auth = require('../common/auth');
 // User register
 router.post('/login', async function (req, res, next) {
     try {
-        let result = await database.QueryMySQL('SELECT id, token from hw_user where gid = ?');
+        var params = [req.body.gid];
+        let result = await database.QueryMySQL('SELECT id from bk_user where gid = ?', params);
+
         if (result.length) {
-            result = await database.QueryMySQL('UPDATE hw_user SET `fname` = ?, `gname` = ?, ' +
-                '`xname` = ?, `head` =? , `email` = ? WHERE `gid` = ?');
+            params = [req.body.fname, req.body.gname, req.body.xname,
+                req.body.head, req.body.email, req.body.gid];
+            await database.QueryMySQL('UPDATE bk_user SET `fname` = ?, `gname` = ?, ' +
+                '`xname` = ?, `head` =? , `email` = ? WHERE `gid` = ?', params);
             return utils.SendResult(res);
         }
 
-        result = await database.QueryMySQL('INSERT INTO hw_user( `gid`, `fname`, `gname`, ' +
-            '`xname`, `head`, `email`, `token`) VALUES(?, ?, ?, ?, ?, ?, ?)');
-        return utils.SendResult(res, result);
+        params = [req.body.gid, req.body.fname, req.body.gname,
+            req.body.xname, req.body.head, req.body.email];
+        await database.QueryMySQL('INSERT INTO bk_user( `gid`, `fname`, `gname`, ' +
+            '`xname`, `head`, `email`) VALUES(?, ?, ?, ?, ?, ?)', params);
+        return utils.SendResult(res);
     } catch (e) {
         utils.SendError(res, e);
     }

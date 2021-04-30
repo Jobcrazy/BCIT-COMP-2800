@@ -87,7 +87,7 @@ let Utils = {
     "SendResult": function (res, data) {
         let result = {
             code: error_code.error_success.code,
-            msg: error_code.error_success.message,
+            message: error_code.error_success.message,
         };
 
         if (typeof (data) === 'object'){
@@ -99,7 +99,7 @@ let Utils = {
     "SendError": function (res, err) {
         let result = {
             code: err.code ? err.code : error_code.error_unknown.code,
-            msg: err.message ? err.message : error_code.error_unknown.message,
+            message: err.message ? err.message : error_code.error_unknown.message,
         };
         res.send(JSON.stringify(result));
     }
