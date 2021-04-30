@@ -17,7 +17,7 @@ Backend source code for BCIT COMP 2800 (Downtown Campus Team 8).
 
 ## REST API
 ### 1. Login with Google ID
-* **URI**: /api//user/login
+* **URI**: /api/user/login
 * **Method**: POST
 
 | Name | Description |
