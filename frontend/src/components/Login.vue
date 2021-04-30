@@ -83,10 +83,29 @@ export default {
         }
       );
     },
+    isLoggedin() {
+      // Navigate to User_Main if the current user has already logged in
+      let self = this;
+      self.$axios({
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        url: "/api/user/profile",
+        data: {},
+      })
+        .then((res) => {
+          if (0 === res.data.code) {
+            self.$toast.clear();
+            self.$router.push({ name: "User_Main" });
+          }
+        })
+        .catch(function (error) {});
+    },
   },
   mounted() {
-    // Init Google Login Button
     let self = this;
+    self.isLoggedin();
+
+    // Init Google Login Button
     gapi.load("auth2", function () {
       // Retrieve the singleton for the GoogleAuth library and set up the client.
       self.auth2 = gapi.auth2.init({
