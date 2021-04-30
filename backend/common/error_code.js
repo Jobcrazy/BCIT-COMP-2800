@@ -1,4 +1,4 @@
-var error_code = {
+module.exports = {
     error_unknown: {
         code: -1,
         message: "Unknown error"
@@ -7,6 +7,8 @@ var error_code = {
         code: 0,
         message: "Success"
     },
+    error_access: {
+        code: 1,
+        message: "Not authenticated"
+    },
 };
-
-module.exports = error_code;
