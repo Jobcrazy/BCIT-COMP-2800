@@ -7,7 +7,7 @@ let auth = require('../common/auth');
 // User login
 router.post('/login', async function (req, res, next) {
     try {
-        var params = [req.body.gid];
+        let params = [req.body.gid];
         let result = await database.QueryMySQL('SELECT id from bk_user where gid = ?', params);
 
         //User exists, update information
