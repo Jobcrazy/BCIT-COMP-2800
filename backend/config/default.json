@@ -1,0 +1,16 @@
+{
+	"bike": {
+		"db": {
+			"mysql": {
+				"host": "localhost",
+				"user": "bike",
+				"password": "jIPEyvTVBGPu7vfA",
+				"port": "3306",
+				"database": "bike_database",
+				"max_connections": 5,
+				"multipleStatements" : false
+			}
+		},
+		"comment": "Database connection configuration file for Bike2Go"
+	}
+}

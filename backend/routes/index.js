@@ -1,42 +1,16 @@
-var express = require('express');
-var router = express.Router();
-var mysql      = require('mysql');
+let express = require('express');
+let router = express.Router();
+let utils = require('../common/utils');
+let database = require('../common/database');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  let obj = {
-    id: 1,
-    name: "Victor"
-  };
-
-  res.send(obj);
-});
-
-router.get('/two', function(req, res, next) {
-  res.send("Hello Two!")
-});
-
-router.get('/test', function(req, res, next) {
-  var connection = mysql.createConnection({
-    host     : 'localhost',
-    user     : 'victor',
-    password : 'goodboy',
-    database : 'victor_database'
-  });
-
-  // connect
-  connection.connect();
-
-  // get data(structural query language)
-  connection.query('SELECT * FROM user', function (error, results, fields) {
-    if (error) {
-      res.send("error occurred");
-      return;
-    };
-
-    res.send(results);
-  });
-
+router.get('/', async function (req, res, next) {
+    try {
+        let result = database.QueryMySQL("SELECT * FROM bk_user");
+        return utils.SendResult(res, result);
+    }catch (e) {
+        utils.SendError(res, e);
+    }
 });
 
 module.exports = router;
