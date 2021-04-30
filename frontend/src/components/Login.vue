@@ -40,6 +40,8 @@ export default {
         message: "Loading...",
         forbidClick: true,
       });
+
+      /*
       this.$axios({
         method: "POST",
         headers: { "content-type": "application/json" },
@@ -57,13 +59,14 @@ export default {
           if (0 != res.data.code) {
             return self.$toast.fail(res.data.message);
           }
-          self.$store.commit("setToken", res.data);
-          console.log(self.$store.state);
           this.$router.push({ name: "User_Main", query: { id: res.data.id } });
         })
         .catch(function (error) {
           self.$toast.fail(error);
         });
+        */
+       //self.$toast.clear();
+       this.$router.push({ name: "User_Main", query: { } });
     },
     attachSignin(element) {
       // Init Google Login Callback functions
