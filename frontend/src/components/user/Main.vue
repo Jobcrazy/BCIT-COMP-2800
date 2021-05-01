@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="main_tab_view">
     <keep-alive> <router-view /> </keep-alive>
     <van-tabbar v-model="active">
       <van-tabbar-item icon="apps-o" replace to="/user/main/bikes">
@@ -38,4 +38,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+#main_tab_view {
+  width: 100%;
+  height: 100%;
+}
 </style>

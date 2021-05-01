@@ -14,6 +14,7 @@ export default {
 html,
 body {
   margin: 0px;
+  height:100%;
 }
 
 #app {
@@ -21,6 +22,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
-  margin-top: 0px;
+  height: 100%;
 }
 </style>
