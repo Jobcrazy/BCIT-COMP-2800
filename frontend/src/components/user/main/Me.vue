@@ -26,7 +26,27 @@
         </van-row>
       </van-col>
     </van-row>
+
     <van-divider @divider-line-height="24" />
+
+    <van-nav-bar left-text="Advertisement" />
+    <van-list
+      v-model="loading"
+      :finished="finished"
+      finished-text="Finished"
+      @load="onLoad"
+    >
+      <van-cell v-for="item in list" :key="item" :title="item" />
+    </van-list>
+    <van-nav-bar left-text="Bookmarks" />
+    <van-list
+      v-model="loading"
+      :finished="finished"
+      finished-text="Finished"
+      @load="onLoad"
+    >
+      <van-cell v-for="item in list" :key="item" :title="item" />
+    </van-list>
   </div>
 </template>
 
@@ -82,7 +102,8 @@ export default {
 }
 
 #head {
-  padding: 10px;
+  padding-left: 10px;
+  padding-top: 20px;
 }
 
 #name {
