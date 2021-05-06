@@ -65,15 +65,19 @@ export default {
         data: {},
       })
         .then((res) => {
-          if (0 != res.data.code) {
+          if (1 == res.data.code) {
+            // Not login
+            self.$toast.clear();
+            this.$router.push({ name: "Login" });
+            return;
+          } else if (0 != res.data.code) {
+            // Other errors
             return self.$toast.fail(res.data.message);
           }
-          console.log(res.data);
+          
           self.fname = res.data.data[0].fname;
           self.head = res.data.data[0].head;
           self.email = res.data.data[0].email;
-          //self.$toast.clear();
-          //this.$router.push({ name: "User_Main" });
         })
         .catch(function (error) {
           self.$toast.fail(error);
