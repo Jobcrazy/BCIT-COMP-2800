@@ -29,24 +29,10 @@
 
     <van-divider @divider-line-height="24" />
 
-    <van-nav-bar left-text="Advertisement" />
-    <van-list
-      v-model="loading"
-      :finished="finished"
-      finished-text="Finished"
-      @load="onLoad"
-    >
-      <van-cell v-for="item in list" :key="item" :title="item" />
-    </van-list>
-    <van-nav-bar left-text="Bookmarks" />
-    <van-list
-      v-model="loading"
-      :finished="finished"
-      finished-text="Finished"
-      @load="onLoad"
-    >
-      <van-cell v-for="item in list" :key="item" :title="item" />
-    </van-list>
+    <van-cell-group>
+      <van-cell title="Advertisements" label="Description" />
+      <van-cell title="Bookmarks" label="Description" />
+    </van-cell-group>
   </div>
 </template>
 
