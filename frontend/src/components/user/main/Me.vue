@@ -1,16 +1,20 @@
 <template>
   <div>
-    <h2 id="logo">BIKE2GO</h2>
+    <van-nav-bar id="title" title="Bike2Go" />
+
     <van-row id="profile">
-      <van-col span="8">
-        <van-image round width="4rem" height="4rem" :src="head" id="head" />
+      <van-col span="1" />
+
+      <van-col span="6">
+        <van-image radius="50%" width="4em" height="4em" :src="head" />
       </van-col>
-      <van-col span="16" id="infoContainer">
+
+      <van-col span="15">
         <van-row>
-          <van-col span="16" id="name">{{ fname }}</van-col>
+          <van-col id="name">{{ fname }}</van-col>
         </van-row>
         <van-row>
-          <van-col span="16" id="star">
+          <van-col>
             <van-rate
               v-model="value"
               allow-half
@@ -25,13 +29,17 @@
           <van-col span="8" id="email">{{ email }}</van-col>
         </van-row>
       </van-col>
+
+      <van-col span="1" />
     </van-row>
 
-    <van-divider @divider-line-height="24" />
-
     <van-cell-group>
-      <van-cell title="Advertisements" label="Description" />
-      <van-cell title="Bookmarks" label="Description" />
+      <van-cell
+        title="Advertisements"
+        label="Manage my advertisements"
+        is-link
+      />
+      <van-cell title="Favourites" label="Manage my favourite bikes" is-link />
     </van-cell-group>
   </div>
 </template>
@@ -80,31 +88,22 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-#logo {
-  padding-left: 10px;
-}
-#profile {
-  margin-top: 10px;
+#title {
+  font-weight: 900 im !important;
 }
 
-#head {
-  padding-left: 10px;
-  padding-top: 20px;
+#profile {
+  padding-top: 15px;
+  padding-bottom: 5px;
 }
 
 #name {
-  font-size: 16px;
-}
-
-#star {
-  padding: 5px 0;
+  padding-top: 0.1em;
+  font-size: 1em;
+  font-weight: 700;
 }
 
 #email {
-  font-size: 12px;
-}
-
-#infoContainer {
-  padding-top: 20px;
+  font-size: 0.85em;
 }
 </style>
