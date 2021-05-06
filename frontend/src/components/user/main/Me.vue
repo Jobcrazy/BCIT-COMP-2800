@@ -88,8 +88,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-#title {
-  font-weight: 900 im !important;
+#title >>> * {
+  font-weight: 900 !important;
 }
 
 #profile {
