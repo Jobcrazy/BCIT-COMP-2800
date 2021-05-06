@@ -6,7 +6,12 @@
       <van-col span="1" />
 
       <van-col span="6">
-        <van-image radius="50%" width="4em" height="4em" :src="head" />
+        <van-image
+          radius="50%"
+          width="4em"
+          height="4em"
+          :src="this.avatar ? this.avatar : icon.default_avatar"
+        />
       </van-col>
 
       <van-col span="15">
@@ -49,15 +54,24 @@ export default {
   name: "User_Main_Me",
   data() {
     return {
-      fname: "",
-      email: "",
-      head: "",
+      fname: "Full Name",
+      email: "someone@bcit.ca",
+      avatar: null,
+      icon: {
+        default_avatar: require("@/assets/default_avatar.png"),
+      },
       value: 5,
     };
   },
   methods: {
     getProfile: function () {
       let self = this;
+
+      self.$toast.loading({
+        message: "Loading...",
+        forbidClick: true,
+      });
+
       this.$axios({
         method: "POST",
         headers: { "content-type": "application/json" },
@@ -74,7 +88,8 @@ export default {
             // Other errors
             return self.$toast.fail(res.data.message);
           }
-          
+
+          self.$toast.clear();
           self.fname = res.data.data[0].fname;
           self.head = res.data.data[0].head;
           self.email = res.data.data[0].email;
