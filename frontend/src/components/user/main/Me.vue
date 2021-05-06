@@ -91,7 +91,7 @@ export default {
 
           self.$toast.clear();
           self.fname = res.data.data[0].fname;
-          self.head = res.data.data[0].head;
+          self.avatar = res.data.data[0].head;
           self.email = res.data.data[0].email;
         })
         .catch(function (error) {
