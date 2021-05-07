@@ -101,7 +101,7 @@ let Utils = {
             code: err.code ? err.code : error_code.error_unknown.code,
             message: err.message ? err.message : error_code.error_unknown.message,
         };
-        res.send(JSON.stringify(result));
+        res.send(result);
     }
 };
 
