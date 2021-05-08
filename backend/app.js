@@ -1,12 +1,13 @@
-let express = require('express');
-let path = require('path');
-let cookieParser = require('cookie-parser');
-let logger = require('morgan');
-let session = require('express-session');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const session = require('express-session');
 
-let usersRouter = require('./routes/user');
+const usersRouter = require('./routes/user');
+const fileRouter = require('./routes/file');
 
-let app = express();
+const app = express();
 
 app.set('trust proxy', 1);
 app.use(logger('dev'));
@@ -41,5 +42,6 @@ app.all('*', function (req, res, next) {
 });
 
 app.use('/api/user', usersRouter);
+app.use('/api/file', fileRouter);
 
 module.exports = app;

@@ -1,6 +1,7 @@
 .idea
 /package-lock.json
 npm-debug.log
+public/
 
 # Logs
 logs

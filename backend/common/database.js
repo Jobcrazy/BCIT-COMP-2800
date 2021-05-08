@@ -28,8 +28,8 @@
 * POSSIBILITY OF SUCH DAMAGE.
 */
 
-let config = require('config');
-let mysql = require('mysql');
+const config = require('config');
+const mysql = require('mysql');
 let connection = null;
 
 module.exports.QueryMySQL = function () {

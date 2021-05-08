@@ -1,8 +1,8 @@
-let express = require('express');
-let router = express.Router();
-let utils = require('../common/utils');
-let database = require('../common/database');
-let auth = require('../common/auth');
+const express = require('express');
+const router = express.Router();
+const utils = require('../common/utils');
+const database = require('../common/database');
+const auth = require('../common/auth');
 
 // User login
 router.post('/login', async function (req, res, next) {
