@@ -4,7 +4,7 @@
       <van-field
         v-model="title"
         name="Title"
-        label="Title"
+        label="Post Title"
         placeholder="Enter Title"
         :rules="[{ required: true, message: 'Title is required' }]"
       />
@@ -12,7 +12,7 @@
         v-model="description"
         type="textarea"
         name="Description"
-        label="Description"
+        label="Bike Description"
         placeholder="Enter Description"
         rows="5"
         autosize
@@ -24,7 +24,7 @@
         v-model="deposit"
         type="number"
         name="deposit"
-        label="Deposit"
+        label="Deposit Amount"
         placeholder="Enter the deposit amount"
         :rules="[{ required: true, message: 'A deposit amount is required' }]"
       />
@@ -32,7 +32,7 @@
         v-model="fee"
         type="number"
         name="fee"
-        label="Fee"
+        label="Renting Fee"
         placeholder="Enter the fee amount"
         :rules="[{ required: true, message: 'A fee amount is required' }]"
       />
