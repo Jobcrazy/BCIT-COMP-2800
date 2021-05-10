@@ -37,6 +37,12 @@ router.post("/add", auth, async function (req, res, next) {
 
 router.post("/find", auth, async function (req, res, next) {
     //Todo:
+
+    {
+        distance:
+
+
+    }
 });
 
 module.exports = router;
