@@ -1,6 +1,12 @@
 <template>
   <div>
     <van-form @submit="onSubmit">
+      <van-uploader
+        v-model="imageList"
+        multiple
+        :after-read="afterRead"
+        :max-count="6"
+      />
       <van-field
         v-model="title"
         name="Title"
@@ -49,6 +55,7 @@
 export default {
   data() {
     return {
+      imageList: [],
       title: "",
       description: "",
       deposit: "",
@@ -56,7 +63,10 @@ export default {
     };
   },
   methods: {
-    onSubmit(values) {
+    afterRead(file) {
+      console.log(file);
+    },
+    onSubmit(values,) {
       console.log('submit', values);
     },
   },
