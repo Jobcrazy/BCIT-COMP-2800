@@ -42,6 +42,10 @@
         placeholder="Enter the fee amount"
         :rules="[{ required: true, message: 'A fee amount is required' }]"
       />
+
+      <van-cell is-link @click="showPopup">Pick Location</van-cell>
+      <van-popup v-model="show">Google Map Goes Here</van-popup>
+
       <div style="margin: 16px;">
         <van-button round block type="info" native-type="submit">
           Submit
@@ -60,14 +64,19 @@ export default {
       description: "",
       deposit: "",
       fee: "",
+      show: false,
     };
   },
   methods: {
     afterRead(file) {
       console.log(file);
     },
+    showPopup() {
+      this.show = true;
+    },
     onSubmit(values,) {
       console.log('submit', values);
+
     },
   },
 };
