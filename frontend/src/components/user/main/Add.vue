@@ -44,7 +44,10 @@
       />
 
       <van-cell is-link @click="showPopup">Pick Location</van-cell>
-      <van-popup v-model="show">Google Map Goes Here</van-popup>
+      <van-popup v-model="show">
+        <div id="bike_map"></div>
+        google map goes here
+      </van-popup>
 
       <div style="margin: 16px;">
         <van-button round block type="info" native-type="submit">
@@ -65,6 +68,7 @@ export default {
       deposit: "",
       fee: "",
       show: false,
+      map: null,
     };
   },
   methods: {
@@ -73,15 +77,46 @@ export default {
     },
     showPopup() {
       this.show = true;
+      this.initMap();
     },
+
+    initMap: function () {
+      let self = this;
+      this.map = new google.maps.Map(document.getElementById("bike_map"), {
+        center: { lat: 49.13, lng: -123.06 },
+        zoom: 10,
+        disableDefaultUI: true,
+      });
+      // // Test: Add a marker
+      // var myCenter = new google.maps.LatLng(49.13, -123.06);
+      // var marker = new google.maps.Marker({
+      //   position: myCenter,
+      //   icon: "static/images/bike.png",
+      // });
+      // marker.setMap(this.map);
+      // // Test: Add an event listening to the marker
+      // google.maps.event.addListener(marker, "click", function () {
+      //   self.$toast("Hello, Joon!");
+      // });
+      // // Tip: Add marker cluster please see:
+      // // https://developers.google.com/maps/documentation/javascript/marker-clustering
+    },
+
     onSubmit(values,) {
       console.log('submit', values);
 
     },
   },
+  // mounted() {
+  //   this.initMap();
+  // },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+#bike_map {
+  width: 100%;
+  height: 100%;
+}
 </style>
