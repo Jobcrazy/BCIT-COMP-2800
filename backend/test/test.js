@@ -133,7 +133,6 @@ describe("Find bike", function () {
                     distance: 1000,
                 })
                 .end(function (err, res) {
-                    console.log(res.body.data);
                     assert.equal(res.body.code, error_code.error_success.code);
                     if (err) throw err;
                     done();
