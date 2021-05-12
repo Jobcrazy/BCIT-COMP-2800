@@ -1,5 +1,12 @@
 <template>
-  <div id="bike_map"></div>
+  <div id="container">
+    <van-nav-bar id="title" title="Bike2Go" @click-right="onClickRight">
+      <template #right>
+        <van-icon name="add-o" size="18" />
+      </template>
+    </van-nav-bar>
+    <div id="bike_map"></div>
+  </div>
 </template>
 
 <script>
@@ -32,8 +39,11 @@ export default {
         self.$toast("Hello, Joon!");
       });
 
-      // Tip: Add marker cluster please see: 
+      // Tip: Add marker cluster please see:
       // https://developers.google.com/maps/documentation/javascript/marker-clustering
+    },
+    onClickRight: function() {
+      this.$router.push({ name: "User_Main_Add" });
     },
   },
   mounted() {
@@ -44,8 +54,17 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-#bike_map {
+#title >>> * {
+  font-weight: 900 !important;
+}
+
+#container {
   width: 100%;
   height: 100%;
+}
+
+#bike_map {
+  width: 100%;
+  height: calc(100% - 50px);
 }
 </style>

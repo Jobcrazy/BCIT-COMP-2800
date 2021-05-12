@@ -36,8 +36,8 @@
         placeholder="Enter the fee amount"
         :rules="[{ required: true, message: 'A fee amount is required' }]"
       />
-      <div style="margin: 16px;">
-        <van-button round block type="info" native-type="submit">
+      <div style="margin: 16px">
+        <van-button block type="info" native-type="submit">
           Submit
         </van-button>
       </div>
@@ -57,7 +57,7 @@ export default {
   },
   methods: {
     onSubmit(values) {
-      console.log('submit', values);
+      console.log("submit", values);
     },
   },
 };
