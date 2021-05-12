@@ -94,7 +94,10 @@ describe("Add bike", function () {
                     title: "A test bike",
                     description: "Test for a bike, blabla...",
                     photos: [1, 2, 3, 4, 5],
-                    location: {lat: 100.88, long: 22.78},
+                    location: {
+                        lat: 49.13,
+                        long: -123.06,
+                    },
                     deposit: 200.66,
                     price: 2.19,
                 })
@@ -129,7 +132,10 @@ describe("Find bike", function () {
                 .set("Accept", "application/json")
                 .expect(200)
                 .send({
-                    location: {lat: 100.88, long: 22.78},
+                    location: {
+                        lat: 49.13,
+                        long: -123.06,
+                    },
                     distance: 1000,
                 })
                 .end(function (err, res) {

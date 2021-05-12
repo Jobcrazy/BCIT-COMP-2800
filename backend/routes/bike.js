@@ -21,8 +21,8 @@ router.post("/add", auth, async function (req, res, next) {
         title,
         description,
         photos,
-        location.lat,
         location.long,
+        location.lat,
         deposit,
         price,
     ];
@@ -41,7 +41,7 @@ router.post("/find", auth, async function (req, res, next) {
     try {
         let SQL =
             "SELECT id, location FROM bk_bike WHERE ST_DISTANCE_SPHERE(location, POINT(?, ?)) < ?";
-        let Params = [location.lat, location.long, distance];
+        let Params = [location.long, location.lat, distance];
         let result = await database.QueryMySQL(SQL, Params);
         return utils.SendResult(res, result);
     } catch (e) {

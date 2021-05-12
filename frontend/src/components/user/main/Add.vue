@@ -1,5 +1,11 @@
 <template>
   <div>
+    <van-nav-bar
+      title="Add a bike"
+      left-text="Back"
+      left-arrow
+      @click-left="onClickLeft"
+    />
     <van-form @submit="onSubmit">
       <van-field
         v-model="title"
@@ -37,9 +43,7 @@
         :rules="[{ required: true, message: 'A fee amount is required' }]"
       />
       <div style="margin: 16px">
-        <van-button block type="info" native-type="submit">
-          Submit
-        </van-button>
+        <van-button block type="info" native-type="submit"> Submit </van-button>
       </div>
     </van-form>
   </div>
@@ -58,6 +62,9 @@ export default {
   methods: {
     onSubmit(values) {
       console.log("submit", values);
+    },
+    onClickLeft() {
+      history.back();
     },
   },
 };

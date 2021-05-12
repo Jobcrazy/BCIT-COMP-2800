@@ -25,17 +25,11 @@ export default {
   },
   mounted() {
     switch (this.$route.path) {
-       case "/user/main/add":
+      case "/user/main/orders":
         this.active = 1;
         break;
-      case "/user/main/orders":
-        this.active = 2;
-        break;
       case "/user/main/me":
-        this.active = 3;
-        break;
-      case "/user/main/AboutUs":
-        this.active = 4;
+        this.active = 2;
         break;
     }
   },
