@@ -14,6 +14,9 @@
       <van-tabbar-item icon="user-o" replace to="/user/main/me">
         <span>Me</span>
       </van-tabbar-item>
+      <van-tabbar-item icon="user-o" replace to="/user/main/AboutUs">
+        <span>About Us</span>
+      </van-tabbar-item>
     </van-tabbar>
   </div>
 </template>
@@ -36,6 +39,9 @@ export default {
         break;
       case "/user/main/me":
         this.active = 3;
+        break;
+      case "/user/main/AboutUs":
+        this.active = 4;
         break;
     }
   },

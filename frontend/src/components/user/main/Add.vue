@@ -6,6 +6,7 @@
       :after-read="uploadImage"
       :max-count="6"
     />
+    sksks
   </div>
 </template>
 
