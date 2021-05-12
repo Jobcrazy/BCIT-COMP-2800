@@ -2,9 +2,9 @@
   <div>
     <van-form @submit="onSubmit">
       <van-uploader
-        v-model="imageList"
+        v-model="photos"
         multiple
-        :after-read="afterRead"
+        :after-read="uploadImage"
         :max-count="6"
       />
       <van-field
@@ -35,7 +35,7 @@
         :rules="[{ required: true, message: 'A deposit amount is required' }]"
       />
       <van-field
-        v-model="fee"
+        v-model="price"
         type="number"
         name="fee"
         label="Renting Fee"
@@ -44,7 +44,7 @@
       />
 
       <van-cell is-link @click="showPopup">Pick Location</van-cell>
-      <van-popup v-model="show">
+      <van-popup id="pop_map" v-model="show">
         <div id="bike_map"></div>
         google map goes here
       </van-popup>
@@ -59,21 +59,58 @@
 </template>
 
 <script>
+
 export default {
   data() {
     return {
-      imageList: [],
+      photos: [],
       title: "",
       description: "",
       deposit: "",
-      fee: "",
+      price: "",
       show: false,
       map: null,
+      location: {},
     };
   },
   methods: {
-    afterRead(file) {
-      console.log(file);
+    uploadImage(file) {
+      let self = this;
+      // Set status
+      file.status = "uploading";
+      file.message = "Uploading...";
+      // Upload file
+      let form = new FormData();
+      form.append("file", file.file);
+      self
+        .$axios({
+          method: "POST",
+          headers: { "Content-Type": "multipart/form-data" },
+          url: "/api/file/upload",
+          data: form,
+        })
+        .then((res) => {
+          if (1 == res.data.code) {
+            // Not login
+            self.$toast.clear();
+            self.$router.push({ name: "Login" });
+            return;
+          } else if (0 != res.data.code) {
+            // Other errors
+            file.status = "failed";
+            file.message = "Failed";
+            return;
+          }
+          // Done uploading
+          file.status = "done";
+          // Set the unique id for this file
+          file.id = res.data.data[0].id;
+          //console.log(res.data.data[0]);
+          self.imageList.push(file.id);
+        })
+        .catch(function (error) {
+          self.$toast.fail(error);
+        });
     },
     showPopup() {
       this.show = true;
@@ -115,6 +152,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+#pop_map{
+  width: 80%;
+  height: 80%;
+}
+
 #bike_map {
   width: 100%;
   height: 100%;
