@@ -69,7 +69,7 @@ router.post('/upload', /*auth,*/ function (req, res) {
 
             let newFileName = fileMD5 + '.' +
                 fileName.split('.')[fileName.split('.').length - 1];
-            let newRelativePath = "public/uploads/" + fileMD5.substring(0, 2) + "/" +
+            let newRelativePath = "/uploads/" + fileMD5.substring(0, 2) + "/" +
                 fileMD5.substring(fileMD5.length - 2) + "/" + fileMD5 + '.' +
                 fileName.split('.')[fileName.split('.').length - 1];
             let insertSQL = "INSERT INTO bk_file(name, path, md5) VALUES(?,?,?)";
