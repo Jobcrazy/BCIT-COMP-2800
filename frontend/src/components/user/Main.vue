@@ -14,9 +14,6 @@
       <van-tabbar-item icon="user-o" replace to="/user/main/me">
         <span>Me</span>
       </van-tabbar-item>
-      <van-tabbar-item icon="user-o" replace to="/user/main/AboutUs">
-        <span>About Us</span>
-      </van-tabbar-item>
     </van-tabbar>
   </div>
 </template>

@@ -5,8 +5,8 @@ import User_Main from "@/components/user/Main";
 import User_Main_Add from "@/components/user/main/Add";
 import User_Main_Bikes from "@/components/user/main/Bikes";
 import User_Main_Orders from "@/components/user/main/Orders";
-import User_Main_Me from "@/components/user/main/me";
-import User_Main_About from "@/components/user/main/About";
+import User_Main_Me from "@/components/user/main/Me";
+import User_Me_About from "@/components/user/me/About";
 
 Vue.use(Router);
 
@@ -42,13 +42,13 @@ export default new Router({
           name: "User_Main_Me",
           path: "me",
           component: User_Main_Me
-        },
-        {
-          name: "User_Main_About",
-          path: "about",
-          component: User_Main_About
-        }
+        },        
       ]
+    },
+    {
+      name: "User_Me_About",
+      path: "/user/me/about",
+      component: User_Me_About
     }
   ]
 });

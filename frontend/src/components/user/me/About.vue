@@ -1,6 +1,11 @@
 <template>
   <div>
-    <div class="center"><p>About Us</p></div>
+    <van-nav-bar
+      title="About Us"
+      left-text="Back"
+      left-arrow
+      @click-left="onClickLeft"
+    />
     <van-swipe class="my-swipe" :autoplay="3000" indicator-color="white">
       <van-swipe-item>We are making Vancouver greener</van-swipe-item>
       <van-swipe-item>Providing the best service</van-swipe-item>
@@ -62,9 +67,14 @@
 
 <script>
 export default {
-  name: "User_Main_AboutUs",
+  name: "User_Me_About",
   data() {
     return {};
+  },
+  methods:{
+    onClickLeft() {
+      history.back();
+    },
   },
   mounted() {},
 };
