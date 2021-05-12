@@ -5,9 +5,6 @@
       <van-tabbar-item icon="apps-o" replace to="/user/main/bikes">
         Bikes
       </van-tabbar-item>
-      <van-tabbar-item icon="add-o" replace to="/user/main/add">
-        Add
-      </van-tabbar-item>
       <van-tabbar-item icon="shopping-cart-o" replace to="/user/main/orders">
         Orders
       </van-tabbar-item>
