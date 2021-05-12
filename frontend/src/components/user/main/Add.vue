@@ -9,7 +9,7 @@
       />
       <van-field
         v-model="title"
-        name="Title"
+        name="title"
         label="Post Title"
         placeholder="Enter Title"
         :rules="[{ required: true, message: 'Title is required' }]"
@@ -17,7 +17,7 @@
       <van-field
         v-model="description"
         type="textarea"
-        name="Description"
+        name="description"
         label="Bike Description"
         placeholder="Enter Description"
         rows="5"
@@ -37,7 +37,7 @@
       <van-field
         v-model="price"
         type="number"
-        name="fee"
+        name="price"
         label="Renting Fee"
         placeholder="Enter the fee amount"
         :rules="[{ required: true, message: 'A fee amount is required' }]"
@@ -46,7 +46,6 @@
       <van-cell is-link @click="showPopup">Pick Location</van-cell>
       <van-popup id="pop_map" v-model="show">
         <div id="bike_map"></div>
-        google map goes here
       </van-popup>
 
       <div style="margin: 16px;">
@@ -106,7 +105,7 @@ export default {
           // Set the unique id for this file
           file.id = res.data.data[0].id;
           //console.log(res.data.data[0]);
-          self.imageList.push(file.id);
+          self.photos.push(file.id);
         })
         .catch(function (error) {
           self.$toast.fail(error);
@@ -124,6 +123,11 @@ export default {
         zoom: 10,
         disableDefaultUI: true,
       });
+
+      map.addListener("click", (e) => {
+        self.placeMarkerAndPanTo(e.latLng, map);
+      });
+
       // // Test: Add a marker
       // var myCenter = new google.maps.LatLng(49.13, -123.06);
       // var marker = new google.maps.Marker({
@@ -139,14 +143,20 @@ export default {
       // // https://developers.google.com/maps/documentation/javascript/marker-clustering
     },
 
+    placeMarkerAndPanTo: function (latLng, map)  {
+      let marker = new google.maps.Marker({
+        position: latLng,
+        map: map,
+      });
+      map.panTo(latLng);
+    },
+
+
     onSubmit(values,) {
       console.log('submit', values);
 
     },
   },
-  // mounted() {
-  //   this.initMap();
-  // },
 };
 </script>
 
