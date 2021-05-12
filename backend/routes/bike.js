@@ -49,4 +49,28 @@ router.post("/find", auth, async function (req, res, next) {
     }
 });
 
+router.post("/list", auth, async function (req, res, next) {
+    try {
+        let SQL =
+            "SELECT title, description, photos, price FROM bk_bike WHERE uid = ?";
+        let Params = [req.session.uid];
+        let result = await database.QueryMySQL(SQL, Params);
+        return utils.SendResult(res, result);
+    } catch (e) {
+        utils.SendError(res, e);
+    }
+}
+
+router.post("/remove", auth, async function (req, res, next) {
+    try {
+        let SQL =
+            "DELETE FROM bk_bike WHERE id = ?";
+        let Params = [req.body.bid];
+        let result = await database.QueryMySQL(SQL, Params);
+        return utils.SendResult(res, result);
+    } catch (e) {
+        utils.SendError(res, e);
+    }
+});
+
 module.exports = router;
