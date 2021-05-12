@@ -44,9 +44,14 @@
       />
 
       <van-cell is-link @click="showPopup">Pick Location</van-cell>
-      <van-popup id="pop_map" v-model="show">
+      <van-popup id="pop_map" v-model="show" closeable close-icon=close>
         <div id="bike_map"></div>
       </van-popup>
+
+<!--      <van-cell is-link @click="showPopup">Pick Location</van-cell>-->
+<!--      <van-dialog id="pop_map" v-model="show" title="map" show-cancel-button>-->
+<!--        <div id="bike_map"></div>-->
+<!--      </van-dialog>-->
 
       <div style="margin: 16px;">
         <van-button round block type="info" native-type="submit">
