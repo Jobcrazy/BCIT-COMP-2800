@@ -6,62 +6,95 @@
       left-arrow
       @click-left="onClickLeft"
     />
-    <van-swipe class="my-swipe" :autoplay="3000" indicator-color="white">
-      <van-swipe-item>We are making Vancouver greener</van-swipe-item>
-      <van-swipe-item>Providing the best service</van-swipe-item>
-      <van-swipe-item>Create more bikers</van-swipe-item>
-      <van-swipe-item>Enjoy your favorite bike!</van-swipe-item>
-    </van-swipe>
-    <div class="center"><p>Meet Our Team</p></div>
-    <div class="members">
-      <transition name="van-fade">
-        <div v-show="visible">Fade</div>
-      </transition>
-      <van-row>
-        <van-col span="8"
-          ><van-image
-            round
-            width="5rem"
-            height="5rem"
-            src="static/images/james.png"
-        /></van-col>
-        <van-col span="8">James</van-col>
-        <van-col span="8">Backend Developer</van-col>
-      </van-row>
-      <van-row>
-        <van-col span="8"
-          ><van-image
-            round
-            width="5rem"
-            height="5rem"
-            src="static/images/joon.png"
-        /></van-col>
-        <van-col span="8">Joon</van-col>
-        <van-col span="8">Backend Developer</van-col>
-      </van-row>
-      <van-row>
-        <van-col span="8"
-          ><van-image
-            round
-            width="5rem"
-            height="5rem"
-            src="static/images/victor.png"
-        /></van-col>
-        <van-col span="8">Victor</van-col>
-        <van-col span="8">Frontend Developer</van-col>
-      </van-row>
-      <van-row>
-        <van-col span="8"
-          ><van-image
-            round
-            width="5rem"
-            height="5rem"
-            src="static/images/hyerim.png"
-        /></van-col>
-        <van-col span="8">Hyerim</van-col>
-        <van-col span="8">Frontend Developer</van-col>
-      </van-row>
-    </div>
+
+    <van-row id="topImage">
+      <van-image width="100%" height="211px" src="static/images/about.jpg" />
+    </van-row>
+    <van-row>
+      <van-col span="1" />
+      <van-col span="22">
+        <p>
+          <b>Bike2Go</b> is developed by Destroy Bikes, which is the most famous
+          web app development team at BCIT. You could rent bikes and rent out
+          bikes with Bike2Go to reduce the use of fossil fuels.
+          <span id="slogan">Let's make Vancouver greener together!</span>
+        </p>
+        <van-divider />
+        <van-row>
+          <van-col span="7"
+            ><van-image
+              radius="5px"
+              width="5rem"
+              height="5rem"
+              src="static/images/james.png"
+          /></van-col>
+          <van-col span="14">
+            <van-row class="name">James</van-row>
+            <van-row class="position">Backend Developer</van-row>
+            <van-row class="description"
+              >1. Was a Product Manager <br />2. Like wathcing movies</van-row
+            >
+            <van-divider />
+          </van-col>
+        </van-row>
+
+        <van-row>
+          <van-col span="7"
+            ><van-image
+              radius="5px"
+              width="5rem"
+              height="5rem"
+              src="static/images/joon.png"
+          /></van-col>
+          <van-col span="14">
+            <van-row class="name">Joon</van-row>
+            <van-row class="position">Backend Developer</van-row>
+            <van-row class="description"
+              >1. Was a Product Manager <br />2. Like wathcing movies</van-row
+            >
+            <van-divider />
+          </van-col>
+        </van-row>
+
+        <van-row>
+          <van-col span="7"
+            ><van-image
+              radius="5px"
+              width="5rem"
+              height="5rem"
+              src="static/images/victor.png"
+          /></van-col>
+          <van-col span="14">
+            <van-row class="name">Victor</van-row>
+            <van-row class="position">Frontend Developer</van-row>
+            <van-row class="description"
+              >1. Was a Product Manager <br />2. Like wathcing movies</van-row
+            >
+            <van-divider />
+          </van-col>
+        </van-row>
+
+        <van-row>
+          <van-col span="7"
+            ><van-image
+              radius="5px"
+              width="5rem"
+              height="5rem"
+              src="static/images/hyerim.png"
+          /></van-col>
+          <van-col span="14">
+            <van-row class="name">Hyerim</van-row>
+            <van-row class="position">Frontend Developer</van-row>
+            <van-row class="description"
+              >1. Was a Product Manager <br />2. Like wathcing movies</van-row
+            >
+            <van-divider />
+          </van-col>
+        </van-row>
+        <van-row id="footer">Copyright@2021 Destroy Bikes</van-row>
+      </van-col>
+      <van-col span="1" />
+    </van-row>
   </div>
 </template>
 
@@ -71,7 +104,7 @@ export default {
   data() {
     return {};
   },
-  methods:{
+  methods: {
     onClickLeft() {
       history.back();
     },
@@ -82,21 +115,29 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.members {
-  padding-bottom: 5rem;
-  font-size: 0.8rem;
-  text-align: center;
-  justify-content: flex;
+#slogan {
+  color: green;
+  font-weight: bolder;
 }
-.center {
-  text-align: center;
-  padding-bottom: 1rem;
+
+.name {
+  font-weight: bold;
+  margin-top: 5px;
 }
-.my-swipe .van-swipe-item {
-  color: #fff;
-  font-size: 20px;
-  line-height: 150px;
+
+.position {
+  font-size: 0.8em;
+  margin-top: 2px;
+}
+
+.description {
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
+#footer{
+  font-size: 0.8em;
   text-align: center;
-  background-color: #fcac61;
+  margin-bottom: 30px;
 }
 </style>
