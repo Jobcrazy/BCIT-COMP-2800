@@ -130,9 +130,10 @@ describe("Find bike", function () {
                 .expect(200)
                 .send({
                     location: {lat: 100.88, long: 22.78},
-                    limitDistance: 5,
+                    distance: 1000,
                 })
                 .end(function (err, res) {
+                    console.log(res.body.data);
                     assert.equal(res.body.code, error_code.error_success.code);
                     if (err) throw err;
                     done();
