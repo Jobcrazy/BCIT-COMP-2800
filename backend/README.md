@@ -194,7 +194,7 @@ Backend source code for BCIT COMP 2800 (Downtown Campus Team 8).
 ---
 ### 7. Find Bike Advertisement and The Owner
 
-- **URI**: /api/bike/list
+- **URI**: /api/bike/bikeAndOwner
 - **Method**: POST bid
 
 | Name | Description |
