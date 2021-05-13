@@ -59,7 +59,7 @@ router.post("/list", auth, async function (req, res, next) {
     } catch (e) {
         utils.SendError(res, e);
     }
-})
+});
 
 router.post("/remove", auth, async function (req, res, next) {
     try {
@@ -73,10 +73,11 @@ router.post("/remove", auth, async function (req, res, next) {
     }
 });
 
-router.post("/bikeAndOwner", auth, async function (req, res, next) {
+router.post("/detail", auth, async function (req, res, next) {
     try {
         let SQL =
-            "SELECT title, description, photos, deposit,price, fname, head, email FROM bk_bike " +
+            "SELECT title, description, photos, deposit, price, " +
+            "fname, head, email FROM bk_bike " +
             "LEFT JOIN bk_user " +
             "ON bk_bike.uid = bk_user.id " +
             "WHERE bk_bike.id = ?";

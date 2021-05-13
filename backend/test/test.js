@@ -221,10 +221,10 @@ describe("Remove my bike advertisement", function () {
 
 //URI: api/bike/bikeAndOwner
 describe("Find bike advertisement and owner", function () {
-    describe("POST /api/bike/bikeAndOwner", function () {
+    describe("POST /api/bike/detail", function () {
         it("Find bike advertisement and the owner after a user logged in.", function (done) {
             request
-                .post("/api/bike/bikeAndOwner")
+                .post("/api/bike/detail")
                 .set("Cookie", userCookie)
                 .set("Accept", "application/json")
                 .expect(200)

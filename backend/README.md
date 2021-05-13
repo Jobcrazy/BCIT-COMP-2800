@@ -173,7 +173,7 @@ Backend source code for BCIT COMP 2800 (Downtown Campus Team 8).
 ### 6. Remove Advertisement that the user posted
 
 - **URI**: /api/bike/remove
-- **Method**: POST bid
+- **Method**: POST
 
 | Name | Description | 
 | ---- |---- | 
@@ -194,8 +194,8 @@ Backend source code for BCIT COMP 2800 (Downtown Campus Team 8).
 ---
 ### 7. Find Bike Advertisement and The Owner
 
-- **URI**: /api/bike/bikeAndOwner
-- **Method**: POST bid
+- **URI**: /api/bike/detail
+- **Method**: POST
 
 | Name | Description |
 | ---- | ----------- |
