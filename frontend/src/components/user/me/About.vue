@@ -14,10 +14,12 @@
       <van-col span="1" />
       <van-col span="22">
         <p>
-          <b>Bike2Go</b> is developed by Destroy Bikes, which is the most famous
-          web app development team at BCIT. You could rent bikes and rent out
-          bikes with Bike2Go to reduce the use of fossil fuels.
-          <span id="slogan">Let's make Vancouver greener together!</span>
+          <b>Bike2Go</b> is developed by Bikes4U, the most famous
+          web app development team at BCIT. It was originally created to address the bike shortages due to COVID-19.
+          Anyone can rent or rent out bikes with  Bike2Go to reduce their carbon footprint and get some exercise in.
+          Make your next trip happen with your own two legs.
+
+          <span id="slogan">Bike2Go, powered by you, for the planet.</span>
         </p>
         <van-divider />
         <van-row>
@@ -32,7 +34,7 @@
             <van-row class="name">James</van-row>
             <van-row class="position">Backend Developer</van-row>
             <van-row class="description"
-              >1. Was a Product Manager <br />2. Like wathcing movies</van-row
+              >1. Was a Product Manager <br />2. Huge foodie</van-row
             >
             <van-divider />
           </van-col>
@@ -50,7 +52,7 @@
             <van-row class="name">Joon</van-row>
             <van-row class="position">Backend Developer</van-row>
             <van-row class="description"
-              >1. Was a Product Manager <br />2. Like wathcing movies</van-row
+              >1. Was a Product Manager <br />2. Loves watching movies</van-row
             >
             <van-divider />
           </van-col>
@@ -68,7 +70,7 @@
             <van-row class="name">Victor</van-row>
             <van-row class="position">Frontend Developer</van-row>
             <van-row class="description"
-              >1. Was a Product Manager <br />2. Like wathcing movies</van-row
+              >1. Fried chicken aficionado<br />2. Loves biking at Stanley Park</van-row
             >
             <van-divider />
           </van-col>
@@ -86,12 +88,12 @@
             <van-row class="name">Hyerim</van-row>
             <van-row class="position">Frontend Developer</van-row>
             <van-row class="description"
-              >1. Was a Product Manager <br />2. Like wathcing movies</van-row
+              >1. Was a Product Manager <br />2. Loves watching movies</van-row
             >
             <van-divider />
           </van-col>
         </van-row>
-        <van-row id="footer">Copyright@2021 Destroy Bikes</van-row>
+        <van-row id="footer">Copyright@2021 Bikes4U</van-row>
       </van-col>
       <van-col span="1" />
     </van-row>
