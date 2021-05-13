@@ -80,10 +80,10 @@ Backend source code for BCIT COMP 2800 (Downtown Campus Team 8).
 ### 3. Post advertisement
 
 - **URI**: /api/bike/add
-- **Method**: POST title, description, photos, location, deposit, price
+- **Method**: POST
 
   | Name | Description | 
-        | ---- | ---- | 
+  | ---- | ---- | 
   | title |  Advertisement title |
   | description | Advertisement description | 
   | location.lat | Bike's location latitude | 
@@ -107,7 +107,7 @@ Backend source code for BCIT COMP 2800 (Downtown Campus Team 8).
 ### 4. Find Near Bikes
 
 - **URI**: /api/bike/find
-- **Method**: POST location, distance
+- **Method**: POST
 
 | Name | Description | 
 | ---- |---- | 
@@ -231,5 +231,80 @@ Backend source code for BCIT COMP 2800 (Downtown Campus Team 8).
             email: "JooniorProgrammer@gmail.com" 
         }
     ]
+}
+```
+---
+### 7. Add a Bookmark
+
+- **URI**: /api/bookmark/add
+- **Method**: POST
+
+| Name | Description |
+| ---- | ----------- |
+| bid | Advertisement ID  |
+
+- **Return Value**
+
+| Name | Description |
+| ---- | ----------- |
+| code | 0: success  |
+
+```
+{
+    "code": 0,
+}
+```
+---
+### 7. Remove a Bookmark
+
+- **URI**: /api/bookmark/remove
+- **Method**: POST
+
+| Name | Description |
+| ---- | ----------- |
+| bid | Advertisement ID  |
+
+- **Return Value**
+
+| Name | Description |
+| ---- | ----------- |
+| code | 0: success  |
+
+```
+{
+    "code": 0,
+}
+```
+
+---
+### 7. Find Bookmarks
+
+- **URI**: /api/bookmark/find
+- **Method**: POST
+
+- **Return Value**
+
+| Name | Description |
+| ---- | ----------- |
+| code | 0: success  |
+| data | See desription below |
+| id | Advertisement ID  |
+| title | Advertisement title  |
+| description | Advertisement description  |
+| photos | Photo IDs  |
+| price | Bike Rental Fee |
+
+```
+{
+    "code": 0,
+    "data": [
+    {
+      id: 6,
+      title: "Joonior's Bike",
+      description: "The best bike in Vancouver!",
+      photos: [1,2,3,4,5],
+      price: 12.99
+    }
+  ]
 }
 ```
