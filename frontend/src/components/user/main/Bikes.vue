@@ -62,7 +62,10 @@ export default {
 
             // Add an event listener for markers
             google.maps.event.addListener(marker, "click", function () {
-              self.$toast("Hello, Joon!");
+              self.$router.push({
+                name: "User_Bike_Detail",
+                query: { bid: bike.id },
+              });
             });
             return marker;
           });
@@ -84,7 +87,7 @@ export default {
         disableDefaultUI: true,
       });
     },
-    onClickRight: function() {
+    onClickRight: function () {
       this.$router.push({ name: "User_Main_Add" });
     },
   },

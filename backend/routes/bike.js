@@ -83,6 +83,11 @@ router.post("/detail", auth, async function (req, res, next) {
             "WHERE bk_bike.id = ?";
         let Params = [req.body.bid];
         let result = await database.QueryMySQL(SQL, Params);
+
+        SQL = "SELECT path from bk_file WHERE id in (?)";
+        Params = [JSON.parse(result[0].photos)];
+        result[0].photos = await database.QueryMySQL(SQL, Params);
+
         return utils.SendResult(res, result);
     } catch (e) {
         utils.SendError(res, e);

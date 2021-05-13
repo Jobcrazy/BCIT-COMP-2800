@@ -33,9 +33,6 @@ export default {
   },
   methods: {
     login(profile) {
-      // User data has been got from google
-      console.log(profile);
-
       // Perform login
       let self = this;
       self.$toast.loading({
