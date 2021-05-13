@@ -49,9 +49,11 @@
       </van-popup>
 
 <!--      <van-cell is-link @click="showPopup">Pick Location</van-cell>-->
-<!--      <van-dialog id="pop_map" v-model="show" title="map" show-cancel-button>-->
+<!--      <van-dialog id="pop_map" v-model="show" title="map goes here" show-cancel-button>-->
 <!--        <div id="bike_map"></div>-->
 <!--      </van-dialog>-->
+
+
 
       <div style="margin: 16px;">
         <van-button round block type="info" native-type="submit">
@@ -131,8 +133,10 @@ export default {
       let marker;
       self.map.addListener("click", (e) => {
         console.log(e.latLng.lat() + "---" + e.latLng.lng());
-        let userPickedLocation;
-        userPickedLocation = e.latLng;
+        let latitude = e.latLng.lat();
+        let longitude = e.latLng.lng();
+        self.location = {latitude, longitude};
+        let userPickedLocation = e.latLng;
         if (marker) {
           marker.setPosition(userPickedLocation);
           self.map.panTo(userPickedLocation);
@@ -145,18 +149,32 @@ export default {
         }
       });
     },
+
+
     onSubmit(values,) {
       console.log('submit', values);
+      this
+        .$axios({
+          method: "POST",
+          headers: { "Content-Type": ""},
+          url: "",
+          data: form,
+      })
+      .then((res) => {
+          if (1 == res.data.code) {
+            //stuff
+            return;
+          } else if (0 != res.data.code) {
+            //stuff
+            return;
+          }
+
+      })
+      .catch(function(error) {
+        self.$toast.fail(error);
+      });
     },
   },
-};
-
-function placeMarkerAndPanTo(latLng, map) {
-  new google.maps.Marker({
-    position: latLng,
-    map: map,
-  });
-  map.panTo(latLng);
 };
 </script>
 
