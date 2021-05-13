@@ -129,17 +129,16 @@ export default {
         disableDefaultUI: true,
       });
 
-      google.maps.event.addListener("click", (e) => {
-        self.placeMarkerAndPanTo(e.latLng, map);
+      self.map.addListener("click", (e) => {
+        //self.placeMarkerAndPanTo(e.latLng, map);
+        console.log(e.latLng);
+        console.log(e.latLng.lat() + "---" + e.latLng.lng());
+        let marker = new google.maps.Marker({
+          position: e.latLng,
+          map: self.map,
+        });
+        self.map.panTo(e.latLng);
       });
-
-      // placeMarkerAndPanTo: function (latLng, map)  {
-      //   let marker = new google.maps.Marker({
-      //     position: latLng,
-      //     map: map,
-      //   });
-      //   map.panTo(latLng);
-      // };
 
       // google.maps.event.addListener("click", function () {
       //   self.$toast("Hello, Joon!");
