@@ -128,44 +128,25 @@ export default {
         zoom: 10,
         disableDefaultUI: true,
       });
-
+      let marker;
       self.map.addListener("click", (e) => {
-        //self.placeMarkerAndPanTo(e.latLng, map);
-        console.log(e.latLng);
         console.log(e.latLng.lat() + "---" + e.latLng.lng());
-        let marker = new google.maps.Marker({
-          position: e.latLng,
-          map: self.map,
-        });
-        self.map.panTo(e.latLng);
+        let userPickedLocation;
+        userPickedLocation = e.latLng;
+        if (marker) {
+          marker.setPosition(userPickedLocation);
+          self.map.panTo(userPickedLocation);
+        } else {
+          marker = new google.maps.Marker({
+            position: userPickedLocation,
+            map: self.map,
+          });
+          self.map.panTo(userPickedLocation);
+        }
       });
-
-      // google.maps.event.addListener("click", function () {
-      //   self.$toast("Hello, Joon!");
-      //   self.placeMarkerAndPanTo(e.latLng, map);
-      // });
-
-      // // Test: Add a marker
-      // var myCenter = new google.maps.LatLng(49.13, -123.06);
-      // var marker = new google.maps.Marker({
-      //   position: myCenter,
-      //   icon: "static/images/bike.png",
-      // });
-      // marker.setMap(this.map);
-      // // Test: Add an event listening to the marker
-      // google.maps.event.addListener(marker, "click", function () {
-      //   self.$toast("Hello, Joon!");
-      // });
-      // // Tip: Add marker cluster please see:
-      // // https://developers.google.com/maps/documentation/javascript/marker-clustering
     },
-
-
-
-
     onSubmit(values,) {
       console.log('submit', values);
-
     },
   },
 };
