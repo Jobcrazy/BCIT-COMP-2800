@@ -2,20 +2,20 @@
   <div>
     <van-form @submit="onSubmit">
       <van-uploader
-        v-model="photos"
+        v-model="dataToSubmit.photos"
         multiple
         :after-read="uploadImage"
         :max-count="6"
       />
       <van-field
-        v-model="title"
+        v-model="dataToSubmit.title"
         name="title"
         label="Post Title"
         placeholder="Enter Title"
         :rules="[{ required: true, message: 'Title is required' }]"
       />
       <van-field
-        v-model="description"
+        v-model="dataToSubmit.description"
         type="textarea"
         name="description"
         label="Bike Description"
@@ -27,7 +27,7 @@
         :rules="[{ required: true, message: 'A description is required' }]"
       />
       <van-field
-        v-model="deposit"
+        v-model="dataToSubmit.deposit"
         type="number"
         name="deposit"
         label="Deposit Amount"
@@ -35,7 +35,7 @@
         :rules="[{ required: true, message: 'A deposit amount is required' }]"
       />
       <van-field
-        v-model="price"
+        v-model="dataToSubmit.price"
         type="number"
         name="price"
         label="Renting Fee"
@@ -48,11 +48,10 @@
         <div id="bike_map"></div>
       </van-popup>
 
-<!--      <van-cell is-link @click="showPopup">Pick Location</van-cell>-->
-<!--      <van-dialog id="pop_map" v-model="show" title="map goes here" show-cancel-button>-->
-<!--        <div id="bike_map"></div>-->
-<!--      </van-dialog>-->
-
+      <!--      <van-cell is-link @click="showPopup">Pick Location</van-cell>-->
+      <!--      <van-dialog id="pop_map" v-model="show" title="map goes here" show-cancel-button>-->
+      <!--        <div id="bike_map"></div>-->
+      <!--      </van-dialog>-->
 
 
       <div style="margin: 16px;">
@@ -69,14 +68,16 @@
 export default {
   data() {
     return {
-      photos: [],
-      title: "",
-      description: "",
-      deposit: "",
-      price: "",
+      dataToSubmit: {
+        photos: [],
+        title: "",
+        description: "",
+        deposit: "",
+        price: "",
+        location: {},
+      },
       show: false,
-      map: null,
-      location: {},
+      map: null
     };
   },
   methods: {
@@ -91,7 +92,7 @@ export default {
       self
         .$axios({
           method: "POST",
-          headers: { "Content-Type": "multipart/form-data" },
+          headers: {"Content-Type": "multipart/form-data"},
           url: "/api/file/upload",
           data: form,
         })
@@ -99,7 +100,7 @@ export default {
           if (1 == res.data.code) {
             // Not login
             self.$toast.clear();
-            self.$router.push({ name: "Login" });
+            self.$router.push({name: "Login"});
             return;
           } else if (0 != res.data.code) {
             // Other errors
@@ -126,53 +127,55 @@ export default {
     initMap: function () {
       let self = this;
       self.map = new google.maps.Map(document.getElementById("bike_map"), {
-        center: { lat: 49.13, lng: -123.06 },
+        center: {lat: 49.13, lng: -123.06},
         zoom: 10,
         disableDefaultUI: true,
       });
       let marker;
       self.map.addListener("click", (e) => {
         console.log(e.latLng.lat() + "---" + e.latLng.lng());
-        let latitude = e.latLng.lat();
-        let longitude = e.latLng.lng();
-        self.location = {latitude, longitude};
-        let userPickedLocation = e.latLng;
+        self.dataToSubmit.location = {
+          lat: e.latLng.lat(),
+          lng: e.latLng.lng()
+        };
         if (marker) {
-          marker.setPosition(userPickedLocation);
-          self.map.panTo(userPickedLocation);
+          marker.setPosition(self.dataToSubmit.location);
+          self.map.panTo(self.dataToSubmit.location);
         } else {
           marker = new google.maps.Marker({
-            position: userPickedLocation,
+            position: self.dataToSubmit.location,
             map: self.map,
           });
-          self.map.panTo(userPickedLocation);
+          self.map.panTo(self.dataToSubmit.location);
         }
       });
     },
 
 
     onSubmit(values,) {
+      let self = this;
       console.log('submit', values);
       this
         .$axios({
           method: "POST",
-          headers: { "Content-Type": ""},
-          url: "",
-          data: form,
-      })
-      .then((res) => {
+          url: "/api/bike/add",
+          data: this.dataToSubmit,
+        })
+        .then((res) => {
+          console.log(res.data);
           if (1 == res.data.code) {
-            //stuff
+            self.$toast.clear();
+            self.$router.push({ name: "Login" });
             return;
           } else if (0 != res.data.code) {
             //stuff
             return;
           }
 
-      })
-      .catch(function(error) {
-        self.$toast.fail(error);
-      });
+        })
+        .catch(function (error) {
+          self.$toast.fail(error);
+        });
     },
   },
 };
@@ -180,7 +183,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-#pop_map{
+#pop_map {
   width: 80%;
   height: 80%;
 }
