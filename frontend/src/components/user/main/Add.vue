@@ -123,15 +123,28 @@ export default {
 
     initMap: function () {
       let self = this;
-      this.map = new google.maps.Map(document.getElementById("bike_map"), {
+      self.map = new google.maps.Map(document.getElementById("bike_map"), {
         center: { lat: 49.13, lng: -123.06 },
         zoom: 10,
         disableDefaultUI: true,
       });
 
-      map.addListener("click", (e) => {
+      google.maps.event.addListener("click", (e) => {
         self.placeMarkerAndPanTo(e.latLng, map);
       });
+
+      // placeMarkerAndPanTo: function (latLng, map)  {
+      //   let marker = new google.maps.Marker({
+      //     position: latLng,
+      //     map: map,
+      //   });
+      //   map.panTo(latLng);
+      // };
+
+      // google.maps.event.addListener("click", function () {
+      //   self.$toast("Hello, Joon!");
+      //   self.placeMarkerAndPanTo(e.latLng, map);
+      // });
 
       // // Test: Add a marker
       // var myCenter = new google.maps.LatLng(49.13, -123.06);
@@ -148,13 +161,7 @@ export default {
       // // https://developers.google.com/maps/documentation/javascript/marker-clustering
     },
 
-    placeMarkerAndPanTo: function (latLng, map)  {
-      let marker = new google.maps.Marker({
-        position: latLng,
-        map: map,
-      });
-      map.panTo(latLng);
-    },
+
 
 
     onSubmit(values,) {
@@ -162,6 +169,14 @@ export default {
 
     },
   },
+};
+
+function placeMarkerAndPanTo(latLng, map) {
+  new google.maps.Marker({
+    position: latLng,
+    map: map,
+  });
+  map.panTo(latLng);
 };
 </script>
 
