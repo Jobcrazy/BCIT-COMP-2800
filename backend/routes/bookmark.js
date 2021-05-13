@@ -28,7 +28,7 @@ router.post("/remove", auth, async function (req, res, next) {
     }
 });
 
-router.post("/find", auth, async function (req, res, next) {
+router.post("/list", auth, async function (req, res, next) {
     try {
         let SQL =
             "SELECT id, title, description, photos, price " +
@@ -39,9 +39,11 @@ router.post("/find", auth, async function (req, res, next) {
         let Params = [req.session.uid];
         let result = await database.QueryMySQL(SQL, Params);
 
-        SQL = "SELECT path from bk_file WHERE id in (?)";
-        Params = [JSON.parse(result[0].photos)];
-        result[0].photos = await database.QueryMySQL(SQL, Params);
+        if (result.length) {
+            SQL = "SELECT path from bk_file WHERE id in (?)";
+            Params = [JSON.parse(result[0].photos)];
+            result[0].photos = await database.QueryMySQL(SQL, Params);
+        }
 
         return utils.SendResult(res, result);
     } catch (e) {
