@@ -1,7 +1,6 @@
 const express = require("express");
 const router = express.Router();
 const utils = require("../common/utils");
-const error_code = require("../common/error_code");
 const database = require("../common/database");
 const auth = require("../common/auth");
 
@@ -36,7 +35,7 @@ router.post("/find", auth, async function (req, res, next) {
             "FROM bk_bookmark " +
             "LEFT JOIN bk_bike " +
             "ON bk_bike.id = bk_bookmark.bid " +
-            "WHERE bk_bookmark.uid = ?"
+            "WHERE bk_bookmark.uid = ?";
         let Params = [req.session.uid];
         let result = await database.QueryMySQL(SQL, Params);
         return utils.SendResult(res, result);
