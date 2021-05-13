@@ -159,3 +159,102 @@ describe("Find bike", function () {
     });
 });
 
+//URI: api/bike/list
+describe("List all my bikes", function () {
+    describe("POST /api/bike/list", function () {
+        it("List all my bikes after a user logged in.", function (done) {
+            request
+                .post("/api/bike/list")
+                .set("Cookie", userCookie)
+                .set("Accept", "application/json")
+                .expect(200)
+                .send({}
+                )
+                .end(function (err, res) {
+                    assert.equal(res.body.code, error_code.error_success.code);
+                    if (err) throw err;
+                    done();
+                });
+        });
+        beforeEach(function (done) {
+            request
+                .post("/api/user/login")
+                .send(user)
+                .set("Accept", "application/json")
+                .end(function (err, res) {
+                    if (!err) {
+                        userCookie = res.header["set-cookie"];
+                        done();
+                    }
+                });
+        });
+    });
+});
+
+//URI: api/bike/remove
+describe("Remove my bike advertisement", function () {
+    describe("POST /api/bike/remove", function () {
+        it("Remove my bike advertisement after a user logged in.", function (done) {
+            request
+                .post("/api/bike/remove")
+                .set("Cookie", userCookie)
+                .set("Accept", "application/json")
+                .expect(200)
+                .send({
+                        bid: 7
+                    }
+                )
+                .end(function (err, res) {
+                    assert.equal(res.body.code, error_code.error_success.code);
+                    if (err) throw err;
+                    done();
+                });
+        });
+        beforeEach(function (done) {
+            request
+                .post("/api/user/login")
+                .send(user)
+                .set("Accept", "application/json")
+                .end(function (err, res) {
+                    if (!err) {
+                        userCookie = res.header["set-cookie"];
+                        done();
+                    }
+                });
+        });
+    });
+});
+
+//URI: api/bike/bikeAndOwner
+describe("Find bike advertisement and owner", function () {
+    describe("POST /api/bike/detail", function () {
+        it("Find bike advertisement and the owner after a user logged in.", function (done) {
+            request
+                .post("/api/bike/detail")
+                .set("Cookie", userCookie)
+                .set("Accept", "application/json")
+                .expect(200)
+                .send({
+                        bid: 11
+                    }
+                )
+                .end(function (err, res) {
+                    assert.equal(res.body.code, error_code.error_success.code);
+                    if (err) throw err;
+                    done();
+                });
+        });
+        beforeEach(function (done) {
+            request
+                .post("/api/user/login")
+                .send(user)
+                .set("Accept", "application/json")
+                .end(function (err, res) {
+                    if (!err) {
+                        userCookie = res.header["set-cookie"];
+                        done();
+                    }
+                });
+        });
+    });
+});
