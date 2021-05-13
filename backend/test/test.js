@@ -258,3 +258,102 @@ describe("Find bike advertisement and owner", function () {
         });
     });
 });
+
+//URI: api/bookmark/add
+describe("Add bookmark", function () {
+    describe("POST /api/bookmark/add", function () {
+        it("Add bookmark after a user logged in.", function (done) {
+            request
+                .post("/api/bookmark/add")
+                .set("Cookie", userCookie)
+                .set("Accept", "application/json")
+                .expect(200)
+                .send({
+                        bid: 11
+                    }
+                )
+                .end(function (err, res) {
+                    assert.equal(res.body.code, error_code.error_success.code);
+                    if (err) throw err;
+                    done();
+                });
+        });
+        beforeEach(function (done) {
+            request
+                .post("/api/user/login")
+                .send(user)
+                .set("Accept", "application/json")
+                .end(function (err, res) {
+                    if (!err) {
+                        userCookie = res.header["set-cookie"];
+                        done();
+                    }
+                });
+        });
+    });
+});
+
+//URI: api/bookmark/remove
+describe("Remove bookmark", function () {
+    describe("POST /api/bookmark/remove", function () {
+        it("Remove bookmark after a user logged in.", function (done) {
+            request
+                .post("/api/bookmark/remove")
+                .set("Cookie", userCookie)
+                .set("Accept", "application/json")
+                .expect(200)
+                .send({
+                        bid: 11
+                    }
+                )
+                .end(function (err, res) {
+                    assert.equal(res.body.code, error_code.error_success.code);
+                    if (err) throw err;
+                    done();
+                });
+        });
+        beforeEach(function (done) {
+            request
+                .post("/api/user/login")
+                .send(user)
+                .set("Accept", "application/json")
+                .end(function (err, res) {
+                    if (!err) {
+                        userCookie = res.header["set-cookie"];
+                        done();
+                    }
+                });
+        });
+    });
+});
+
+//URI: api/bookmark/find
+describe("Find bookmarks", function () {
+    describe("POST /api/bookmark/find", function () {
+        it("Find bookmarks after a user logged in.", function (done) {
+            request
+                .post("/api/bookmark/find")
+                .set("Cookie", userCookie)
+                .set("Accept", "application/json")
+                .expect(200)
+                .send({})
+                .end(function (err, res) {
+                    assert.equal(res.body.code, error_code.error_success.code);
+                    if (err) throw err;
+                    done();
+                });
+        });
+        beforeEach(function (done) {
+            request
+                .post("/api/user/login")
+                .send(user)
+                .set("Accept", "application/json")
+                .end(function (err, res) {
+                    if (!err) {
+                        userCookie = res.header["set-cookie"];
+                        done();
+                    }
+                });
+        });
+    });
+});
