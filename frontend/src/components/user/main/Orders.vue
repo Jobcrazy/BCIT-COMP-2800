@@ -1,18 +1,14 @@
 <template>
-  <div>
-    Orders
-  </div>
+  <div>Ordersz</div>
 </template>
 
 <script>
 export default {
   name: "User_Main_Orders",
   data() {
-    return {
-    };
+    return {};
   },
-  mounted() {
-  },
+  mounted() {},
 };
 </script>
 

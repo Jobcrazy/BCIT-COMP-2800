@@ -11,6 +11,9 @@
       <van-tabbar-item icon="shopping-cart-o" replace to="/user/main/orders">
         Orders
       </van-tabbar-item>
+      <van-tabbar-item icon="user-o" replace to="/user/main/bookmark">
+        <span>Bookmark</span>
+      </van-tabbar-item>
       <van-tabbar-item icon="user-o" replace to="/user/main/me">
         <span>Me</span>
       </van-tabbar-item>
@@ -28,14 +31,17 @@ export default {
   },
   mounted() {
     switch (this.$route.path) {
-       case "/user/main/add":
+      case "/user/main/add":
         this.active = 1;
         break;
       case "/user/main/orders":
         this.active = 2;
         break;
-      case "/user/main/me":
+      case "/user/main/bookmark":
         this.active = 3;
+        break;
+      case "/user/main/me":
+        this.active = 4;
         break;
     }
   },
