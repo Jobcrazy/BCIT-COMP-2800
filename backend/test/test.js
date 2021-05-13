@@ -218,3 +218,37 @@ describe("Remove my bike advertisement", function () {
         });
     });
 });
+
+//URI: api/bike/bikeAndOwner
+describe("Find bike advertisement and owner", function () {
+    describe("POST /api/bike/bikeAndOwner", function () {
+        it("Find bike advertisement and the owner after a user logged in.", function (done) {
+            request
+                .post("/api/bike/bikeAndOwner")
+                .set("Cookie", userCookie)
+                .set("Accept", "application/json")
+                .expect(200)
+                .send({
+                        bid: 11
+                    }
+                )
+                .end(function (err, res) {
+                    assert.equal(res.body.code, error_code.error_success.code);
+                    if (err) throw err;
+                    done();
+                });
+        });
+        beforeEach(function (done) {
+            request
+                .post("/api/user/login")
+                .send(user)
+                .set("Accept", "application/json")
+                .end(function (err, res) {
+                    if (!err) {
+                        userCookie = res.header["set-cookie"];
+                        done();
+                    }
+                });
+        });
+    });
+});

@@ -59,12 +59,27 @@ router.post("/list", auth, async function (req, res, next) {
     } catch (e) {
         utils.SendError(res, e);
     }
-}
+})
 
 router.post("/remove", auth, async function (req, res, next) {
     try {
         let SQL =
             "DELETE FROM bk_bike WHERE id = ?";
+        let Params = [req.body.bid];
+        let result = await database.QueryMySQL(SQL, Params);
+        return utils.SendResult(res, result);
+    } catch (e) {
+        utils.SendError(res, e);
+    }
+});
+
+router.post("/bikeAndOwner", auth, async function (req, res, next) {
+    try {
+        let SQL =
+            "SELECT title, description, photos, deposit,price, fname, head, email FROM bk_bike " +
+            "LEFT JOIN bk_user " +
+            "ON bk_bike.uid = bk_user.id " +
+            "WHERE bk_bike.id = ?";
         let Params = [req.body.bid];
         let result = await database.QueryMySQL(SQL, Params);
         return utils.SendResult(res, result);
