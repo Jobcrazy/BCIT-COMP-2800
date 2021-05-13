@@ -7,6 +7,7 @@ const session = require("express-session");
 const usersRouter = require("./routes/user");
 const fileRouter = require("./routes/file");
 const bikeRouter = require("./routes/bike");
+const bookmarkRouter = require("./routes/bookmark");
 
 const app = express();
 
@@ -47,5 +48,6 @@ app.all("*", function (req, res, next) {
 app.use("/api/user", usersRouter);
 app.use("/api/file", fileRouter);
 app.use("/api/bike", bikeRouter);
+app.use("/api/bookmark", bookmarkRouter);
 
 module.exports = app;
