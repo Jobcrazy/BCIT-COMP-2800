@@ -43,9 +43,20 @@
         title="Advertisements"
         label="Manage my advertisements"
         is-link
+        to="/user/me/bike"
       />
-      <van-cell title="Favourites" label="Manage my favourite bikes" is-link to="/user/me/bookmark" />
-      <van-cell title="About Us" label="Information about the development team" is-link to="/user/me/about"/>
+      <van-cell
+        title="Favourites"
+        label="Manage my favourite bikes"
+        is-link
+        to="/user/me/bookmark"
+      />
+      <van-cell
+        title="About Us"
+        label="Information about the development team"
+        is-link
+        to="/user/me/about"
+      />
     </van-cell-group>
   </div>
 </template>
