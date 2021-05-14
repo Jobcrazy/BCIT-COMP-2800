@@ -125,13 +125,11 @@ export default {
             this.$router.push({ name: "Login" });
             return;
           } else if (0 != res.data.code) {
-            console.log(res);
             return self.$toast.fail(res.data.message);
           }
 
           self.$toast.clear();
           self.bikes = res.data.data;
-          console.log(self.bikes);
         })
         .catch((err) => {
           self.$toast.fail(err);
