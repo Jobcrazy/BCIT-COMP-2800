@@ -4,9 +4,11 @@ import Login from "@/components/Login";
 import User_Main from "@/components/user/Main";
 import User_Main_Add from "@/components/user/main/Add";
 import User_Main_Bikes from "@/components/user/main/Bikes";
-import User_Main_Orders from "@/components/user/main/Orders";
-import User_Main_Me from "@/components/user/Main/me";
-import User_Main_Bookmark from "@/components/user/Main/Bookmark";
+import User_Main_Orders from "@/components/user/main/Orders";;
+import User_Main_Me from "@/components/user/main/Me";
+import User_Me_About from "@/components/user/me/About";
+import User_Bike_Detail from "@/components/user/bike/Detail";
+import User_Me_Bookmark from "@/components/user/me/Bookmark";
 
 Vue.use(Router);
 
@@ -34,11 +36,6 @@ export default new Router({
           component: User_Main_Add
         },
         {
-          name: "User_Main_Bookmark",
-          path: "bookmark",
-          component: User_Main_Bookmark
-        },
-        {
           name: "User_Main_Orders",
           path: "orders",
           component: User_Main_Orders
@@ -47,8 +44,23 @@ export default new Router({
           name: "User_Main_Me",
           path: "me",
           component: User_Main_Me
-        }
+        },
       ]
-    }
+    },
+    {
+      name: "User_Me_About",
+      path: "/user/me/about",
+      component: User_Me_About
+    },
+    {
+      name: "User_Bike_Detail",
+      path: "/user/bike/detail",
+      component: User_Bike_Detail
+    },
+    {
+      name: "User_Me_Bookmark",
+      path: "/user/me/bookmark",
+      component: User_Me_Bookmark
+    },
   ]
 });

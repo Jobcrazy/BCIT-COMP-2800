@@ -1,16 +1,16 @@
 <template>
   <div>
+    <van-nav-bar
+      title="Add a bike"
+      left-text="Back"
+      left-arrow
+      @click-left="onClickLeft"
+    />
     <van-form @submit="onSubmit">
-      <van-uploader
-        v-model="imageList"
-        multiple
-        :after-read="afterRead"
-        :max-count="6"
-      />
       <van-field
         v-model="title"
         name="Title"
-        label="Post Title"
+        label="Title"
         placeholder="Enter Title"
         :rules="[{ required: true, message: 'Title is required' }]"
       />
@@ -18,7 +18,7 @@
         v-model="description"
         type="textarea"
         name="Description"
-        label="Bike Description"
+        label="Description"
         placeholder="Enter Description"
         rows="5"
         autosize
@@ -30,7 +30,7 @@
         v-model="deposit"
         type="number"
         name="deposit"
-        label="Deposit Amount"
+        label="Deposit"
         placeholder="Enter the deposit amount"
         :rules="[{ required: true, message: 'A deposit amount is required' }]"
       />
@@ -38,21 +38,12 @@
         v-model="fee"
         type="number"
         name="fee"
-        label="Renting Fee"
+        label="Fee"
         placeholder="Enter the fee amount"
         :rules="[{ required: true, message: 'A fee amount is required' }]"
       />
-
-      <van-cell is-link @click="showPopup">Pick Location</van-cell>
-      <van-popup v-model="show">
-        <div id="bike_map"></div>
-        google map goes here
-      </van-popup>
-
-      <div style="margin: 16px;">
-        <van-button round block type="info" native-type="submit">
-          Submit
-        </van-button>
+      <div style="margin: 16px">
+        <van-button block type="info" native-type="submit"> Submit </van-button>
       </div>
     </van-form>
   </div>
@@ -62,61 +53,23 @@
 export default {
   data() {
     return {
-      imageList: [],
       title: "",
       description: "",
       deposit: "",
       fee: "",
-      show: false,
-      map: null,
     };
   },
   methods: {
-    afterRead(file) {
-      console.log(file);
+    onSubmit(values) {
+      console.log("submit", values);
     },
-    showPopup() {
-      this.show = true;
-      this.initMap();
-    },
-
-    initMap: function () {
-      let self = this;
-      this.map = new google.maps.Map(document.getElementById("bike_map"), {
-        center: { lat: 49.13, lng: -123.06 },
-        zoom: 10,
-        disableDefaultUI: true,
-      });
-      // // Test: Add a marker
-      // var myCenter = new google.maps.LatLng(49.13, -123.06);
-      // var marker = new google.maps.Marker({
-      //   position: myCenter,
-      //   icon: "static/images/bike.png",
-      // });
-      // marker.setMap(this.map);
-      // // Test: Add an event listening to the marker
-      // google.maps.event.addListener(marker, "click", function () {
-      //   self.$toast("Hello, Joon!");
-      // });
-      // // Tip: Add marker cluster please see:
-      // // https://developers.google.com/maps/documentation/javascript/marker-clustering
-    },
-
-    onSubmit(values,) {
-      console.log('submit', values);
-
+    onClickLeft() {
+      history.back();
     },
   },
-  // mounted() {
-  //   this.initMap();
-  // },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-#bike_map {
-  width: 100%;
-  height: 100%;
-}
 </style>

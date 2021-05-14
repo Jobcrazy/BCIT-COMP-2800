@@ -1,20 +1,33 @@
 <template>
   <div>
-    <!--<van-swipe-cell>-->
+    <van-nav-bar
+      title="Favorites"
+      left-text="Back"
+      left-arrow
+      @click-left="onClickLeft"
+    />
     <van-card
       v-for="bike in bikes"
       :key="bike.id"
       :price="bike.price"
-      :description="bike.description"
+      :desc="bike.description"
       :title="bike.title"
       class="bookmark"
       currency="$"
       :thumb="bike.photos[0].path"
+      @click="onclick(bike.id)"
     />
-    <!--<template #right>
-        <van-button square text="Delete" type="danger" class="delete-button" />
-      </template>
-    </van-swipe-cell>-->
+    <van-card
+      v-for="bike in bikes"
+      :key="bike.id"
+      :price="bike.price"
+      :desc="bike.description"
+      :title="bike.title"
+      class="bookmark"
+      currency="$"
+      :thumb="bike.photos[0].path"
+      @click="onclick(bike.id)"
+    />
   </div>
 </template>
 
@@ -27,6 +40,15 @@ export default {
     };
   },
   methods: {
+    onClickLeft() {
+      history.back();
+    },
+    onclick(bid) {
+      this.$router.push({
+        name: "User_Bike_Detail",
+        query: { bid: bid },
+      });
+    },
     getBookmark: function () {
       let self = this;
 
@@ -38,7 +60,7 @@ export default {
       this.$axios({
         method: "POST",
         headers: { "content-type": "application/json" },
-        url: "api/bookmark/find",
+        url: "/api/bookmark/list",
         data: {},
       })
         .then((res) => {
@@ -53,11 +75,6 @@ export default {
 
           self.$toast.clear();
           self.bikes = res.data.data;
-
-          for (let index = 0; index < self.bikes.length; index++) {
-            //self.bikes.photos[index].path =
-            //  "http://bike.kaka888.net/" + self.bikes.photos[index].path;
-          }
         })
         .catch((err) => {
           self.$toast.fail(err);
@@ -73,4 +90,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.bookmark {
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 2px;
+}
 </style>

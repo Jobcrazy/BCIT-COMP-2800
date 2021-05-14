@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node ./bin/www",
     "debug": "set DBG_ENV=1 && node %NODE_DEBUG_OPTION% ./bin/www",
-    "unittest": "./node_modules/.bin/mocha tests/test.js"
+    "unittest": "./node_modules/.bin/mocha test/test.js"
   },
   "dependencies": {
     "config": "^3.3.6",
