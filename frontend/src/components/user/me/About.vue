@@ -32,7 +32,7 @@
               height="5rem"
               src="static/images/james.png"
           /></van-col>
-          <van-col span="14">
+          <van-col span="17">
             <van-row class="name">James</van-row>
             <van-row class="position">Backend Developer</van-row>
             <van-row class="description"
@@ -50,11 +50,11 @@
               height="5rem"
               src="static/images/joon.png"
           /></van-col>
-          <van-col span="14">
+          <van-col span="17">
             <van-row class="name">Joon</van-row>
             <van-row class="position">Backend Developer</van-row>
             <van-row class="description"
-              >1. I'm the only one Joonior Programmer <br />2. Loves watching
+              >1. A jonior developer<br />2. Loves watching
               movies</van-row
             >
             <van-divider />
@@ -69,7 +69,7 @@
               height="5rem"
               src="static/images/victor.png"
           /></van-col>
-          <van-col span="14">
+          <van-col span="17">
             <van-row class="name">Victor</van-row>
             <van-row class="position">Frontend Developer</van-row>
             <van-row class="description"
@@ -88,7 +88,7 @@
               height="5rem"
               src="static/images/hyerim.png"
           /></van-col>
-          <van-col span="14">
+          <van-col span="17">
             <van-row class="name">Hyerim</van-row>
             <van-row class="position">Frontend Developer</van-row>
             <van-row class="description"
