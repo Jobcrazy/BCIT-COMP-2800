@@ -39,12 +39,12 @@ router.post("/list", auth, async function (req, res, next) {
         let Params = [req.session.uid];
         let result = await database.QueryMySQL(SQL, Params);
 
-        if (result.length) {
+        for (let index = 0; index < result.length; ++index) {
             SQL = "SELECT path from bk_file WHERE id in (?)";
-            Params = [JSON.parse(result[0].photos)];
-            result[0].photos = await database.QueryMySQL(SQL, Params);
+            Params = [JSON.parse(result[index].photos)];
+            result[index].photos = await database.QueryMySQL(SQL, Params);
         }
-
+        
         return utils.SendResult(res, result);
     } catch (e) {
         utils.SendError(res, e);

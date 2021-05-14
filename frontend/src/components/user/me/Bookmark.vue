@@ -17,17 +17,6 @@
       :thumb="bike.photos[0].path"
       @click="onclick(bike.id)"
     />
-    <van-card
-      v-for="bike in bikes"
-      :key="bike.id"
-      :price="bike.price"
-      :desc="bike.description"
-      :title="bike.title"
-      class="bookmark"
-      currency="$"
-      :thumb="bike.photos[0].path"
-      @click="onclick(bike.id)"
-    />
   </div>
 </template>
 
@@ -75,6 +64,7 @@ export default {
 
           self.$toast.clear();
           self.bikes = res.data.data;
+          console.log(self.bikes);
         })
         .catch((err) => {
           self.$toast.fail(err);
