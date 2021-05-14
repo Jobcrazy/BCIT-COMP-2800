@@ -160,6 +160,8 @@ export default {
         this.deposit = res.data.data[0].deposit;
         this.price = res.data.data[0].price;
         this.owner_avatar = res.data.data[0].head;
+        this.owner_name = res.data.data[0].fname;
+        this.owner_email = res.data.data[0].email;
         this.like = res.data.data[0].bid ? true : false;
 
         this.photos.splice(0, this.photos.length);
