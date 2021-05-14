@@ -15,9 +15,10 @@
       <van-col span="1" />
       <van-col span="22">
         <p>
-          <b>Bike2Go</b> is developed by Bikes4U, the most famous
-          web app development team at BCIT. It was originally created to address the bike shortages due to COVID-19.
-          Anyone can rent or rent out bikes with  Bike2Go to reduce their carbon footprint and get some exercise in.
+          <b>Bike2Go</b> is developed by Bikes4U, the most famous web app
+          development team at BCIT. It was originally created to address the
+          bike shortages due to COVID-19. Anyone can rent or rent out bikes with
+          Bike2Go to reduce their carbon footprint and get some exercise in.
           Make your next trip happen with your own two legs.
 
           <span id="slogan">Bike2Go, powered by you, for the planet.</span>
@@ -53,7 +54,8 @@
             <van-row class="name">Joon</van-row>
             <van-row class="position">Backend Developer</van-row>
             <van-row class="description"
-              >1. Was a Product Manager <br />2. Loves watching movies</van-row
+              >1. I'm the only one Joonior Programmer <br />2. Loves watching
+              movies</van-row
             >
             <van-divider />
           </van-col>
@@ -71,7 +73,8 @@
             <van-row class="name">Victor</van-row>
             <van-row class="position">Frontend Developer</van-row>
             <van-row class="description"
-              >1. Fried chicken aficionado<br />2. Loves biking at Stanley Park</van-row
+              >1. Fried chicken aficionado<br />2. Loves biking at Stanley
+              Park</van-row
             >
             <van-divider />
           </van-col>
@@ -89,7 +92,8 @@
             <van-row class="name">Hyerim</van-row>
             <van-row class="position">Frontend Developer</van-row>
             <van-row class="description"
-              >1. Was a Product Manager <br />2. Loves watching movies</van-row
+              >1. very new to Vancouver <br />2. Love walking with my
+              dog</van-row
             >
             <van-divider />
           </van-col>
@@ -138,12 +142,12 @@ export default {
   margin-top: 5px;
 }
 
-#footer{
+#footer {
   font-size: 0.8em;
   text-align: center;
 }
 
-#this_page{
+#this_page {
   padding-top: 46px;
   padding-bottom: 20px;
 }
