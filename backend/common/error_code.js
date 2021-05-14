@@ -16,7 +16,11 @@ module.exports = {
         message: "Wrong Form Content"
     },
     error_io: {
-        code: 2,
+        code: 3,
         message: "IO error occurred"
+    },
+    error_location: {
+        code: 4,
+        message: "Location needed"
     },
 };

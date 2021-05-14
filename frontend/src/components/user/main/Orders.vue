@@ -1,6 +1,6 @@
 <template>
   <div>
-    Orders
+    order
   </div>
 </template>
 
@@ -8,14 +8,13 @@
 export default {
   name: "User_Main_Orders",
   data() {
-    return {
-    };
+    return {};
   },
-  mounted() {
-  },
+  mounted() {},
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
 </style>
