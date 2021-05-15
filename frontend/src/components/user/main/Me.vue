@@ -7,7 +7,7 @@
 
       <van-col span="6">
         <van-image
-          radius="50%"
+          radius="5px"
           width="4em"
           height="4em"
           :src="this.avatar ? this.avatar : icon.default_avatar"
@@ -43,8 +43,20 @@
         title="Advertisements"
         label="Manage my advertisements"
         is-link
+        to="/user/me/bike"
       />
-      <van-cell title="Favourites" label="Manage my favourite bikes" is-link />
+      <van-cell
+        title="Favourites"
+        label="Manage my favourite bikes"
+        is-link
+        to="/user/me/bookmark"
+      />
+      <van-cell
+        title="About Us"
+        label="Information about the development team"
+        is-link
+        to="/user/me/about"
+      />
     </van-cell-group>
   </div>
 </template>

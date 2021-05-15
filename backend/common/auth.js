@@ -1,5 +1,5 @@
-let utils = require('./utils');
-let error_code = require('./error_code');
+const utils = require('./utils');
+const error_code = require('./error_code');
 
 /*
 * This function should be added for any routers when we want to

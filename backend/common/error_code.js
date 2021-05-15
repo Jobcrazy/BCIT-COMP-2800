@@ -11,4 +11,16 @@ module.exports = {
         code: 1,
         message: "Not authenticated"
     },
+    error_form: {
+        code: 2,
+        message: "Wrong Form Content"
+    },
+    error_io: {
+        code: 3,
+        message: "IO error occurred"
+    },
+    error_location: {
+        code: 4,
+        message: "Location needed"
+    },
 };
