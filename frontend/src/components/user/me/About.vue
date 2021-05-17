@@ -8,9 +8,47 @@
       @click-left="onClickLeft"
     />
 
-    <van-row id="topImage">
-      <van-image width="100%" height="211px" src="static/images/about.jpg" />
+    <van-row id="topImage" v-if="EasterCounter < 5">
+      <van-image
+        width="100%"
+        height="211px"
+        src="static/images/about.jpg"
+        v-on:click="EasterCounter += 1"
+      />
     </van-row>
+    <van-row id="topImage" v-else-if="EasterCounter < 10">
+      <van-image
+        width="50%"
+        height="106px"
+        src="static/images/about.jpg"
+        v-on:click="EasterCounter += 1"
+      />
+    </van-row>
+    <van-row id="topImage" v-else-if="EasterCounter < 15">
+      <van-image
+        width="25%"
+        height="53px"
+        src="static/images/about.jpg"
+        v-on:click="EasterCounter += 1"
+      />
+    </van-row>
+    <van-row id="topImage" v-else-if="EasterCounter < 20">
+      <van-image
+        width="12.5%"
+        height="26px"
+        src="static/images/about.jpg"
+        v-on:click="EasterCounter += 1"
+      />
+    </van-row>
+    <van-row id="topImage" v-else>
+      <van-image
+        width="100%"
+        height="100%"
+        src="static/images/EasterEgg1.png"
+        v-on:click="EasterCounter += 1"
+      />
+    </van-row>
+
     <van-row>
       <van-col span="1" />
       <van-col span="22">
@@ -54,8 +92,7 @@
             <van-row class="name">Joon</van-row>
             <van-row class="position">Backend Developer</van-row>
             <van-row class="description"
-              >1. A jonior developer<br />2. Loves watching
-              movies</van-row
+              >1. A jonior developer<br />2. Loves watching movies</van-row
             >
             <van-divider />
           </van-col>
@@ -109,7 +146,9 @@
 export default {
   name: "User_Me_About",
   data() {
-    return {};
+    return {
+      EasterCounter: 0,
+    };
   },
   methods: {
     onClickLeft() {
