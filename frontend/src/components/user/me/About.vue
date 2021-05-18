@@ -128,11 +128,6 @@ export default {
   methods: {
     onClickEgg() {
       this.eggCounter >= 5 ? 5 : this.eggCounter++;
-      if (this.eggCounter < 5) {
-        this.$toast(
-          "Plese click for " + (5 - this.eggCounter) + " more times."
-        );
-      }
     },
     onClickLeft() {
       history.back();
