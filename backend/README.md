@@ -234,7 +234,7 @@ Backend source code for BCIT COMP 2800 (Downtown Campus Team 8).
 }
 ```
 ---
-### 7. Add a Bookmark
+### 8. Add a Bookmark
 
 - **URI**: /api/bookmark/add
 - **Method**: POST
@@ -255,7 +255,7 @@ Backend source code for BCIT COMP 2800 (Downtown Campus Team 8).
 }
 ```
 ---
-### 7. Remove a Bookmark
+### 9. Remove a Bookmark
 
 - **URI**: /api/bookmark/remove
 - **Method**: POST
@@ -277,7 +277,7 @@ Backend source code for BCIT COMP 2800 (Downtown Campus Team 8).
 ```
 
 ---
-### 7. Find Bookmarks
+### 10. Find Bookmarks
 
 - **URI**: /api/bookmark/find
 - **Method**: POST
@@ -308,3 +308,41 @@ Backend source code for BCIT COMP 2800 (Downtown Campus Team 8).
   ]
 }
 ```
+---
+### 11. Rent a bike
+
+- **URI**: /api/order/make
+- **Method**: POST
+| Name | Description |
+| ---- | ----------- |
+| id | Bike id  |
+- **Return Value**
+
+| Name | Description |
+| ---- | ----------- |
+| code | 0: success  |
+---
+### 12. List bikes the current user has rented in
+
+- **URI**: /api/order/list/in
+- **Method**: POST
+- **Return Value**
+```print the result to see the data```
+---
+### 13. List bikes the current user has rented out
+
+- **URI**: /api/order/list/in
+- **Method**: POST
+- **Return Value**
+```print the result to see the data```
+---
+### 14. Complete an order
+
+- **URI**: /api/order/complete
+- **Method**: POST
+| Name | Description |
+| ---- | ----------- |
+| id | Order id  |
+- **Return Value**
+```print the result to see the data```
+---
