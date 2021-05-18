@@ -23,4 +23,20 @@ module.exports = {
         code: 4,
         message: "Location needed"
     },
+    error_record: {
+        code: 5,
+        message: "No such record"
+    },
+    error_same_person: {
+        code: 6,
+        message: "Bike owner and leander are the same"
+    },
+    error_rented: {
+        code: 7,
+        message: "Bike has been rented out"
+    },
+    error_returned: {
+        code: 8,
+        message: "Bike has been returned"
+    },
 };

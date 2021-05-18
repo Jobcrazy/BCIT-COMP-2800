@@ -8,6 +8,7 @@ const usersRouter = require("./routes/user");
 const fileRouter = require("./routes/file");
 const bikeRouter = require("./routes/bike");
 const bookmarkRouter = require("./routes/bookmark");
+const orderRouter = require("./routes/order");
 
 const app = express();
 
@@ -49,5 +50,6 @@ app.use("/api/user", usersRouter);
 app.use("/api/file", fileRouter);
 app.use("/api/bike", bikeRouter);
 app.use("/api/bookmark", bookmarkRouter);
+app.use("/api/order", orderRouter);
 
 module.exports = app;
