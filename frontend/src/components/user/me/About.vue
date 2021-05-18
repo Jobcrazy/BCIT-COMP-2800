@@ -9,8 +9,21 @@
     />
 
     <van-row id="topImage">
-      <van-image width="100%" height="211px" src="static/images/about.jpg" />
+      <van-image
+        width="100%"
+        height="211px"
+        src="static/images/about.jpg"
+        v-if="eggCounter < 5"
+        v-on:click="onClickEgg"
+      />
+      <van-image
+        width="100%"
+        height="570px"
+        src="static/images/egg.png"
+        v-else
+      />
     </van-row>
+
     <van-row>
       <van-col span="1" />
       <van-col span="22">
@@ -54,8 +67,7 @@
             <van-row class="name">Joon</van-row>
             <van-row class="position">Backend Developer</van-row>
             <van-row class="description"
-              >1. A jonior developer<br />2. Loves watching
-              movies</van-row
+              >1. A jonior developer<br />2. Loves watching movies</van-row
             >
             <van-divider />
           </van-col>
@@ -109,9 +121,19 @@
 export default {
   name: "User_Me_About",
   data() {
-    return {};
+    return {
+      eggCounter: 0,
+    };
   },
   methods: {
+    onClickEgg() {
+      this.eggCounter >= 5 ? 5 : this.eggCounter++;
+      if (this.eggCounter < 5) {
+        this.$toast(
+          "Plese click for " + (5 - this.eggCounter) + " more times."
+        );
+      }
+    },
     onClickLeft() {
       history.back();
     },
