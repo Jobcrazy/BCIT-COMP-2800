@@ -9,7 +9,7 @@
           :desc="list.description"
           :price="list.price"
           currency="$"
-          :thumb="list.photos[0].path"
+          :thumb="list.photos[0]"
         >
           <template #tags>
             <van-tag plain type="danger">Tag</van-tag>
@@ -50,7 +50,7 @@ export default {
   data() {
     return {
       activeName: "owner",
-      ownerOrderList: null,
+      ownerOrderList: [],
     };
   },
   methods: {

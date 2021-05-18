@@ -43,7 +43,7 @@ router.post("/make", auth, async function (req, res, next) {
 
 router.post("/list/in", auth, async function (req, res, next) {
     try {
-        let SQL = "SELECT bk_bike.title, bk_bike.description, bk_bike.photos, bk_order.price, bk_order.deposit " +
+        let SQL = "SELECT id, bk_bike.title, bk_bike.description, bk_bike.photos, bk_order.price, bk_order.deposit " +
             "FROM bk_order " +
             "LEFT JOIN bk_bike " +
             "ON bk_order.bid = bk_bike.id " +
@@ -59,7 +59,7 @@ router.post("/list/in", auth, async function (req, res, next) {
 
 router.post("/list/out", auth, async function (req, res, next) {
     try {
-        let SQL = "SELECT bk_bike.title, bk_bike.description, bk_bike.photos, bk_order.price, bk_order.deposit " +
+        let SQL = "SELECT id, bk_bike.title, bk_bike.description, bk_bike.photos, bk_order.price, bk_order.deposit " +
             "FROM bk_order " +
             "LEFT JOIN bk_bike " +
             "ON bk_order.bid = bk_bike.id " +
