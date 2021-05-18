@@ -5,6 +5,7 @@
       <van-tab title="Owner" name="owner">
         <van-card
           v-for="list in ownerOrderList"
+          :key="list.id"
           :title="list.title"
           :desc="list.description"
           :price="list.price"
@@ -24,11 +25,13 @@
 
       <van-tab title="Lender" name="renter">
         <van-card
-          num="2"
-          title="Title"
-          desc="Description"
-          price="2.00"
-          thumb="https://img01.yzcdn.cn/vant/ipad.jpeg"
+          v-for="list in ownerOrderList"
+          :key="list.id"
+          :title="list.title"
+          :desc="list.description"
+          :price="list.price"
+          currency="$"
+          :thumb="list.photos[0]"
         >
           <template #tags>
             <van-tag plain type="danger">Tag</van-tag>
@@ -51,6 +54,7 @@ export default {
     return {
       activeName: "owner",
       ownerOrderList: [],
+      lenderOrderList: [],
     };
   },
   methods: {
@@ -78,8 +82,39 @@ export default {
           }
 
           self.$toast.clear();
-          self.orderList = res.data.data;
-          console.log(res.data.data);
+          self.ownerOrderList = res.data.data;
+          console.log(res.data);
+        })
+        .catch((err) => {
+          self.$toast.fail(err);
+        });
+    },
+    loadLenderOrderList: function () {
+      let self = this;
+
+      self.$toast.loading({
+        message: "Loading....",
+        forbidClick: true,
+      });
+
+      this.$axios({
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        url: "/api/order/list/in",
+        data: {},
+      })
+        .then((res) => {
+          if (1 == res.data.code) {
+            self.$toast.clear();
+            this.$router.push({ name: "Login" });
+            return;
+          } else if (0 != res.data.code) {
+            return self.$toast.fail(res.data.message);
+          }
+
+          self.$toast.clear();
+          self.lenderOrderList = res.data.data;
+          console.log(res);
         })
         .catch((err) => {
           self.$toast.fail(err);
@@ -88,6 +123,7 @@ export default {
   },
   mounted() {
     this.loadOwnerOrderList();
+    this.loadLenderOrderList();
   },
 };
 </script>
