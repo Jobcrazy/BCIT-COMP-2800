@@ -8,44 +8,19 @@
       @click-left="onClickLeft"
     />
 
-    <van-row id="topImage" v-if="EasterCounter < 5">
+    <van-row id="topImage">
       <van-image
         width="100%"
         height="211px"
         src="static/images/about.jpg"
-        v-on:click="EasterCounter += 1"
+        v-if="eggCounter < 5"
+        v-on:click="onClickEgg"
       />
-    </van-row>
-    <van-row id="topImage" v-else-if="EasterCounter < 10">
-      <van-image
-        width="50%"
-        height="106px"
-        src="static/images/about.jpg"
-        v-on:click="EasterCounter += 1"
-      />
-    </van-row>
-    <van-row id="topImage" v-else-if="EasterCounter < 15">
-      <van-image
-        width="25%"
-        height="53px"
-        src="static/images/about.jpg"
-        v-on:click="EasterCounter += 1"
-      />
-    </van-row>
-    <van-row id="topImage" v-else-if="EasterCounter < 20">
-      <van-image
-        width="12.5%"
-        height="26px"
-        src="static/images/about.jpg"
-        v-on:click="EasterCounter += 1"
-      />
-    </van-row>
-    <van-row id="topImage" v-else>
       <van-image
         width="100%"
-        height="100%"
-        src="static/images/EasterEgg1.png"
-        v-on:click="EasterCounter += 1"
+        height="570px"
+        src="static/images/egg.png"
+        v-else
       />
     </van-row>
 
@@ -147,10 +122,18 @@ export default {
   name: "User_Me_About",
   data() {
     return {
-      EasterCounter: 0,
+      eggCounter: 0,
     };
   },
   methods: {
+    onClickEgg() {
+      this.eggCounter >= 5 ? 5 : this.eggCounter++;
+      if (this.eggCounter < 5) {
+        this.$toast(
+          "Plese click for " + (5 - this.eggCounter) + " more times."
+        );
+      }
+    },
     onClickLeft() {
       history.back();
     },
