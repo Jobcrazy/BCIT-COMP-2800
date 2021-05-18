@@ -67,7 +67,7 @@ router.post("/profile", auth, async function (req, res, next) {
     try {
         let params = [req.session.gid];
         let result = await database.QueryMySQL(
-            "SELECT fname, gname, xname, head, email " + "from bk_user where gid = ?",
+            "SELECT fname, gname, xname, head, email, balance " + "from bk_user where gid = ?",
             params
         );
         return utils.SendResult(res, result);
