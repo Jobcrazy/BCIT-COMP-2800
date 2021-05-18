@@ -313,6 +313,7 @@ Backend source code for BCIT COMP 2800 (Downtown Campus Team 8).
 
 - **URI**: /api/order/make
 - **Method**: POST
+
 | Name | Description |
 | ---- | ----------- |
 | id | Bike id  |
@@ -340,6 +341,7 @@ Backend source code for BCIT COMP 2800 (Downtown Campus Team 8).
 
 - **URI**: /api/order/complete
 - **Method**: POST
+
 | Name | Description |
 | ---- | ----------- |
 | id | Order id  |
