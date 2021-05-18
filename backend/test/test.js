@@ -102,7 +102,6 @@ describe("Add bike", function () {
                     price: 2.19,
                 })
                 .end(function (err, res) {
-                    console.log(res)
                     assert.equal(res.body.code, error_code.error_success.code);
                     if (err) throw err;
                     done();
@@ -334,6 +333,68 @@ describe("Find bookmarks", function () {
         it("Find bookmarks after a user logged in.", function (done) {
             request
                 .post("/api/bookmark/list")
+                .set("Cookie", userCookie)
+                .set("Accept", "application/json")
+                .expect(200)
+                .send({})
+                .end(function (err, res) {
+                    assert.equal(res.body.code, error_code.error_success.code);
+                    if (err) throw err;
+                    done();
+                });
+        });
+        beforeEach(function (done) {
+            request
+                .post("/api/user/login")
+                .send(user)
+                .set("Accept", "application/json")
+                .end(function (err, res) {
+                    if (!err) {
+                        userCookie = res.header["set-cookie"];
+                        done();
+                    }
+                });
+        });
+    });
+});
+
+//URI: api/order/list/in
+describe("Find Order List for Lender", function () {
+    describe("POST /api/order/list/in", function () {
+        it("Find Order List for Lender after a user logged in.", function (done) {
+            request
+                .post("/api/order/list/in")
+                .set("Cookie", userCookie)
+                .set("Accept", "application/json")
+                .expect(200)
+                .send({})
+                .end(function (err, res) {
+                    assert.equal(res.body.code, error_code.error_success.code);
+                    if (err) throw err;
+                    done();
+                });
+        });
+        beforeEach(function (done) {
+            request
+                .post("/api/user/login")
+                .send(user)
+                .set("Accept", "application/json")
+                .end(function (err, res) {
+                    if (!err) {
+                        userCookie = res.header["set-cookie"];
+                        done();
+                    }
+                });
+        });
+    });
+});
+
+//URI: api/order/list/out
+describe("Find Order List for Owner", function () {
+    describe("POST /api/order/list/out", function () {
+        it("Find Order List for Owner after a user logged in.", function (done) {
+            request
+                .post("/api/order/list/out")
                 .set("Cookie", userCookie)
                 .set("Accept", "application/json")
                 .expect(200)
