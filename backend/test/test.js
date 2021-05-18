@@ -96,12 +96,13 @@ describe("Add bike", function () {
                     photos: [1, 2, 3, 4, 5],
                     location: {
                         lat: 49.13,
-                        long: -123.06,
+                        lng: -123.06,
                     },
                     deposit: 200.66,
                     price: 2.19,
                 })
                 .end(function (err, res) {
+                    console.log(res)
                     assert.equal(res.body.code, error_code.error_success.code);
                     if (err) throw err;
                     done();
@@ -329,10 +330,10 @@ describe("Remove bookmark", function () {
 
 //URI: api/bookmark/find
 describe("Find bookmarks", function () {
-    describe("POST /api/bookmark/find", function () {
+    describe("POST /api/bookmark/list", function () {
         it("Find bookmarks after a user logged in.", function (done) {
             request
-                .post("/api/bookmark/find")
+                .post("/api/bookmark/list")
                 .set("Cookie", userCookie)
                 .set("Accept", "application/json")
                 .expect(200)
