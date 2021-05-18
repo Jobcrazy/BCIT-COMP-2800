@@ -10,7 +10,7 @@
           :desc="list.description"
           :price="list.price"
           currency="$"
-          :thumb="list.photos[0]"
+          :thumb="list.photos[0].path"
         >
           <template #tags>
             <van-tag plain type="danger">Tag</van-tag>
@@ -25,13 +25,13 @@
 
       <van-tab title="Lender" name="renter">
         <van-card
-          v-for="list in ownerOrderList"
+          v-for="list in lenderOrderList"
           :key="list.id"
           :title="list.title"
           :desc="list.description"
           :price="list.price"
           currency="$"
-          :thumb="list.photos[0]"
+          :thumb="list.photos[0].path"
         >
           <template #tags>
             <van-tag plain type="danger">Tag</van-tag>
@@ -82,8 +82,20 @@ export default {
           }
 
           self.$toast.clear();
+          for (let index = 0; index < res.data.data.length; index++) {
+            for (
+              let itemIndex = 0;
+              itemIndex < res.data.data[index].photos.length;
+              ++itemIndex
+            ) {
+              let url =
+                "http://bike.kaka888.net/" +
+                res.data.data[index].photos[itemIndex].path;
+              res.data.data[index].photos[itemIndex].path = url;
+            }
+          }
+
           self.ownerOrderList = res.data.data;
-          console.log(res.data);
         })
         .catch((err) => {
           self.$toast.fail(err);
@@ -113,8 +125,21 @@ export default {
           }
 
           self.$toast.clear();
+
+          for (let index = 0; index < res.data.data.length; index++) {
+            for (
+              let itemIndex = 0;
+              itemIndex < res.data.data[index].photos.length;
+              ++itemIndex
+            ) {
+              let url =
+                "http://bike.kaka888.net/" +
+                res.data.data[index].photos[itemIndex].path;
+              res.data.data[index].photos[itemIndex].path = url;
+            }
+          }
+
           self.lenderOrderList = res.data.data;
-          console.log(res);
         })
         .catch((err) => {
           self.$toast.fail(err);
