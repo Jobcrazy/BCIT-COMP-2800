@@ -4,12 +4,13 @@ import Login from "@/components/Login";
 import User_Main from "@/components/user/Main";
 import User_Bike_Add from "@/components/user/bike/Add";
 import User_Main_Bikes from "@/components/user/main/Bikes";
-import User_Main_Orders from "@/components/user/main/Orders";;
+import User_Main_Orders from "@/components/user/main/Orders";
 import User_Main_Me from "@/components/user/main/Me";
 import User_Me_About from "@/components/user/me/About";
 import User_Bike_Detail from "@/components/user/bike/Detail";
 import User_Me_Bookmark from "@/components/user/me/Bookmark";
 import User_Me_Bike from "@/components/user/me/Bike";
+import User_Order_Payment from "@/components/user/order/payment";
 
 Vue.use(Router);
 
@@ -67,6 +68,11 @@ export default new Router({
       name: "User_Me_Bike",
       path: "/user/me/bike",
       component: User_Me_Bike
+    },
+    {
+      name: "User_Orders_Payment",
+      path: "/user/order/payment",
+      component: User_Order_Payment
     },
   ]
 });
