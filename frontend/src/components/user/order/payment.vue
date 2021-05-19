@@ -8,41 +8,57 @@
       @click-left="onClickLeft"
     />
 
-    <van-form @submit="onSubmit">
-      <van-radio-group v-model="radio">
-        <van-cell-group>
-          <van-cell title="Paypal" clickable @click="radio = 'Paypal'">
-            <template #right-icon>
-              <van-radio name="Paypal" />
-            </template>
-          </van-cell>
-          <van-cell
-            title="Credit Card"
-            clickable
-            @click="radio = 'Credit Card'"
-          >
-            <template #right-icon>
-              <van-radio name="Credit Card" />
-            </template>
-          </van-cell>
-          <van-cell
-            title="Bike2Go Credit"
-            clickable
-            @click="radio = 'Bike2Go Credit'"
-          >
-            <template #right-icon>
-              <van-radio name="Bike2Go Credit" />
-            </template>
-          </van-cell>
-        </van-cell-group>
-      </van-radio-group>
+<!--    <van-form @submit="onSubmit">-->
+<!--      <van-radio-group v-model="radio">-->
+<!--        <van-cell-group>-->
+<!--          <van-cell title="Paypal" clickable @click="radio = 'Paypal'">-->
+<!--            <template #right-icon>-->
+<!--              <van-radio name="Paypal" />-->
+<!--            </template>-->
+<!--          </van-cell>-->
+<!--          <van-cell-->
+<!--            title="Credit Card"-->
+<!--            clickable-->
+<!--            @click="radio = 'Credit Card'"-->
+<!--            @click="showForm()"-->
+<!--          >-->
+<!--            <template #right-icon>-->
+<!--              <van-radio name="Credit Card" />-->
+<!--            </template>-->
+<!--          </van-cell>-->
+<!--          <van-cell-->
+<!--            title="Bike2Go Credit"-->
+<!--            clickable-->
+<!--            @click="radio = 'Bike2Go Credit'"-->
+<!--          >-->
+<!--            <template #right-icon>-->
+<!--              <van-radio name="Bike2Go Credit" />-->
+<!--            </template>-->
+<!--          </van-cell>-->
+<!--        </van-cell-group>-->
+<!--      </van-radio-group>-->
 
-      <div style="margin: 16px">
-        <van-button round block type="info" native-type="submit">
-          Submit
-        </van-button>
-      </div>
-    </van-form>
+<!--      <div style="margin: 16px">-->
+<!--        <van-button round block type="info" native-type="submit">-->
+<!--          Submit-->
+<!--        </van-button>-->
+<!--      </div>-->
+<!--    </van-form>-->
+
+    <van-collapse v-model="activeName" accordion>
+      <van-collapse-item title="Credit Card" name="1">
+
+
+
+
+
+
+      </van-collapse-item>
+      <van-collapse-item title="Paypal" name="2">Unavailable</van-collapse-item>
+      <van-collapse-item title="Bik2Go Credit" name="3">Unavailable</van-collapse-item>
+    </van-collapse>
+
+
   </div>
 </template>
 
@@ -50,6 +66,8 @@
 export default {
   data() {
     return {
+      show: false,
+      activeName: '1',
       dataToSubmit: {
         paymentMethod: "",
       },
@@ -58,6 +76,9 @@ export default {
   methods: {
     onClickLeft() {
       history.back();
+    },
+    showForm(){
+      this.show = true;
     },
     onSubmit(values) {
       console.log("submit", values);
