@@ -45,13 +45,37 @@
 export default {
   data() {
     return {
-      username: '',
-      password: '',
+      dataToSubmit: {
+        paymentMethod: "",
+      },
     };
   },
   methods: {
+    onClickLeft(){
+      history.back();
+    },
     onSubmit(values) {
       console.log('submit', values);
+      this.$axios({
+        method: "POST",
+        url: "/api/order/payment",
+        data: this.dataToSubmit,
+      })
+        .then((res) => {
+          if (1 == res.data.code) {
+            self.$toast.clear();
+            self.$router.push({ paymentMethod: "something here?"});
+            return;
+          } else if (0 != res.data.code) {
+            self.$toast.fail(res.data.message);
+            return;
+          }
+
+          self.$router.push({ paymentMethod: "something here?"});
+        })
+        .catch(function (error){
+          self.$toast.fail(error);
+        });
     },
   },
 
