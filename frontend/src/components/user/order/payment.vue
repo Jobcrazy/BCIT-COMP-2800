@@ -7,39 +7,44 @@
       fixed
       @click-left="onClickLeft"
     />
+
+    <van-form @submit="onSubmit">
+      <van-radio-group v-model="radio">
+        <van-cell-group>
+          <van-cell title="Paypal" clickable @click="radio = 'Paypal'">
+            <template #right-icon>
+              <van-radio name="Paypal" />
+            </template>
+          </van-cell>
+          <van-cell
+            title="Credit Card"
+            clickable
+            @click="radio = 'Credit Card'"
+          >
+            <template #right-icon>
+              <van-radio name="Credit Card" />
+            </template>
+          </van-cell>
+          <van-cell
+            title="Bike2Go Credit"
+            clickable
+            @click="radio = 'Bike2Go Credit'"
+          >
+            <template #right-icon>
+              <van-radio name="Bike2Go Credit" />
+            </template>
+          </van-cell>
+        </van-cell-group>
+      </van-radio-group>
+
+      <div style="margin: 16px">
+        <van-button round block type="info" native-type="submit">
+          Submit
+        </van-button>
+      </div>
+    </van-form>
   </div>
-
-  <van-form @submit="onSubmit">
-    <van-radio-group v-model="radio">
-      <van-cell-group>
-        <van-cell title="Paypal" clickable @click="radio = 'Paypal'">
-          <template #right-icon>
-            <van-radio name="Paypal" />
-          </template>
-        </van-cell>
-        <van-cell title="Credit Card" clickable @click="radio = 'Credit Card'">
-          <template #right-icon>
-            <van-radio name="Credit Card" />
-          </template>
-        </van-cell>
-        <van-cell title="Bike2Go Credit" clickable @click="radio = 'Bike2Go Credit'">
-          <template #right-icon>
-            <van-radio name="Bike2Go Credit" />
-          </template>
-        </van-cell>
-      </van-cell-group>
-    </van-radio-group>
-
-    <div style="margin: 16px;">
-      <van-button round block type="info" native-type="submit">
-        Submit
-      </van-button>
-    </div>
-  </van-form>
-
-
 </template>
-
 
 <script>
 export default {
@@ -51,11 +56,11 @@ export default {
     };
   },
   methods: {
-    onClickLeft(){
+    onClickLeft() {
       history.back();
     },
     onSubmit(values) {
-      console.log('submit', values);
+      console.log("submit", values);
       this.$axios({
         method: "POST",
         url: "/api/order/payment",
@@ -64,16 +69,16 @@ export default {
         .then((res) => {
           if (1 == res.data.code) {
             self.$toast.clear();
-            self.$router.push({ paymentMethod: "something here?"});
+            self.$router.push({ paymentMethod: "something here?" });
             return;
           } else if (0 != res.data.code) {
             self.$toast.fail(res.data.message);
             return;
           }
 
-          self.$router.push({ paymentMethod: "something here?"});
+          self.$router.push({ paymentMethod: "something here?" });
         })
-        .catch(function (error){
+        .catch(function (error) {
           self.$toast.fail(error);
         });
     },
@@ -85,7 +90,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
 #this_page {
   padding-top: 46px;
   padding-bottom: 20px;
