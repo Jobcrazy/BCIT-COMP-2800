@@ -66,10 +66,13 @@ router.post("/list/in", auth, async function (req, res, next) {
 
 router.post("/list/out", auth, async function (req, res, next) {
     try {
-        let SQL = "SELECT bk_order.id, bk_bike.title, bk_bike.description, bk_bike.photos, bk_order.price, bk_order.deposit " +
+        let SQL = "SELECT bk_order.id, bk_bike.title, bk_bike.description, bk_bike.photos, " +
+            "bk_order.price, bk_order.deposit, bk_user.fname, bk_user.email " +
             "FROM bk_order " +
             "LEFT JOIN bk_bike " +
             "ON bk_order.bid = bk_bike.id " +
+            "LEFT JOIN bk_user " +
+            "ON bk_user.id =  bk_order.rid " +
             "WHERE oid = ?";
         let Params = [req.session.uid];
         let result = await database.QueryMySQL(SQL, Params);
