@@ -69,7 +69,7 @@ export default {
   name: "User_Bike_Detail",
   data() {
     return {
-      id: 0,
+      bid: 0,
       title: "Bike Information",
       description: "This is a good bike",
       photos: [],
@@ -128,7 +128,33 @@ export default {
           self.$toast.fail(error);
         });
     },
-    onSubmit() {},
+    onSubmit(values) {
+      console.log("submit", values);
+      console.log(this.id);
+      this.$router.push({name : "User_Orders_Payment"});
+      // this.$axios({
+      //   method: "POST",
+      //   url: "/api/order/make",
+      //   data: this.id,
+      // })
+      //   .then((res) => {
+      //     if (1 ==res.data.code) {
+      //       self.$toast.clear();
+      //       self.$router.push({ name: "Login" });
+      //       return;
+      //     } else if (0 != res.data.code) {
+      //       console.log(res)
+      //       self.$toast.fail(res.data.message);
+      //       return;
+      //     }
+      //
+      //     self.$router.push({ name: "User_Orders_Payment"});
+      //   })
+      //   .catch(function (error) {
+      //     self.$toast.fail(error);
+      //   });
+
+    },
   },
   mounted() {
     let self = this;
@@ -163,6 +189,8 @@ export default {
         this.owner_name = res.data.data[0].fname;
         this.owner_email = res.data.data[0].email;
         this.like = res.data.data[0].bid ? true : false;
+        this.bid = res.data.data[0].bid;
+        console.log(res)
 
         this.photos.splice(0, this.photos.length);
         for (let index = 0; index < res.data.data[0].photos.length; index++) {

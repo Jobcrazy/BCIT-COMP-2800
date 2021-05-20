@@ -10,6 +10,8 @@ import User_Me_About from "@/components/user/me/About";
 import User_Bike_Detail from "@/components/user/bike/Detail";
 import User_Me_Bookmark from "@/components/user/me/Bookmark";
 import User_Me_Bike from "@/components/user/me/Bike";
+import User_Order_Payment from "@/components/user/order/Payment";
+
 Vue.use(Router);
 
 export default new Router({
@@ -66,6 +68,11 @@ export default new Router({
       name: "User_Me_Bike",
       path: "/user/me/bike",
       component: User_Me_Bike
-    }
+    },
+    {
+      name: "User_Orders_Payment",
+      path: "/user/order/payment",
+      component: User_Order_Payment
+    },
   ]
 });
