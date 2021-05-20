@@ -53,7 +53,7 @@
     </van-collapse>
 
     <div style="margin: 16px">
-      <van-button round block type="info" native-type="submit">
+      <van-button round block type="info" native-type="submit" @left-click:>
         Submit
       </van-button>
     </div>
@@ -72,8 +72,8 @@ export default {
       minDate: new Date(2020, 0, 1),
       maxDate: new Date(2025, 10, 1),
       dataToSubmit: {
-        cardNumber: '',
-        fName: '',
+        cardNumber: '1345',
+        fName: 'Victor',
         currentDate: new Date(),
         cvc: '',
       },
@@ -95,7 +95,7 @@ export default {
       console.log("submit", values);
       this.$axios({
         method: "POST",
-        url: "/api/order/payment",
+        url: "/api/order/make",
         data: this.dataToSubmit,
       })
         .then((res) => {
@@ -117,6 +117,7 @@ export default {
   },
 
   mounted() {
+
   },
 };
 </script>
