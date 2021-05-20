@@ -47,28 +47,50 @@
 
     <van-collapse v-model="activeName" accordion>
       <van-collapse-item title="Credit Card" name="1">
-        <van-datetime-picker id="datePicker"
-          v-model="dataToSubmit.currentDate"
-          type="year-month"
-          title="Enter expiry date"
-          :min-date="minDate"
-          :max-date="maxDate"
-          :formatter="formatter"
-        />
-        <van-password-input id="cvcInput"
-          info="Enter CVC"
-          :value="value"
-          :gutter="2"
-          :length="3"
-          :mask="false"
-          :focused="showKeyboard"
-          @focus="showKeyboard = true"
-        />
-        <van-number-keyboard
-          v-model="value"
-          :show="showKeyboard"
-          @blur="showKeyboard = false"
-        />
+
+        <van-form @submit="onSubmit">
+          <van-field
+            v-model="dataToSubmit.cardNumber"
+            name="cardNumber"
+            label="Credit Card Number"
+            placeholder="Credit Card Number"
+            :rules="[{ required: true, message: 'Credit card number is required' }]"
+          />
+          <van-field
+            v-model="dataToSubmit.fName"
+            name="Cardholder Name"
+            label="Cardholder Name"
+            placeholder="Cardholder name"
+            :rules="[{ required: true, message: 'Name is required' }]"
+          />
+          <van-datetime-picker id="datePicker"
+                               v-model="dataToSubmit.currentDate"
+                               type="year-month"
+                               title="Enter expiry date"
+                               :min-date="minDate"
+                               :max-date="maxDate"
+                               :formatter="formatter"
+          />
+          <van-password-input id="cvcInput"
+                              info="Enter CVC (Back of card)"
+                              :value="value"
+                              :gutter="2"
+                              :length="3"
+                              :mask="false"
+                              :focused="showKeyboard"
+                              @focus="showKeyboard = true"
+          />
+          <van-number-keyboard
+            v-model="value"
+            :show="showKeyboard"
+            @blur="showKeyboard = false"
+          />
+
+        </van-form>
+
+
+
+
 
       </van-collapse-item>
       <van-collapse-item title="Paypal" name="2">Paypal API to be implemented</van-collapse-item>
@@ -96,6 +118,8 @@ export default {
       minDate: new Date(2020, 0, 1),
       maxDate: new Date(2025, 10, 1),
       dataToSubmit: {
+        cardNumber: '',
+        fName: '',
         currentDate: new Date(),
       },
     };
