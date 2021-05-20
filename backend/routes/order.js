@@ -47,7 +47,7 @@ router.post("/list/in", auth, async function (req, res, next) {
             "FROM bk_order " +
             "LEFT JOIN bk_bike " +
             "ON bk_order.bid = bk_bike.id " +
-            "WHERE oid = ?";
+            "WHERE rid = ?";
         let Params = [req.session.uid];
         let result = await database.QueryMySQL(SQL, Params);
         for (let index = 0; index < result.length; ++index) {
@@ -70,7 +70,7 @@ router.post("/list/out", auth, async function (req, res, next) {
             "FROM bk_order " +
             "LEFT JOIN bk_bike " +
             "ON bk_order.bid = bk_bike.id " +
-            "WHERE rid = ?";
+            "WHERE oid = ?";
         let Params = [req.session.uid];
         let result = await database.QueryMySQL(SQL, Params);
         for (let index = 0; index < result.length; ++index) {
