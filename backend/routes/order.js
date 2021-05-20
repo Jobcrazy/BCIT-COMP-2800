@@ -43,9 +43,20 @@ router.post("/make", auth, async function (req, res, next) {
 
 router.post("/list/in", auth, async function (req, res, next) {
     try {
-        let SQL = "SELECT * FROM bk_order WHERE rid = ?";
+        let SQL = "SELECT bk_order.id, bk_bike.title, bk_bike.description, bk_bike.photos, bk_order.price, bk_order.deposit " +
+            "FROM bk_order " +
+            "LEFT JOIN bk_bike " +
+            "ON bk_order.bid = bk_bike.id " +
+            "WHERE rid = ?";
         let Params = [req.session.uid];
         let result = await database.QueryMySQL(SQL, Params);
+        for (let index = 0; index < result.length; ++index) {
+            if (result[index].photos) {
+                SQL = "SELECT path from bk_file WHERE id in (?)";
+                Params = [JSON.parse(result[index].photos)];
+                result[index].photos = await database.QueryMySQL(SQL, Params);
+            }
+        }
 
         return utils.SendResult(res, result);
     } catch (e) {
@@ -55,9 +66,20 @@ router.post("/list/in", auth, async function (req, res, next) {
 
 router.post("/list/out", auth, async function (req, res, next) {
     try {
-        let SQL = "SELECT * FROM bk_order WHERE oid = ?";
+        let SQL = "SELECT bk_order.id, bk_bike.title, bk_bike.description, bk_bike.photos, bk_order.price, bk_order.deposit " +
+            "FROM bk_order " +
+            "LEFT JOIN bk_bike " +
+            "ON bk_order.bid = bk_bike.id " +
+            "WHERE oid = ?";
         let Params = [req.session.uid];
         let result = await database.QueryMySQL(SQL, Params);
+        for (let index = 0; index < result.length; ++index) {
+            if (result[index].photos) {
+                SQL = "SELECT path from bk_file WHERE id in (?)";
+                Params = [JSON.parse(result[index].photos)];
+                result[index].photos = await database.QueryMySQL(SQL, Params);
+            }
+        }
 
         return utils.SendResult(res, result);
     } catch (e) {
