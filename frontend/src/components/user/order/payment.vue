@@ -7,47 +7,8 @@
       fixed
       @click-left="onClickLeft"
     />
-
-    <!--    <van-form @submit="onSubmit">-->
-    <!--      <van-radio-group v-model="radio">-->
-    <!--        <van-cell-group>-->
-    <!--          <van-cell title="Paypal" clickable @click="radio = 'Paypal'">-->
-    <!--            <template #right-icon>-->
-    <!--              <van-radio name="Paypal" />-->
-    <!--            </template>-->
-    <!--          </van-cell>-->
-    <!--          <van-cell-->
-    <!--            title="Credit Card"-->
-    <!--            clickable-->
-    <!--            @click="radio = 'Credit Card'"-->
-    <!--            @click="showForm()"-->
-    <!--          >-->
-    <!--            <template #right-icon>-->
-    <!--              <van-radio name="Credit Card" />-->
-    <!--            </template>-->
-    <!--          </van-cell>-->
-    <!--          <van-cell-->
-    <!--            title="Bike2Go Credit"-->
-    <!--            clickable-->
-    <!--            @click="radio = 'Bike2Go Credit'"-->
-    <!--          >-->
-    <!--            <template #right-icon>-->
-    <!--              <van-radio name="Bike2Go Credit" />-->
-    <!--            </template>-->
-    <!--          </van-cell>-->
-    <!--        </van-cell-group>-->
-    <!--      </van-radio-group>-->
-
-    <!--      <div style="margin: 16px">-->
-    <!--        <van-button round block type="info" native-type="submit">-->
-    <!--          Submit-->
-    <!--        </van-button>-->
-    <!--      </div>-->
-    <!--    </van-form>-->
-
     <van-collapse v-model="activeName" accordion>
       <van-collapse-item title="Credit Card" name="1">
-
         <van-form @submit="onSubmit">
           <van-field
             v-model="dataToSubmit.cardNumber"
@@ -73,7 +34,7 @@
           />
           <van-password-input id="cvcInput"
                               info="Enter CVC (Back of card)"
-                              :value="value"
+                              :value="dataToSubmit.cvc"
                               :gutter="2"
                               :length="3"
                               :mask="false"
@@ -81,22 +42,15 @@
                               @focus="showKeyboard = true"
           />
           <van-number-keyboard
-            v-model="value"
+            v-model="dataToSubmit.cvc"
             :show="showKeyboard"
             @blur="showKeyboard = false"
           />
-
         </van-form>
-
-
-
-
-
       </van-collapse-item>
       <van-collapse-item title="Paypal" name="2">Paypal API to be implemented</van-collapse-item>
       <van-collapse-item title="Bik2Go Credit" name="3">Unavailable</van-collapse-item>
     </van-collapse>
-
 
     <div style="margin: 16px">
       <van-button round block type="info" native-type="submit">
@@ -121,6 +75,7 @@ export default {
         cardNumber: '',
         fName: '',
         currentDate: new Date(),
+        cvc: '',
       },
     };
   },
@@ -146,14 +101,14 @@ export default {
         .then((res) => {
           if (1 == res.data.code) {
             self.$toast.clear();
-            self.$router.push({paymentMethod: "something here?"});
+            self.$router.push({ name: "Login" });
             return;
           } else if (0 != res.data.code) {
             self.$toast.fail(res.data.message);
             return;
           }
 
-          self.$router.push({paymentMethod: "something here?"});
+          self.$router.push({ name: "Order_List" });
         })
         .catch(function (error) {
           self.$toast.fail(error);
@@ -161,7 +116,7 @@ export default {
     },
   },
 
-  mount() {
+  mounted() {
   },
 };
 </script>
@@ -174,15 +129,11 @@ export default {
 }
 #datePicker {
   margin-top: 7%;
-
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
 }
 #cvcInput {
   margin-top: 7%;
   background-color:lightgrey;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
 }
-
 </style>
