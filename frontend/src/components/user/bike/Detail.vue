@@ -128,7 +128,30 @@ export default {
           self.$toast.fail(error);
         });
     },
-    onSubmit() {},
+    onSubmit(values) {
+      console.log("submit", values);
+      this.$axios({
+        method: "POST",
+        url: "/api/bike/detail",
+        data: this.id,
+      })
+        .then((res) => {
+          if (1 ==res.data.code) {
+            self.$toast.clear();
+            self.$router.push({ name: "Login" });
+            return;
+          } else if (0 != res.data.code) {
+            self.$toast.fail(res.data.message);
+            return;
+          }
+
+          self.$router.push({ name: "Payment"});
+        })
+        .catch(function (error) {
+          self.$toast.fail(error);
+        });
+
+    },
   },
   mounted() {
     let self = this;
