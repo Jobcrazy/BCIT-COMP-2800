@@ -47,13 +47,27 @@
 
     <van-collapse v-model="activeName" accordion>
       <van-collapse-item title="Credit Card" name="1">
-        <van-datetime-picker
-          v-model="currentDate"
+        <van-datetime-picker id="datePicker"
+          v-model="dataToSubmit.currentDate"
           type="year-month"
           title="Enter expiry date"
           :min-date="minDate"
           :max-date="maxDate"
           :formatter="formatter"
+        />
+        <van-password-input id="cvcInput"
+          info="Enter CVC"
+          :value="value"
+          :gutter="2"
+          :length="3"
+          :mask="false"
+          :focused="showKeyboard"
+          @focus="showKeyboard = true"
+        />
+        <van-number-keyboard
+          v-model="value"
+          :show="showKeyboard"
+          @blur="showKeyboard = false"
         />
 
       </van-collapse-item>
@@ -76,21 +90,19 @@ export default {
   data() {
     return {
       show: false,
+      value: '',
+      showKeyboard: false,
       activeName: '1',
-      dataToSubmit: {
-        paymentMethod: "",
-      },
       minDate: new Date(2020, 0, 1),
       maxDate: new Date(2025, 10, 1),
-      currentDate: new Date(),
+      dataToSubmit: {
+        currentDate: new Date(),
+      },
     };
   },
   methods: {
     onClickLeft() {
       history.back();
-    },
-    showForm() {
-      this.show = true;
     },
     formatter(type, val) {
       if (type === 'year') {
@@ -136,4 +148,17 @@ export default {
   padding-top: 46px;
   padding-bottom: 20px;
 }
+#datePicker {
+  margin-top: 7%;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+#cvcInput {
+  margin-top: 7%;
+  background-color:lightgrey;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
 </style>
