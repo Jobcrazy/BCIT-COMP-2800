@@ -8,7 +8,7 @@ const error_code = require("../common/error_code");
 router.post("/make", auth, async function (req, res, next) {
     try {
         let SQL = "SELECT * FROM bk_bike WHERE id = ?";
-        let Params = [req.body.id];
+        let Params = [req.body.bid];
         let bikeInfo = await database.QueryMySQL(SQL, Params);
 
         if (!bikeInfo.length) {
