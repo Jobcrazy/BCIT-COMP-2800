@@ -13,27 +13,29 @@
           :name="like ? 'like' : 'like-o'"
           size="18"
           color="#ee0a24"
-        /> </template
-    ></van-nav-bar>
+        />
+      </template
+      >
+    </van-nav-bar>
 
     <van-row>
       <van-swipe id="swipe" :autoplay="3000">
         <van-swipe-item v-for="(image, index) in photos" :key="index">
-          <img v-lazy="image" />
+          <img v-lazy="image"/>
         </van-swipe-item>
       </van-swipe>
     </van-row>
 
     <van-row>
-      <van-col span="1" />
+      <van-col span="1"/>
       <van-col span="22">
         <van-row id="avatar">
           <van-col span="18">
             <van-row id="title">
               {{ title }}
             </van-row>
-            <van-row id="owner_name"> <b>Price:</b> ${{ price }}/h </van-row>
-            <van-row id="owner_email"> <b>Deposit: </b>${{ deposit }} </van-row>
+            <van-row id="owner_name"><b>Price:</b> ${{ price }}/h</van-row>
+            <van-row id="owner_email"><b>Deposit: </b>${{ deposit }}</van-row>
           </van-col>
           <van-col span="4">
             <van-image
@@ -45,13 +47,13 @@
           </van-col>
         </van-row>
 
-        <van-divider id="divider" />
+        <van-divider id="divider"/>
 
         <van-row>
-          {{ description }}<br /><br />{{ owner_name }}<br />{{ owner_email }}
+          {{ description }}<br/><br/>{{ owner_name }}<br/>{{ owner_email }}
         </van-row>
       </van-col>
-      <van-col span="1" />
+      <van-col span="1"/>
     </van-row>
 
     <van-submit-bar
@@ -106,15 +108,15 @@ export default {
 
       this.$axios({
         method: "POST",
-        headers: { "content-type": "application/json" },
+        headers: {"content-type": "application/json"},
         url: url,
-        data: { bid: self.$route.query.bid },
+        data: {bid: self.$route.query.bid},
       })
         .then((res) => {
           if (1 == res.data.code) {
             // Not login
             self.$toast.clear();
-            this.$router.push({ name: "Login" });
+            this.$router.push( {name: "Login"} );
             return;
           } else if (0 != res.data.code) {
             // Other errors
@@ -130,30 +132,11 @@ export default {
     },
     onSubmit(values) {
       console.log("submit", values);
-      console.log(this.id);
-      this.$router.push({name : "User_Orders_Payment"});
-      // this.$axios({
-      //   method: "POST",
-      //   url: "/api/order/make",
-      //   data: this.id,
-      // })
-      //   .then((res) => {
-      //     if (1 ==res.data.code) {
-      //       self.$toast.clear();
-      //       self.$router.push({ name: "Login" });
-      //       return;
-      //     } else if (0 != res.data.code) {
-      //       console.log(res)
-      //       self.$toast.fail(res.data.message);
-      //       return;
-      //     }
-      //
-      //     self.$router.push({ name: "User_Orders_Payment"});
-      //   })
-      //   .catch(function (error) {
-      //     self.$toast.fail(error);
-      //   });
-
+      console.log(this.bid);
+      this.$router.push({
+          name: "User_Orders_Payment",
+          query: { bid: this.bid },
+      });
     },
   },
   mounted() {
@@ -166,15 +149,15 @@ export default {
 
     this.$axios({
       method: "POST",
-      headers: { "content-type": "application/json" },
+      headers: {"content-type": "application/json"},
       url: "/api/bike/detail",
-      data: { bid: self.$route.query.bid },
+      data: {bid: self.$route.query.bid},
     })
       .then((res) => {
         if (1 == res.data.code) {
           // Not login
           self.$toast.clear();
-          this.$router.push({ name: "Login" });
+          this.$router.push({name: "Login"});
           return;
         } else if (0 != res.data.code) {
           // Other errors
@@ -250,7 +233,7 @@ export default {
   margin: 10px 0;
 }
 
-#this_page{
+#this_page {
   padding-top: 46px;
   padding-bottom: 60px;
 }
