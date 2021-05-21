@@ -1,55 +1,27 @@
 <template>
-  <div id="this_page">
-    <van-nav-bar title="Order" fixed />
-    <van-tabs v-model="activeName">
-      <van-tab title="Owner" name="owner">
-        <van-card
-          v-for="list in ownerOrderList"
-          :key="list.id"
-          :title="list.title"
-          :desc="list.description"
-          :price="list.price"
-          currency="$"
-          :thumb="list.photos[0].path"
-        >
-          <template #tags>
-            <van-tag plain type="danger">Tag</van-tag>
-            <van-tag plain type="danger">Tag</van-tag>
-          </template>
-          <template #footer>
-            <van-button size="mini">Button</van-button>
-            <van-button size="mini">Button</van-button>
-          </template>
-        </van-card>
-      </van-tab>
+  <div>
+    <van-row>
+      <van-col span="7"
+        ><van-image
+          radius="5px"
+          width="5rem"
+          height="5rem"
+          src="list.photos[0].path"
+      /></van-col>
+      <van-col span="14">
+        <van-row class="name">{{ list.title }}</van-row>
+        <van-row class="price">Price: ${{ list.price }}</van-row>
+        <van-row class="description">{{ list.description }}</van-row>
 
-      <van-tab title="Lender" name="renter">
-        <van-card
-          v-for="list in lenderOrderList"
-          :key="list.id"
-          :title="list.title"
-          :desc="list.description"
-          :price="list.price"
-          currency="$"
-          :thumb="list.photos[0].path"
-        >
-          <template #tags>
-            <van-tag plain type="danger">Tag</van-tag>
-            <van-tag plain type="danger">Tag</van-tag>
-          </template>
-          <template #footer>
-            <van-button size="mini">Button</van-button>
-            <van-button size="mini">Button</van-button>
-          </template>
-        </van-card>
-      </van-tab>
-    </van-tabs>
+        <van-divider />
+      </van-col>
+    </van-row>
   </div>
 </template>
 
 <script>
 export default {
-  name: "User_Main_Orders",
+  name: "User_Main_Confirm",
   data() {
     return {
       activeName: "owner",
@@ -143,11 +115,6 @@ export default {
   },
 };
 </script>
-
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-#this_page {
-  padding-top: 46px;
-  padding-bottom: 20px;
-}
 </style>
