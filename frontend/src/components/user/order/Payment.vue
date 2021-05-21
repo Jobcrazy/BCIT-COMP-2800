@@ -41,10 +41,9 @@
             maxlength="3"
             :rules="[{ required: true, message: 'Password is required' }]"
           />
-
           <div style="margin: 16px;">
             <van-button round block type="info" native-type="submit">
-              Submit
+              Pay ${{this.$route.query.price}} Now
             </van-button>
           </div>
         </van-form>
@@ -114,7 +113,7 @@ export default {
   },
 
   mounted() {
-    console.log(this.$route.query.bid);
+    // formatter("year", )
   },
 };
 </script>
