@@ -46,17 +46,23 @@
             :show="showKeyboard"
             @blur="showKeyboard = false"
           />
+
+          <div style="margin: 16px;">
+            <van-button round block type="info" native-type="submit">
+              Submit
+            </van-button>
+          </div>
         </van-form>
       </van-collapse-item>
       <van-collapse-item title="Paypal" name="2">Paypal API to be implemented</van-collapse-item>
       <van-collapse-item title="Bik2Go Credit" name="3">Unavailable</van-collapse-item>
     </van-collapse>
 
-    <div style="margin: 16px">
-      <van-button round block type="info" native-type="submit" @left-click:>
-        Submit
-      </van-button>
-    </div>
+<!--    <div style="margin: 16px">-->
+<!--      <van-button round block type="info" native-type="submit" @submit="onSubmit">-->
+<!--        Submit-->
+<!--      </van-button>-->
+<!--    </div>-->
 
   </div>
 </template>
@@ -92,23 +98,26 @@ export default {
       return val;
     },
     onSubmit(values) {
+      let self = this;
       console.log("submit", values);
       this.$axios({
         method: "POST",
         url: "/api/order/make",
-        data: this.dataToSubmit,
+        data: {bid: this.$route.query.bid},
       })
         .then((res) => {
           if (1 == res.data.code) {
+            console.log(res.data);
             self.$toast.clear();
             self.$router.push({ name: "Login" });
             return;
           } else if (0 != res.data.code) {
+            console.log(res.data);
             self.$toast.fail(res.data.message);
             return;
           }
 
-          self.$router.push({ name: "Order_List" });
+          self.$router.push({ name: "User_Main_Orders" });
         })
         .catch(function (error) {
           self.$toast.fail(error);
@@ -117,7 +126,7 @@ export default {
   },
 
   mounted() {
-
+    console.log(this.$route.query.bid);
   },
 };
 </script>
