@@ -16,7 +16,8 @@
 
       <van-col span="15">
         <van-row>
-          <van-col id="name">{{ fname }}</van-col>
+          <van-col id="name" span="20">{{ fname }}</van-col>
+          <van-col id="balance" span="4">${{ balance }}</van-col>
         </van-row>
         <van-row>
           <van-col>
@@ -69,6 +70,7 @@ export default {
       fname: "Full Name",
       email: "someone@bcit.ca",
       avatar: null,
+      balance: 0,
       icon: {
         default_avatar: require("@/assets/default_avatar.png"),
       },
@@ -105,6 +107,7 @@ export default {
           self.fname = res.data.data[0].fname;
           self.avatar = res.data.data[0].head;
           self.email = res.data.data[0].email;
+          self.balance = res.data.data[0].balance;
         })
         .catch(function (error) {
           self.$toast.fail(error);
@@ -136,5 +139,11 @@ export default {
 
 #email {
   font-size: 0.85em;
+}
+
+#balance {
+  padding-top: 0.1em;
+  font-size: 1em;
+  font-weight: 700;
 }
 </style>
