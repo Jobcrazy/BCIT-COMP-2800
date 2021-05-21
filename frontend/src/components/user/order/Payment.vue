@@ -25,26 +25,21 @@
             :rules="[{ required: true, message: 'Name is required' }]"
           />
           <van-datetime-picker id="datePicker"
-                               v-model="dataToSubmit.currentDate"
+                               v-model="dataToSubmit.expiryDate"
                                type="year-month"
                                title="Enter expiry date"
                                :min-date="minDate"
                                :max-date="maxDate"
                                :formatter="formatter"
           />
-          <van-password-input id="cvcInput"
-                              info="Enter CVC (Back of card)"
-                              :value="dataToSubmit.cvc"
-                              :gutter="2"
-                              :length="3"
-                              :mask="false"
-                              :focused="showKeyboard"
-                              @focus="showKeyboard = true"
-          />
-          <van-number-keyboard
+          <van-field
             v-model="dataToSubmit.cvc"
-            :show="showKeyboard"
-            @blur="showKeyboard = false"
+            type="password"
+            name="cvc"
+            label="Enter CVC"
+            placeholder="CVC Number"
+            maxlength="3"
+            :rules="[{ required: true, message: 'Password is required' }]"
           />
 
           <div style="margin: 16px;">
@@ -57,13 +52,6 @@
       <van-collapse-item title="Paypal" name="2">Paypal API to be implemented</van-collapse-item>
       <van-collapse-item title="Bik2Go Credit" name="3">Unavailable</van-collapse-item>
     </van-collapse>
-
-<!--    <div style="margin: 16px">-->
-<!--      <van-button round block type="info" native-type="submit" @submit="onSubmit">-->
-<!--        Submit-->
-<!--      </van-button>-->
-<!--    </div>-->
-
   </div>
 </template>
 
@@ -72,15 +60,14 @@ export default {
   data() {
     return {
       show: false,
-      value: '',
-      showKeyboard: false,
+      showCalendar: false,
       activeName: '1',
       minDate: new Date(2020, 0, 1),
       maxDate: new Date(2025, 10, 1),
       dataToSubmit: {
-        cardNumber: '1345',
-        fName: 'Victor',
-        currentDate: new Date(),
+        cardNumber: '',
+        fName: '',
+        expiryDate: new Date(),
         cvc: '',
       },
     };
@@ -91,6 +78,7 @@ export default {
     },
     formatter(type, val) {
       if (type === 'year') {
+        //this.dataToSubmit.expiryDate.setFullYear(1,2);
         return `${val} Year`;
       } else if (type === 'month') {
         return `${val} Month`;
