@@ -102,6 +102,7 @@ describe("Add bike", function () {
                     price: 2.19,
                 })
                 .end(function (err, res) {
+                    console.log(res)
                     assert.equal(res.body.code, error_code.error_success.code);
                     if (err) throw err;
                     done();
