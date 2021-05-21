@@ -131,11 +131,12 @@ export default {
         });
     },
     onSubmit(values) {
-      console.log("submit", values);
-      console.log(this.bid);
       this.$router.push({
           name: "User_Orders_Payment",
-          query: { bid: this.bid },
+          query: {
+            bid: this.bid,
+            price: this.price
+          },
       });
     },
   },
@@ -172,8 +173,8 @@ export default {
         this.owner_name = res.data.data[0].fname;
         this.owner_email = res.data.data[0].email;
         this.like = res.data.data[0].bid ? true : false;
-        this.bid = res.data.data[0].bid;
-        console.log(res)
+        this.bid = self.$route.query.bid;
+
 
         this.photos.splice(0, this.photos.length);
         for (let index = 0; index < res.data.data[0].photos.length; index++) {
