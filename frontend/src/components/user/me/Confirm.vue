@@ -1,18 +1,23 @@
 <template>
   <div id="this_page">
     <van-nav-bar
-      title="My bikes to rent"
+      title="Order Detail"
       left-text="Back"
       left-arrow
       fixed
       @click-left="onClickLeft"
-      @click-right="onClickRight"
     >
     </van-nav-bar>
 
     <van-row>
+      <van-swipe id="swipe" :autoplay="3000">
+        <van-swipe-item v-for="(image, index) in photos" :key="index">
+          <img v-lazy="image.path" />
+        </van-swipe-item>
+      </van-swipe>
       <van-col span="1" />
       <van-col span="22">
+        <van-row> </van-row>
         <van-row id="avatar">
           <van-col span="18">
             <van-row id="title">
@@ -21,22 +26,17 @@
             <van-row id="owner_name"> <b>Price:</b> ${{ price }}/h </van-row>
             <van-row id="owner_email"> <b>Deposit: </b>${{ deposit }} </van-row>
           </van-col>
-          <van-col span="4">
-            <van-image
-              radius="5px"
-              width="4em"
-              height="4em"
-              :src="this.photes ? this.phtoes : this.photos"
-            />
-          </van-col>
         </van-row>
 
         <van-divider id="divider" />
 
         <van-row>
-          {{ description }}<br /><br />Lender:<br />{{ lender_name }}<br />{{
-            lender_email
-          }}
+          {{ description }}
+          <br />
+          <br />
+          <b>Lender contact</b><br />
+          {{ lender_name }}
+          <br />{{ lender_email }}
         </van-row>
       </van-col>
       <van-col span="1" />
@@ -60,13 +60,10 @@ export default {
       description: "This is a good bike",
       photos: [],
       deposit: 0.0,
-
       price: 0.0,
       owner_avatar: null,
-
       lender_name: "",
       lender_email: "",
-
       icon: {
         default_avatar: require("@/assets/default_avatar.png"),
       },
@@ -78,15 +75,8 @@ export default {
     onClickLeft: function () {
       history.back();
     },
-    onClickRight: function () {
+    onSubmit() {
       let self = this;
-      let url = null;
-
-      if (this.like) {
-        url = "/api/bookmark/remove";
-      } else {
-        url = "/api/bookmark/add";
-      }
 
       self.$toast.loading({
         message: "Loading...",
@@ -96,8 +86,8 @@ export default {
       this.$axios({
         method: "POST",
         headers: { "content-type": "application/json" },
-        url: url,
-        data: { bid: self.$route.query.bid },
+        url: "/api/order/complete",
+        data: { id: this.$route.query.orderid },
       })
         .then((res) => {
           if (1 == res.data.code) {
@@ -110,14 +100,13 @@ export default {
             return self.$toast.fail(res.data.message);
           }
 
-          this.like = !this.like;
           self.$toast.clear();
+          self.$router.push({ name: "User_Main_Orders" });
         })
         .catch(function (error) {
           self.$toast.fail(error);
         });
     },
-    onSubmit() {},
   },
   mounted() {
     this.title = this.$route.query.ordertitle;
@@ -127,13 +116,6 @@ export default {
     this.photos = this.$route.query.photo;
     this.lender_name = this.$route.query.lender_name;
     this.lender_email = this.$route.query.lender_email;
-    //this.description = res.data.data[0].description;
-    //this.deposit = res.data.data[0].deposit;
-    //this.price = res.data.data[0].price;
-    //this.owner_avatar = res.data.data[0].head;
-    //this.owner_name = res.data.data[0].fname;
-    //this.owner_email = res.data.data[0].email;
-    //this.like = res.data.data[0].bid ? true : false;
   },
 };
 </script>
