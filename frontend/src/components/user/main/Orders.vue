@@ -4,13 +4,13 @@
     <van-tabs v-model="activeName">
       <van-tab title="Owner" name="owner">
         <van-card
-          v-for="list in ownerOrderList"
-          :key="list.id"
-          :title="list.title"
-          :desc="list.description"
-          :price="list.price"
+          v-for="orderItem in ownerOrderList"
+          :key="orderItem.id"
+          :title="orderItem.title"
+          :desc="orderItem.description"
+          :price="orderItem.price"
           currency="$"
-          :thumb="list.photos[0].path"
+          :thumb="orderItem.photos[0].path"
         >
           <template #tags>
             <van-tag plain type="danger">Tag</van-tag>
@@ -18,7 +18,9 @@
           </template>
           <template #footer>
             <van-button size="mini">Button</van-button>
-            <van-button size="mini">Button</van-button>
+            <van-button size="mini" @click="confirm(orderItem)"
+              >Details</van-button
+            >
           </template>
         </van-card>
       </van-tab>
@@ -56,8 +58,24 @@ export default {
       ownerOrderList: [],
       lenderOrderList: [],
     };
+    n;
   },
   methods: {
+    confirm(obj) {
+      this.$router.push({
+        name: "User_Me_Confirm",
+        query: {
+          orderid: obj.id,
+          ordertitle: obj.title,
+          description: obj.description,
+          price: obj.price,
+          deposit: obj.deposit,
+          photo: obj.photos[0].path,
+          lender_name: obj.fname,
+          lender_email: obj.email,
+        },
+      });
+    },
     loadOwnerOrderList: function () {
       let self = this;
 
