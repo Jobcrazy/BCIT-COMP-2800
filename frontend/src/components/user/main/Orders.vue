@@ -1,7 +1,22 @@
 <template>
   <div id="this_page">
-    <van-nav-bar title="Order" fixed />
+    <van-nav-bar id="title" title="Bike2Go" fixed> </van-nav-bar>
     <van-tabs v-model="activeName">
+      <van-tab title="Lender" name="renter">
+        <van-card
+          v-for="list in lenderOrderList"
+          :key="list.id"
+          :title="list.title"
+          :desc="list.description"
+          :price="list.price"
+          currency="$"
+          :thumb="list.photos[0].path"
+        >
+          <template #tags>
+            <van-tag plain type="danger">Tag</van-tag>
+          </template>
+        </van-card>
+      </van-tab>
       <van-tab title="Owner" name="owner">
         <van-card
           v-for="orderItem in ownerOrderList"
@@ -24,27 +39,6 @@
           </template>
         </van-card>
       </van-tab>
-
-      <van-tab title="Lender" name="renter">
-        <van-card
-          v-for="list in lenderOrderList"
-          :key="list.id"
-          :title="list.title"
-          :desc="list.description"
-          :price="list.price"
-          currency="$"
-          :thumb="list.photos[0].path"
-        >
-          <template #tags>
-            <van-tag plain type="danger">Tag</van-tag>
-            <van-tag plain type="danger">Tag</van-tag>
-          </template>
-          <template #footer>
-            <van-button size="mini">Button</van-button>
-            <van-button size="mini">Button</van-button>
-          </template>
-        </van-card>
-      </van-tab>
     </van-tabs>
   </div>
 </template>
@@ -54,7 +48,7 @@ export default {
   name: "User_Main_Orders",
   data() {
     return {
-      activeName: "owner",
+      activeName: "renter",
       ownerOrderList: [],
       lenderOrderList: [],
     };
@@ -176,5 +170,9 @@ export default {
 #this_page {
   padding-top: 46px;
   padding-bottom: 20px;
+}
+
+#title >>> * {
+  font-weight: 900 !important;
 }
 </style>

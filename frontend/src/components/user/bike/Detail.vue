@@ -135,7 +135,7 @@ export default {
           name: "User_Orders_Payment",
           query: {
             bid: this.bid,
-            price: this.price
+            deposit: this.deposit
           },
       });
     },
