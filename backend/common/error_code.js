@@ -39,4 +39,12 @@ module.exports = {
         code: 8,
         message: "Bike has been returned"
     },
+    error_string: {
+        code: 9,
+        message: "Not a valid string"
+    },
+    error_user: {
+        code: 10,
+        message: "Email and password mismatch"
+    },
 };

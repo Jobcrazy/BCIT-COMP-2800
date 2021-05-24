@@ -6,7 +6,7 @@ const error_code = require('./error_code');
 * check if a user has logged in.
 */
 module.exports = function (req, res, next) {
-    if (req.session.gid) {
+    if (req.session.uid) {
         return next();
     } else {
         return utils.SendError(res, error_code.error_access);

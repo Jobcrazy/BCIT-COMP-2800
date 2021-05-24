@@ -34,36 +34,6 @@ const crypto = require('crypto');
 const error_code = require('./error_code');
 
 let Utils = {
-    //Format DateTime String
-    dateFtt: function (fmt, date) {
-        let o = {
-            "M+": date.getMonth() + 1,
-            "d+": date.getDate(),
-            "h+": date.getHours(),
-            "m+": date.getMinutes(),
-            "s+": date.getSeconds(),
-            "q+": Math.floor((date.getMonth() + 3) / 3),
-            "S": date.getMilliseconds()
-        };
-        if (/(y+)/.test(fmt))
-            fmt = fmt.replace(RegExp.$1, (date.getFullYear() + "").substr(4 - RegExp.$1.length));
-        for (let k in o)
-            if (new RegExp("(" + k + ")").test(fmt))
-                fmt = fmt.replace(RegExp.$1, (RegExp.$1.length === 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
-        return fmt;
-    },
-    crtTimeFtt: function () {
-        let crtTime = new Date();
-        return this.dateFtt("yyyy-MM-dd hh:mm:ss", crtTime);
-    },
-    crtTimeMs: function () {
-        let crtTime = new Date();
-        return this.dateFtt("hh-mm-ss-S", crtTime);
-    },
-    crtTimeDate: function () {
-        let crtTime = new Date();
-        return this.dateFtt("yyyy-MM-dd", crtTime);
-    },
     mkdirsSync: function (dirpath, mode) {
         if (!fs.existsSync(dirpath)) {
             let pathtmp;
@@ -119,6 +89,17 @@ let Utils = {
             stream.on('error', (err) => {
                 reject(err);
             });
+        })
+    },
+    CalcStringMD5: function (s) {
+        return new Promise(function (resolve, reject) {
+            if(!s){
+                return reject(error_code.error_string);
+            }
+
+            let c = crypto.createHash('md5');
+            c.update(s);
+            resolve(c.digest('hex'));
         })
     },
 };

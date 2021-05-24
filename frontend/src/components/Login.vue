@@ -6,6 +6,20 @@
       <van-col span="22">
         <div class="login_btn">
           <van-button
+            id="email_login"
+            type="info"
+            block
+            plain
+            hairline
+            :icon="icon_email"
+            @click="show = true"
+          >
+            Login with Your Email
+          </van-button>
+        </div>
+
+        <div class="login_btn">
+          <van-button
             id="login"
             type="info"
             block
@@ -19,19 +33,173 @@
       </van-col>
       <van-col span="1" />
     </van-row>
+
+    <van-dialog
+      v-model="show"
+      :show-cancel-button="false"
+      :showConfirmButton="false"
+      :close-on-click-overlay="true"
+    >
+      <van-tabs>
+        <van-tab title="Login">
+          <van-form @submit="onLogin">
+            <van-field
+              v-model="email"
+              name="email"
+              label="Email"
+              placeholder="Input your email"
+              :rules="[{ required: true, message: 'Please input your email' }]"
+            />
+            <van-field
+              v-model="password"
+              type="password"
+              name="password"
+              label="Password"
+              placeholder="Input your password"
+              :rules="[
+                { required: true, message: 'Please input your password' },
+              ]"
+            />
+            <div style="margin: 16px">
+              <van-button round block type="info" native-type="submit"
+                >Login</van-button
+              >
+            </div>
+          </van-form>
+        </van-tab>
+        <van-tab title="Register">
+          <van-form @submit="onRegister">
+            <van-field
+              v-model="email"
+              name="email"
+              label="Email"
+              placeholder="Input your email"
+              :rules="[
+                {
+                  pattern,
+                  required: true,
+                  message: 'Please input a corret address',
+                },
+              ]"
+            />
+            <van-field
+              v-model="password"
+              type="password"
+              name="password"
+              label="Password"
+              placeholder="Input your password"
+              :rules="[
+                { required: true, message: 'Please input your password' },
+              ]"
+            />
+            <van-field
+              v-model="gname"
+              type="text"
+              name="gname"
+              label="First Name"
+              placeholder="Input your first name"
+              :rules="[
+                { required: true, message: 'Please input your first name' },
+              ]"
+            />
+            <van-field
+              v-model="xname"
+              type="text"
+              name="xname"
+              label="Last Name"
+              placeholder="Input your last name"
+              :rules="[
+                { required: true, message: 'Please input your last name' },
+              ]"
+            />
+            <div style="margin: 16px">
+              <van-button round block type="info" native-type="submit"
+                >Register</van-button
+              >
+            </div>
+          </van-form>
+        </van-tab>
+      </van-tabs>
+    </van-dialog>
   </div>
 </template>
 
 <script>
+import { Dialog } from "vant";
 export default {
   name: "Login",
   data() {
     return {
       icon_google: require("@/assets/sign-in-with-google.png"),
+      icon_email: require("@/assets/sign-in-with-email.png"),
       auth2: null,
+      show: false,
+      email: "",
+      password: "",
+      gname: "",
+      xname: "",
+      pattern: /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/,
     };
   },
   methods: {
+    onRegister() {
+      //Perfrom register
+      let self = this;
+      self.$toast.loading({
+        message: "Loading...",
+        forbidClick: true,
+      });
+
+      this.$axios({
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        url: "/api/user/email/register",
+        data: {
+          email: this.email,
+          password: this.password,
+          gname: this.gname,
+          xname: this.xname,
+        },
+      })
+        .then((res) => {
+          if (0 != res.data.code) {
+            return self.$toast.fail(res.data.message);
+          }
+          self.$toast.clear();
+          this.$router.push({ name: "User_Main" });
+        })
+        .catch(function (error) {
+          self.$toast.fail(error);
+        });
+    },
+    onLogin() {
+      // Perform login
+      let self = this;
+      self.$toast.loading({
+        message: "Loading...",
+        forbidClick: true,
+      });
+
+      this.$axios({
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        url: "/api/user/email/login",
+        data: {
+          email: this.email,
+          password: this.password,
+        },
+      })
+        .then((res) => {
+          if (0 != res.data.code) {
+            return self.$toast.fail(res.data.message);
+          }
+          self.$toast.clear();
+          this.$router.push({ name: "User_Main" });
+        })
+        .catch(function (error) {
+          self.$toast.fail(error);
+        });
+    },
     login(profile) {
       // Perform login
       let self = this;
@@ -83,12 +251,13 @@ export default {
     isLoggedin() {
       // Navigate to User_Main if the current user has already logged in
       let self = this;
-      self.$axios({
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        url: "/api/user/profile",
-        data: {},
-      })
+      self
+        .$axios({
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          url: "/api/user/profile",
+          data: {},
+        })
         .then((res) => {
           if (0 === res.data.code) {
             self.$toast.clear();
@@ -127,8 +296,11 @@ export default {
 }
 .foot {
   position: fixed;
-  bottom: 50px;
+  bottom: 35px;
   width: 100%;
   text-align: center;
+}
+#email_login {
+  margin-bottom: 10px;
 }
 </style>
