@@ -7,13 +7,13 @@ Bike2Go allows a user to rent a bike from other users. The user pays a deposit u
 
 ## How this repo is organized
 This project is divided into two parts: the frontend and the backend. They communicate with each other using JSON, and the source code is in the backend folder and the frontend folder respectively.
-* **Backend**: accept and process requests from the frontend
-* **Frontend**: interact with the end user, communicate with the backend
+* **Backend**: accepts and processes requests from the frontend
+* **Frontend**: interacts with the end user, and communicates with the backend
 
 ## How to assemble the development environment
 1. Download and install [Node.js (10.19.0 or above)](https://nodejs.org/en/)
 2. Download and install [MySQL (5.7.22 or above)](https://dev.mysql.com/downloads/mysql/)
-3. Create a database names "bike_database" in MySQL
+3. Create a database named "bike_database" in MySQL
 4. Create a user using the following credential:
    ```
    Host: localhost
