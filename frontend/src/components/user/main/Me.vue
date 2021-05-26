@@ -53,12 +53,45 @@
         to="/user/me/bookmark"
       />
       <van-cell
+        title="Share"
+        label="Share Bike2Go with your friends"
+        is-link
+        @click="clickShare"
+      />
+      <van-cell
         title="About Us"
         label="Information about the development team"
         is-link
         to="/user/me/about"
       />
     </van-cell-group>
+
+    <van-action-sheet v-model="show" title="Share to">
+      <van-grid :column-num="2">
+        <van-grid-item @click="shareFacebook">
+          <van-row>
+            <van-icon
+              class="iconfont"
+              class-prefix="icon"
+              name="facebook"
+              size="28"
+            />
+          </van-row>
+          <van-row class="iconName"> Facebook </van-row>
+        </van-grid-item>
+        <van-grid-item>
+          <van-row>
+            <van-icon
+              class="iconfont"
+              class-prefix="icon"
+              name="twitter"
+              size="28"
+            />
+          </van-row>
+          <van-row class="iconName"> Twitter </van-row>
+        </van-grid-item>
+      </van-grid>
+    </van-action-sheet>
   </div>
 </template>
 
@@ -75,9 +108,23 @@ export default {
         default_avatar: require("@/assets/default_avatar.png"),
       },
       value: 5,
+      show: false,
     };
   },
   methods: {
+    clickShare: function () {
+      this.show = true;
+    },
+    shareFacebook: function () {
+      FB.ui(
+        {
+          method: "share",
+          href: "http://bike.kaka888.net/",
+          redirect_uri: "http://bike.kaka888.net:8080/#/user/main/me",
+        },
+        function (response) {}
+      );
+    },
     getProfile: function () {
       let self = this;
 
@@ -115,6 +162,15 @@ export default {
     },
   },
   mounted() {
+    window.fbAsyncInit = function () {
+      FB.init({
+        appId: "536870507483445",
+        autoLogAppEvents: true,
+        xfbml: true,
+        version: "v10.0",
+      });
+    };
+
     this.getProfile();
   },
 };
@@ -145,5 +201,9 @@ export default {
   padding-top: 0.1em;
   font-size: 1em;
   font-weight: 700;
+}
+
+.iconName {
+  font-size: 0.85em;
 }
 </style>

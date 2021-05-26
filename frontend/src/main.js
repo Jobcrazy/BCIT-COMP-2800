@@ -3,13 +3,14 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import Vant from 'vant';
-import { Lazyload } from 'vant';
-import { Locale } from 'vant';
-import 'vant/lib/index.css';
+import Vant from 'vant'
+import { Lazyload } from 'vant'
+import { Locale } from 'vant'
+import 'vant/lib/index.css'
 import 'vant/lib/icon/local.css'
-import enUS from 'vant/es/locale/lang/en-US';
+import enUS from 'vant/es/locale/lang/en-US'
 import axios from 'axios'
+import "@/assets/iconfont/iconfont.css"
 
 Vue.config.productionTip = false
 

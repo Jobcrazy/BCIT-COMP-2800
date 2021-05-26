@@ -2,7 +2,7 @@
 	"bike": {
 		"db": {
 			"mysql": {
-				"host": "bike.kaka888.net",
+				"host": "127.0.0.1",
 				"user": "bike",
 				"password": "jIPEyvTVBGPu7vfA",
 				"port": "3306",
