@@ -162,14 +162,12 @@ export default {
     },
   },
   mounted() {
-    window.fbAsyncInit = function () {
-      FB.init({
-        appId: "536870507483445",
-        autoLogAppEvents: true,
-        xfbml: true,
-        version: "v10.0",
-      });
-    };
+    FB.init({
+      appId: "536870507483445",
+      autoLogAppEvents: true,
+      xfbml: true,
+      version: "v2.8",
+    });
 
     this.getProfile();
   },
