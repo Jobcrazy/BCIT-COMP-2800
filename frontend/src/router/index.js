@@ -16,6 +16,7 @@ import User_Me_Confirm from "@/components/user/me/Confirm";
 Vue.use(Router);
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: "/",

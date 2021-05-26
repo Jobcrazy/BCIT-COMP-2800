@@ -12,14 +12,14 @@
       <van-image
         width="100%"
         height="211px"
-        src="static/images/about.jpg"
+        src="../../static/images/about.jpg"
         v-if="eggCounter < 5"
         v-on:click="onClickEgg"
       />
       <van-image
         width="100%"
         height="570px"
-        src="static/images/egg.png"
+        src="../../static/images/egg.png"
         v-else
       />
     </van-row>
@@ -43,7 +43,7 @@
               radius="5px"
               width="5rem"
               height="5rem"
-              src="static/images/james.png"
+              src="../../static/images/james.png"
           /></van-col>
           <van-col span="17">
             <van-row class="name">James</van-row>
@@ -61,7 +61,7 @@
               radius="5px"
               width="5rem"
               height="5rem"
-              src="static/images/joon.png"
+              src="../../static/images/joon.png"
           /></van-col>
           <van-col span="17">
             <van-row class="name">Joon</van-row>
@@ -79,7 +79,7 @@
               radius="5px"
               width="5rem"
               height="5rem"
-              src="static/images/victor.png"
+              src="../../static/images/victor.png"
           /></van-col>
           <van-col span="17">
             <van-row class="name">Victor</van-row>
@@ -98,7 +98,7 @@
               radius="5px"
               width="5rem"
               height="5rem"
-              src="static/images/hyerim.png"
+              src="../../static/images/hyerim.png"
           /></van-col>
           <van-col span="17">
             <van-row class="name">Hyerim</van-row>
