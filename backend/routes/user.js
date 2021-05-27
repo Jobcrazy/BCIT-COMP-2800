@@ -160,8 +160,8 @@ router.get("/callback", async function (req, res, next) {
             };
         request.post({url: url, oauth: oauth, qs: qs, json: true}, function (e, r, user) {
             //res.redirect("http://bike.kaka888.net/user/main/me?shared=1")
-            res.send("Successful Shared! Redirecting to Bike2Go..." +
-                "<script>window.location.href='http://localhost:8080/user/main/me'</script>");
+            res.send("<h1>Successful Shared! Redirecting to Bike2Go...</h1>" +
+                "<script>setTimeout(function(){ window.location.href='http://bike.kaka888.net/user/main/me'</script>}, 1500");
         })
     })
 });
