@@ -1,0 +1,1896 @@
+{
+  "id": "b3416231-0eb6-4940-80d8-72449d4e994f",
+  "version": "2.0",
+  "name": "Bike2Go",
+  "url": "http://bike.kaka888.net/user/bike/add",
+  "tests": [{
+    "id": "747b0c11-f9ee-4980-915c-5a1c41a078da",
+    "name": "5. File upload with Maximum 6 images",
+    "commands": [{
+      "id": "dc551138-88db-4cee-9b63-3e111bdb4e66",
+      "comment": "",
+      "command": "open",
+      "target": "http://bike.kaka888.net/user/bike/add",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c7c17782-d209-4d23-9235-25cbb63490d4",
+      "comment": "",
+      "command": "click",
+      "target": "name=title",
+      "targets": [
+        ["name=title", "name"],
+        ["css=.van-cell:nth-child(1) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='title']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4d79cbb9-b8a4-4116-b02f-9251c1cc09a7",
+      "comment": "",
+      "command": "type",
+      "target": "name=title",
+      "targets": [
+        ["name=title", "name"],
+        ["css=.van-cell:nth-child(1) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='title']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "a"
+    }, {
+      "id": "9ce6623e-10ec-4c6a-bc90-09d60a69e395",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-cell:nth-child(2) .van-field__control",
+      "targets": [
+        ["css=.van-cell:nth-child(2) .van-field__control", "css:finder"],
+        ["xpath=//textarea[@name='description']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[2]/div[2]/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f4318d4b-692d-4984-918f-2333637913df",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-cell:nth-child(2) .van-field__control",
+      "targets": [
+        ["css=.van-cell:nth-child(2) .van-field__control", "css:finder"],
+        ["xpath=//textarea[@name='description']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[2]/div[2]/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2e28db2b-f7b7-421e-b44e-792bfd660b4c",
+      "comment": "",
+      "command": "type",
+      "target": "css=.van-cell:nth-child(2) .van-field__control",
+      "targets": [
+        ["css=.van-cell:nth-child(2) .van-field__control", "css:finder"],
+        ["xpath=//textarea[@name='description']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[2]/div[2]/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "b"
+    }, {
+      "id": "b4389917-aca1-4231-9100-a81709044493",
+      "comment": "",
+      "command": "click",
+      "target": "name=deposit",
+      "targets": [
+        ["name=deposit", "name"],
+        ["css=.van-cell:nth-child(3) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='deposit']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[3]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d137aa4b-2551-4607-8429-07ae7fb5b4bb",
+      "comment": "",
+      "command": "type",
+      "target": "name=deposit",
+      "targets": [
+        ["name=deposit", "name"],
+        ["css=.van-cell:nth-child(3) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='deposit']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[3]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "333"
+    }, {
+      "id": "c5a8a5cf-e742-4216-9f5b-3acbe7ab50ed",
+      "comment": "",
+      "command": "click",
+      "target": "name=price",
+      "targets": [
+        ["name=price", "name"],
+        ["css=.van-cell:nth-child(4) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='price']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[4]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1f4e88b9-fde0-494f-90ee-81da1b54d770",
+      "comment": "",
+      "command": "type",
+      "target": "name=price",
+      "targets": [
+        ["name=price", "name"],
+        ["css=.van-cell:nth-child(4) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='price']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[4]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "222"
+    }, {
+      "id": "82cf3b28-f5bd-455e-be8c-4be10ae6d8ed",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-cell__value--alone",
+      "targets": [
+        ["css=.van-cell__value--alone", "css:finder"],
+        ["xpath=//div[@id='this_page']/form/div[5]/div", "xpath:idRelative"],
+        ["xpath=//div[5]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "23c370e5-f2c3-4b44-8a14-7d82ef935356",
+      "comment": "",
+      "command": "click",
+      "target": "css=.gm-style > div:nth-child(1) > div:nth-child(3)",
+      "targets": [
+        ["css=.gm-style > div:nth-child(1) > div:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='bike_map']/div/div/div/div[3]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div/div/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5e75ff2a-b98a-44c0-b6d2-5343359d82fb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-button--default",
+      "targets": [
+        ["css=.van-button--default", "css:finder"],
+        ["xpath=//div[@id='this_page']/div[3]/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Confirm')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b94bcbb3-321b-420d-886c-c8d5337eb01f",
+      "comment": "",
+      "command": "type",
+      "target": "css=.van-uploader__input",
+      "targets": [
+        ["css=.van-uploader__input", "css:finder"],
+        ["xpath=//input[@type='file']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[6]/div[2]/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/input", "xpath:position"]
+      ],
+      "value": "C:\\fakepath\\1.jpg"
+    }, {
+      "id": "4fd8d6f5-060e-42ca-8b81-30d0917863e9",
+      "comment": "",
+      "command": "type",
+      "target": "css=.van-uploader__input",
+      "targets": [
+        ["css=.van-uploader__input", "css:finder"],
+        ["xpath=//input[@type='file']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[6]/div[2]/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/input", "xpath:position"]
+      ],
+      "value": "C:\\fakepath\\2.jpg"
+    }, {
+      "id": "f7db9e49-851b-48df-866f-cbc7b6710149",
+      "comment": "",
+      "command": "type",
+      "target": "css=.van-uploader__input",
+      "targets": [
+        ["css=.van-uploader__input", "css:finder"],
+        ["xpath=//input[@type='file']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[6]/div[2]/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/input", "xpath:position"]
+      ],
+      "value": "C:\\fakepath\\3.jpg"
+    }, {
+      "id": "462c789e-3677-45d5-bb65-a58402713946",
+      "comment": "",
+      "command": "type",
+      "target": "css=.van-uploader__input",
+      "targets": [
+        ["css=.van-uploader__input", "css:finder"],
+        ["xpath=//input[@type='file']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[6]/div[2]/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/input", "xpath:position"]
+      ],
+      "value": "C:\\fakepath\\4.jpg"
+    }, {
+      "id": "13a5159c-e1a8-4701-8819-c35722268ee1",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.van-uploader__input",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f9635c97-4b93-4a5f-b46e-705dbbc063d9",
+      "comment": "",
+      "command": "type",
+      "target": "css=.van-uploader__input",
+      "targets": [
+        ["css=.van-uploader__input", "css:finder"],
+        ["xpath=//input[@type='file']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[6]/div[2]/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/input", "xpath:position"]
+      ],
+      "value": "C:\\fakepath\\5.jpg"
+    }, {
+      "id": "fba5e570-e342-4656-b826-50ebbf280e59",
+      "comment": "",
+      "command": "type",
+      "target": "css=.van-uploader__input",
+      "targets": [
+        ["css=.van-uploader__input", "css:finder"],
+        ["xpath=//input[@type='file']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[6]/div[2]/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/input", "xpath:position"]
+      ],
+      "value": "C:\\fakepath\\6.jpg"
+    }]
+  }, {
+    "id": "87b51689-e9e5-454a-9f22-0cc17f7a2d79",
+    "name": "5. Upload file more than 6",
+    "commands": [{
+      "id": "f6b28d54-d6a2-4360-850b-e0e64183a937",
+      "comment": "",
+      "command": "open",
+      "target": "http://bike.kaka888.net/user/bike/add",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3b7ddaf8-520a-4774-88f9-51dc217f8c94",
+      "comment": "",
+      "command": "click",
+      "target": "name=title",
+      "targets": [
+        ["name=title", "name"],
+        ["css=.van-cell:nth-child(1) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='title']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "acb97dd3-9b6a-4cc8-9e2a-f74a343f7257",
+      "comment": "",
+      "command": "type",
+      "target": "name=title",
+      "targets": [
+        ["name=title", "name"],
+        ["css=.van-cell:nth-child(1) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='title']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "a"
+    }, {
+      "id": "dda6e3d2-7360-4437-a7a0-ada20a61a33d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-cell:nth-child(2) .van-field__control",
+      "targets": [
+        ["css=.van-cell:nth-child(2) .van-field__control", "css:finder"],
+        ["xpath=//textarea[@name='description']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[2]/div[2]/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1281e7a1-d48c-4757-86cc-d14a4b062a5b",
+      "comment": "",
+      "command": "type",
+      "target": "css=.van-cell:nth-child(2) .van-field__control",
+      "targets": [
+        ["css=.van-cell:nth-child(2) .van-field__control", "css:finder"],
+        ["xpath=//textarea[@name='description']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[2]/div[2]/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "b"
+    }, {
+      "id": "f8bd5001-f247-4659-8c8e-da8df900e814",
+      "comment": "",
+      "command": "click",
+      "target": "name=deposit",
+      "targets": [
+        ["name=deposit", "name"],
+        ["css=.van-cell:nth-child(3) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='deposit']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[3]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6d169722-f0df-43f5-86a7-867604b8f154",
+      "comment": "",
+      "command": "type",
+      "target": "name=deposit",
+      "targets": [
+        ["name=deposit", "name"],
+        ["css=.van-cell:nth-child(3) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='deposit']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[3]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "33"
+    }, {
+      "id": "659bede5-59e3-436f-a1d1-339f5dabbd00",
+      "comment": "",
+      "command": "click",
+      "target": "name=price",
+      "targets": [
+        ["name=price", "name"],
+        ["css=.van-cell:nth-child(4) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='price']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[4]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7895eb7b-bf01-42f8-9f62-85d2a88820d3",
+      "comment": "",
+      "command": "type",
+      "target": "name=price",
+      "targets": [
+        ["name=price", "name"],
+        ["css=.van-cell:nth-child(4) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='price']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[4]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "22"
+    }, {
+      "id": "03b6f811-32de-46a0-92a5-5c25924ebebb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-cell--clickable",
+      "targets": [
+        ["css=.van-cell--clickable", "css:finder"],
+        ["xpath=//div[@id='this_page']/form/div[5]", "xpath:idRelative"],
+        ["xpath=//div[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "692eb256-cff5-4072-a549-6908cd11548e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.gm-style > div:nth-child(1) > div:nth-child(3)",
+      "targets": [
+        ["css=.gm-style > div:nth-child(1) > div:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='bike_map']/div/div/div/div[3]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div/div/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0eeb5ddd-6aae-42ca-bb34-e7df8c36d241",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-button--default",
+      "targets": [
+        ["css=.van-button--default", "css:finder"],
+        ["xpath=//div[@id='this_page']/div[3]/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Confirm')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b95ae1df-27cc-4e5d-ae2b-bffba3a39cdd",
+      "comment": "",
+      "command": "type",
+      "target": "css=.van-uploader__input",
+      "targets": [],
+      "value": "C:\\fakepath\\1.jpg"
+    }, {
+      "id": "582880b6-b540-4228-9340-75375daab17b",
+      "comment": "",
+      "command": "type",
+      "target": "css=.van-uploader__input",
+      "targets": [],
+      "value": "C:\\fakepath\\2.jpg"
+    }, {
+      "id": "0c95f475-46bf-4d50-95b6-dd61bbc02ea8",
+      "comment": "",
+      "command": "type",
+      "target": "css=.van-uploader__input",
+      "targets": [],
+      "value": "C:\\fakepath\\3.jpg"
+    }, {
+      "id": "cbac3644-9722-4adc-b3a6-8ad6121a7964",
+      "comment": "",
+      "command": "type",
+      "target": "css=.van-uploader__input",
+      "targets": [],
+      "value": "C:\\fakepath\\4.jpg"
+    }, {
+      "id": "9bdf25a1-18bf-4e42-a552-f21559f21a8f",
+      "comment": "",
+      "command": "type",
+      "target": "css=.van-uploader__input",
+      "targets": [],
+      "value": "C:\\fakepath\\5.jpg"
+    }, {
+      "id": "3c41dde5-8476-4902-98f8-a3a44831e869",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.van-uploader__input",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "358019cf-0f55-4b1c-9d9d-0cbcb4724d66",
+      "comment": "",
+      "command": "type",
+      "target": "css=.van-uploader__input",
+      "targets": [],
+      "value": "C:\\fakepath\\6.jpg"
+    }, {
+      "id": "c98129be-a149-43f6-8ae7-84da07b98a8a",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=.van-uploader__input",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5e552b58-0880-4cd9-8f4b-aa3badb3900d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-cell:nth-child(2) .van-field__control",
+      "targets": [
+        ["css=.van-cell:nth-child(2) .van-field__control", "css:finder"],
+        ["xpath=//textarea[@name='description']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[2]/div[2]/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "9cfe1059-b94b-4feb-b4f2-6ba078cf656f",
+    "name": "5. Upload an advertisement without picture",
+    "commands": [{
+      "id": "f8427389-cc9d-4ac7-93e5-ca44e3339a14",
+      "comment": "",
+      "command": "open",
+      "target": "http://bike.kaka888.net/user/bike/add",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ca0f91d7-ecbc-4714-b027-4706bdc09c4e",
+      "comment": "",
+      "command": "click",
+      "target": "name=title",
+      "targets": [
+        ["name=title", "name"],
+        ["css=.van-cell:nth-child(1) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='title']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f47f57c3-c83b-4700-8c90-8ba16ee32e3e",
+      "comment": "",
+      "command": "type",
+      "target": "name=title",
+      "targets": [
+        ["name=title", "name"],
+        ["css=.van-cell:nth-child(1) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='title']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "a"
+    }, {
+      "id": "f16aea36-47c8-461f-bcfb-4b5f677f9d5a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-cell:nth-child(2) .van-field__control",
+      "targets": [
+        ["css=.van-cell:nth-child(2) .van-field__control", "css:finder"],
+        ["xpath=//textarea[@name='description']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[2]/div[2]/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ae62334c-3d06-41c7-999a-bf4241d68e29",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-cell:nth-child(2) .van-field__control",
+      "targets": [
+        ["css=.van-cell:nth-child(2) .van-field__control", "css:finder"],
+        ["xpath=//textarea[@name='description']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[2]/div[2]/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f0d29da8-99da-464d-8cc6-22a4643b6247",
+      "comment": "",
+      "command": "type",
+      "target": "css=.van-cell:nth-child(2) .van-field__control",
+      "targets": [
+        ["css=.van-cell:nth-child(2) .van-field__control", "css:finder"],
+        ["xpath=//textarea[@name='description']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[2]/div[2]/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "b"
+    }, {
+      "id": "d9b6107a-de9d-4dcb-af18-618f72301935",
+      "comment": "",
+      "command": "click",
+      "target": "name=deposit",
+      "targets": [
+        ["name=deposit", "name"],
+        ["css=.van-cell:nth-child(3) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='deposit']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[3]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "39f2c083-70c5-4d77-8ec2-83fd0f84f8b0",
+      "comment": "",
+      "command": "type",
+      "target": "name=deposit",
+      "targets": [
+        ["name=deposit", "name"],
+        ["css=.van-cell:nth-child(3) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='deposit']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[3]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "32"
+    }, {
+      "id": "1d63e8c6-d2de-46f9-b960-3cd97f99f7bb",
+      "comment": "",
+      "command": "click",
+      "target": "name=price",
+      "targets": [
+        ["name=price", "name"],
+        ["css=.van-cell:nth-child(4) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='price']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[4]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "79196c24-ac56-45d4-87cb-c8229075eb2b",
+      "comment": "",
+      "command": "type",
+      "target": "name=price",
+      "targets": [
+        ["name=price", "name"],
+        ["css=.van-cell:nth-child(4) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='price']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[4]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "13"
+    }, {
+      "id": "2eb337ee-c83a-49d6-b5c2-966c897942ea",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-cell__value--alone",
+      "targets": [
+        ["css=.van-cell__value--alone", "css:finder"],
+        ["xpath=//div[@id='this_page']/form/div[5]/div", "xpath:idRelative"],
+        ["xpath=//div[5]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "24abb59c-3b74-4ea5-bbe3-b86dfb3c5b21",
+      "comment": "",
+      "command": "click",
+      "target": "css=.gm-style > div:nth-child(1) > div:nth-child(3)",
+      "targets": [
+        ["css=.gm-style > div:nth-child(1) > div:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='bike_map']/div/div/div/div[3]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div/div/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "34ff70cb-a7c8-42ec-b7e3-996effd51fa1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-button--default",
+      "targets": [
+        ["css=.van-button--default", "css:finder"],
+        ["xpath=//div[@id='this_page']/div[3]/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Confirm')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "60a29b58-32bd-45d5-8184-c67da0ff021b",
+    "name": "6. Create a new bike from the map",
+    "commands": [{
+      "id": "299aca4f-fe03-4956-b4e3-fb07d0c00127",
+      "comment": "",
+      "command": "open",
+      "target": "http://bike.kaka888.net/user/main/bikes",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0c9c00f8-d39c-44db-8f03-f74864f1c938",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0f17e147-f7d7-42a7-bed4-1da038cc1eaa",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-icon-add-o",
+      "targets": [
+        ["css=.van-icon-add-o", "css:finder"],
+        ["xpath=//div[@id='title']/div/div[2]/i", "xpath:idRelative"],
+        ["xpath=//i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8d3b8355-9893-426a-a369-69cf87292dc3",
+      "comment": "",
+      "command": "click",
+      "target": "name=title",
+      "targets": [
+        ["name=title", "name"],
+        ["css=.van-cell:nth-child(1) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='title']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d50814d4-398c-407b-abdf-8019935bd843",
+      "comment": "",
+      "command": "type",
+      "target": "name=title",
+      "targets": [
+        ["name=title", "name"],
+        ["css=.van-cell:nth-child(1) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='title']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "f"
+    }, {
+      "id": "e87df9ae-7518-4c11-99b6-2d1ec6bf6f72",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-cell:nth-child(2) .van-field__control",
+      "targets": [
+        ["css=.van-cell:nth-child(2) .van-field__control", "css:finder"],
+        ["xpath=//textarea[@name='description']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[2]/div[2]/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "774414ba-4d5e-4c6c-9105-f66a2bf869f5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-cell:nth-child(2) .van-field__control",
+      "targets": [
+        ["css=.van-cell:nth-child(2) .van-field__control", "css:finder"],
+        ["xpath=//textarea[@name='description']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[2]/div[2]/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1f6604fa-6e79-4a19-80b8-588ee0dfbfae",
+      "comment": "",
+      "command": "type",
+      "target": "css=.van-cell:nth-child(2) .van-field__control",
+      "targets": [
+        ["css=.van-cell:nth-child(2) .van-field__control", "css:finder"],
+        ["xpath=//textarea[@name='description']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[2]/div[2]/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "b"
+    }, {
+      "id": "239f3696-1aed-418d-b426-f9f716b65c47",
+      "comment": "",
+      "command": "click",
+      "target": "name=deposit",
+      "targets": [
+        ["name=deposit", "name"],
+        ["css=.van-cell:nth-child(3) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='deposit']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[3]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "25d4b44d-2515-4b72-812c-b74270952a43",
+      "comment": "",
+      "command": "type",
+      "target": "name=deposit",
+      "targets": [
+        ["name=deposit", "name"],
+        ["css=.van-cell:nth-child(3) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='deposit']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[3]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "332"
+    }, {
+      "id": "70396f8e-e840-4c87-9d79-4309c0e46fe9",
+      "comment": "",
+      "command": "click",
+      "target": "name=price",
+      "targets": [
+        ["name=price", "name"],
+        ["css=.van-cell:nth-child(4) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='price']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[4]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "58ddec82-ea1e-4c26-b1bc-47f4b0e218ea",
+      "comment": "",
+      "command": "type",
+      "target": "name=price",
+      "targets": [
+        ["name=price", "name"],
+        ["css=.van-cell:nth-child(4) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='price']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[4]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "14"
+    }, {
+      "id": "6142394d-9ec6-4c40-a927-b358a64f60e1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-cell__value--alone",
+      "targets": [
+        ["css=.van-cell__value--alone", "css:finder"],
+        ["xpath=//div[@id='this_page']/form/div[5]/div", "xpath:idRelative"],
+        ["xpath=//div[5]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4fd98cf9-1e6a-409d-8b04-da43cc3abafa",
+      "comment": "",
+      "command": "click",
+      "target": "css=.dismissButton",
+      "targets": [
+        ["css=.dismissButton", "css:finder"],
+        ["xpath=//div[@id='bike_map']/div[2]/table/tr/td[2]/button", "xpath:idRelative"],
+        ["xpath=//td[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'확인')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cb438c6a-5e88-45e2-8c3a-e89ca5197a10",
+      "comment": "",
+      "command": "click",
+      "target": "css=.gm-style > div:nth-child(1) > div:nth-child(3)",
+      "targets": [
+        ["css=.gm-style > div:nth-child(1) > div:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='bike_map']/div/div/div/div[3]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div/div/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "60d02202-4800-42c9-8599-e0d8a2040dd3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-button--default",
+      "targets": [
+        ["css=.van-button--default", "css:finder"],
+        ["xpath=//div[@id='this_page']/div[3]/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Confirm')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a38039f2-d8b2-470d-adf8-d9b43a025fd2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-button--info",
+      "targets": [
+        ["css=.van-button--info", "css:finder"],
+        ["xpath=//button[@type='onSubmit']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[7]/button", "xpath:idRelative"],
+        ["xpath=//form/div[7]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Submit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "966c32d1-231b-4877-ba28-beb91addf60e",
+    "name": "6. Create a new bike with photo from the map",
+    "commands": [{
+      "id": "f0643cab-9a7d-4127-a62e-9ac3590c179b",
+      "comment": "",
+      "command": "open",
+      "target": "http://bike.kaka888.net/user/main/bikes",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e1b82df9-2faf-4a3e-a0b0-f66761ced048",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fec3f688-da21-4866-8e7b-73d04e470764",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-icon-add-o",
+      "targets": [
+        ["css=.van-icon-add-o", "css:finder"],
+        ["xpath=//div[@id='title']/div/div[2]/i", "xpath:idRelative"],
+        ["xpath=//i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d592c930-7959-4d38-b8c7-fd8af6d4df1d",
+      "comment": "",
+      "command": "click",
+      "target": "name=title",
+      "targets": [
+        ["name=title", "name"],
+        ["css=.van-cell:nth-child(1) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='title']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "31d4eeea-cf6e-4904-a844-cf766efa82cb",
+      "comment": "",
+      "command": "type",
+      "target": "name=title",
+      "targets": [
+        ["name=title", "name"],
+        ["css=.van-cell:nth-child(1) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='title']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "new bike"
+    }, {
+      "id": "234530bc-6fd4-44a4-bc70-1b2d65d9ad28",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-cell:nth-child(2) .van-field__control",
+      "targets": [
+        ["css=.van-cell:nth-child(2) .van-field__control", "css:finder"],
+        ["xpath=//textarea[@name='description']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[2]/div[2]/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "64e85297-d1e5-4e34-9ff1-c0ee63f9fb55",
+      "comment": "",
+      "command": "type",
+      "target": "css=.van-cell:nth-child(2) .van-field__control",
+      "targets": [
+        ["css=.van-cell:nth-child(2) .van-field__control", "css:finder"],
+        ["xpath=//textarea[@name='description']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[2]/div[2]/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "af"
+    }, {
+      "id": "d160588c-410e-4d2c-8d30-2c19b41e2d67",
+      "comment": "",
+      "command": "click",
+      "target": "name=deposit",
+      "targets": [
+        ["name=deposit", "name"],
+        ["css=.van-cell:nth-child(3) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='deposit']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[3]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "65e583f1-bb89-4794-bfae-1a5ae52ef1f5",
+      "comment": "",
+      "command": "type",
+      "target": "name=deposit",
+      "targets": [
+        ["name=deposit", "name"],
+        ["css=.van-cell:nth-child(3) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='deposit']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[3]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "15152"
+    }, {
+      "id": "9e1723f2-5516-4a08-9a93-1c2326c50527",
+      "comment": "",
+      "command": "click",
+      "target": "name=price",
+      "targets": [
+        ["name=price", "name"],
+        ["css=.van-cell:nth-child(4) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='price']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[4]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b43f0531-c6a1-4f40-b545-9c14b57fbefd",
+      "comment": "",
+      "command": "type",
+      "target": "name=price",
+      "targets": [
+        ["name=price", "name"],
+        ["css=.van-cell:nth-child(4) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='price']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[4]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "22"
+    }, {
+      "id": "f34ad164-0b64-4781-9710-0c5342b1a040",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-cell:nth-child(4) > .van-cell__title",
+      "targets": [
+        ["css=.van-cell:nth-child(4) > .van-cell__title", "css:finder"],
+        ["xpath=//div[@id='this_page']/form/div[4]/div", "xpath:idRelative"],
+        ["xpath=//div[4]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "db4ee080-8b91-4751-9530-a6f8e17fbce2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-cell__value--alone",
+      "targets": [
+        ["css=.van-cell__value--alone", "css:finder"],
+        ["xpath=//div[@id='this_page']/form/div[5]/div", "xpath:idRelative"],
+        ["xpath=//div[5]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d318daf4-fe60-423e-9da5-033edd4b9a72",
+      "comment": "",
+      "command": "click",
+      "target": "css=.dismissButton",
+      "targets": [
+        ["css=.dismissButton", "css:finder"],
+        ["xpath=//div[@id='bike_map']/div[2]/table/tr/td[2]/button", "xpath:idRelative"],
+        ["xpath=//td[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'확인')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "abd831a6-c8a0-45ab-9801-1ce8630725bb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.gm-style > div:nth-child(1) > div:nth-child(3)",
+      "targets": [
+        ["css=.gm-style > div:nth-child(1) > div:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='bike_map']/div/div/div/div[3]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div/div/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b73ca8e6-5c6f-4f59-b657-5101b14c4c8f",
+      "comment": "",
+      "command": "type",
+      "target": "css=.van-uploader__input",
+      "targets": [],
+      "value": "C:\\fakepath\\1.jpg"
+    }, {
+      "id": "91f6f6a8-a3eb-4d55-8a15-662899b33c95",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-button--default",
+      "targets": [
+        ["css=.van-button--default", "css:finder"],
+        ["xpath=//div[@id='this_page']/div[3]/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Confirm')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a949dffe-1a78-4819-931a-d0ad98ada4e2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-button--info",
+      "targets": [
+        ["css=.van-button--info", "css:finder"],
+        ["xpath=//button[@type='onSubmit']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[7]/button", "xpath:idRelative"],
+        ["xpath=//form/div[7]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Submit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "810a5bd5-d6e2-44f1-862c-82ee04ad018d",
+    "name": "6. Checking short information in the order list",
+    "commands": [{
+      "id": "616e9b03-5efc-4d34-b78e-27bac23f2047",
+      "comment": "",
+      "command": "open",
+      "target": "http://bike.kaka888.net/user/main/bikes",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8b7c5d96-0447-4f5c-be39-8a8a03dab482",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "10e5b97b-5bab-41d7-b6ce-0ea35eec3d33",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-tabbar-item:nth-child(2)",
+      "targets": [
+        ["css=.van-tabbar-item:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='main_tab_view']/div[2]/div[2]", "xpath:idRelative"],
+        ["xpath=//body/div/div/div[2]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e9b89b11-24c0-47a8-9c94-fff8fe715eaa",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-tab:nth-child(2) > .van-tab__text",
+      "targets": [
+        ["css=.van-tab:nth-child(2) > .van-tab__text", "css:finder"],
+        ["xpath=//div[@id='this_page']/div[2]/div/div/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Rented out')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "a1922351-886f-4798-bef2-02e17a526f7e",
+    "name": "6. Check if photo uploaded shows correct in the order list",
+    "commands": [{
+      "id": "1d48d3c3-d799-4b22-ae3d-4ccd0c9a2e15",
+      "comment": "",
+      "command": "open",
+      "target": "http://bike.kaka888.net/user/main/bikes",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0cb2328c-2125-41af-95e4-52ba021dabe9",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "93a9aac0-299d-4db2-a48a-6e0baa1eef53",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-tabbar-item:nth-child(2) > .van-tabbar-item__text",
+      "targets": [
+        ["css=.van-tabbar-item:nth-child(2) > .van-tabbar-item__text", "css:finder"],
+        ["xpath=//div[@id='main_tab_view']/div[2]/div[2]/div[2]", "xpath:idRelative"],
+        ["xpath=//body/div/div/div[2]/div[2]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e0753a26-f6f1-49e9-a8c8-1a6be28f2803",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-tab:nth-child(2) > .van-tab__text",
+      "targets": [
+        ["css=.van-tab:nth-child(2) > .van-tab__text", "css:finder"],
+        ["xpath=//div[@id='this_page']/div[2]/div/div/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Rented out')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "f7df2116-cd8d-4af9-b40d-2157bc6663d3",
+    "name": "6. Access the pages not index without any session",
+    "commands": [{
+      "id": "bdf16cd8-c07e-48da-8ce9-784814c2a6df",
+      "comment": "",
+      "command": "runScript",
+      "target": "document.cookie = \"appname='http://bike.kaka888.net' expires=Thu, 01 Jan 1970 00:00:01 GMT;\"",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d3ca6be0-b3b0-4c47-ba6c-050bb3aadf86",
+      "comment": "",
+      "command": "open",
+      "target": "http://bike.kaka888.net/",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "c3ca5ed8-4d15-4ba4-9fd7-f2c8ec7a29db",
+    "name": "5. Upload photos for a bike",
+    "commands": [{
+      "id": "6b0f4ec4-5cf6-40d3-92d4-2706fcf4b8b6",
+      "comment": "",
+      "command": "open",
+      "target": "http://bike.kaka888.net/user/bike/add",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8ab98023-6602-492d-bd83-f4ccea99a38a",
+      "comment": "",
+      "command": "click",
+      "target": "name=title",
+      "targets": [
+        ["name=title", "name"],
+        ["css=.van-cell:nth-child(1) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='title']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "787d47ba-d9b0-4626-9f5f-10cee5228f54",
+      "comment": "",
+      "command": "type",
+      "target": "name=title",
+      "targets": [
+        ["name=title", "name"],
+        ["css=.van-cell:nth-child(1) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='title']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "a"
+    }, {
+      "id": "a70d0a04-3670-4445-ae7a-bae82bf0494b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-cell:nth-child(2) .van-field__control",
+      "targets": [
+        ["css=.van-cell:nth-child(2) .van-field__control", "css:finder"],
+        ["xpath=//textarea[@name='description']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[2]/div[2]/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "080d92ca-97f6-4f21-b30e-b53646895013",
+      "comment": "",
+      "command": "type",
+      "target": "css=.van-cell:nth-child(2) .van-field__control",
+      "targets": [
+        ["css=.van-cell:nth-child(2) .van-field__control", "css:finder"],
+        ["xpath=//textarea[@name='description']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[2]/div[2]/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "b"
+    }, {
+      "id": "7934e342-6621-4e08-bd1e-2e92f7caaf60",
+      "comment": "",
+      "command": "click",
+      "target": "name=deposit",
+      "targets": [
+        ["name=deposit", "name"],
+        ["css=.van-cell:nth-child(3) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='deposit']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[3]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d67edd6a-8591-420a-993f-400aa3c2bead",
+      "comment": "",
+      "command": "type",
+      "target": "name=deposit",
+      "targets": [
+        ["name=deposit", "name"],
+        ["css=.van-cell:nth-child(3) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='deposit']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[3]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "33"
+    }, {
+      "id": "de50f138-0078-46ca-a556-fa40af4406d2",
+      "comment": "",
+      "command": "click",
+      "target": "name=price",
+      "targets": [
+        ["name=price", "name"],
+        ["css=.van-cell:nth-child(4) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='price']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[4]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e9079e85-c6b6-4c31-8d02-1855b51a4e89",
+      "comment": "",
+      "command": "type",
+      "target": "name=price",
+      "targets": [
+        ["name=price", "name"],
+        ["css=.van-cell:nth-child(4) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='price']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[4]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "22"
+    }, {
+      "id": "3efba28d-a1ad-4840-bf5c-a4b84cca25c4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-cell__value--alone",
+      "targets": [
+        ["css=.van-cell__value--alone", "css:finder"],
+        ["xpath=//div[@id='this_page']/form/div[5]/div", "xpath:idRelative"],
+        ["xpath=//div[5]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "be6a8fc2-2c29-46e0-99aa-61d62534c69f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.dismissButton",
+      "targets": [
+        ["css=.dismissButton", "css:finder"],
+        ["xpath=//div[@id='bike_map']/div[2]/table/tr/td[2]/button", "xpath:idRelative"],
+        ["xpath=//td[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'확인')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "80ed0c50-752f-49f0-a634-5398bac4629f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.gm-style > div:nth-child(1) > div:nth-child(3)",
+      "targets": [
+        ["css=.gm-style > div:nth-child(1) > div:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='bike_map']/div/div/div/div[3]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div/div/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "059059d4-a22e-415e-9ee5-40b1d9d12d6a",
+      "comment": "",
+      "command": "type",
+      "target": "css=.van-uploader__input",
+      "targets": [],
+      "value": "C:\\fakepath\\1.jpg"
+    }, {
+      "id": "ab0dfcbe-d945-4559-8bd2-bcfc004ece55",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-button--default",
+      "targets": [
+        ["css=.van-button--default", "css:finder"],
+        ["xpath=//div[@id='this_page']/div[3]/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Confirm')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a535754f-5edd-4c06-990b-1b5d9c25e233",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-button--info",
+      "targets": [
+        ["css=.van-button--info", "css:finder"],
+        ["xpath=//button[@type='onSubmit']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[7]/button", "xpath:idRelative"],
+        ["xpath=//form/div[7]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Submit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "4183f472-ec69-43e4-aa01-61c8c6fd9115",
+    "name": "6. Create a bike without title",
+    "commands": [{
+      "id": "31757098-716c-4170-9a9f-107ac3a96c8e",
+      "comment": "",
+      "command": "open",
+      "target": "http://bike.kaka888.net/user/bike/add",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "13b8e893-d8ea-464a-9cea-d94361c10f80",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-cell:nth-child(2) .van-field__control",
+      "targets": [
+        ["css=.van-cell:nth-child(2) .van-field__control", "css:finder"],
+        ["xpath=//textarea[@name='description']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[2]/div[2]/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a94a8f10-289e-4190-88f1-a1c216854392",
+      "comment": "",
+      "command": "type",
+      "target": "css=.van-cell:nth-child(2) .van-field__control",
+      "targets": [
+        ["css=.van-cell:nth-child(2) .van-field__control", "css:finder"],
+        ["xpath=//textarea[@name='description']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[2]/div[2]/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "d9a0d701-6aa6-4205-9ef6-c55384b6b71a",
+      "comment": "",
+      "command": "click",
+      "target": "name=deposit",
+      "targets": [
+        ["name=deposit", "name"],
+        ["css=.van-cell:nth-child(3) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='deposit']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[3]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "72ad343c-c676-46f3-be9a-89b928d44fdc",
+      "comment": "",
+      "command": "type",
+      "target": "name=deposit",
+      "targets": [
+        ["name=deposit", "name"],
+        ["css=.van-cell:nth-child(3) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='deposit']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[3]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "33"
+    }, {
+      "id": "53ec09db-737c-4be1-a599-53fce428c424",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-cell:nth-child(4)",
+      "targets": [
+        ["css=.van-cell:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='this_page']/form/div[4]", "xpath:idRelative"],
+        ["xpath=//div[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cf0ba1a3-2488-44f3-8a33-5f65b68e21d3",
+      "comment": "",
+      "command": "click",
+      "target": "name=price",
+      "targets": [
+        ["name=price", "name"],
+        ["css=.van-cell:nth-child(4) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='price']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[4]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "27764065-94e0-46ac-aa56-722f905bbbb0",
+      "comment": "",
+      "command": "type",
+      "target": "name=price",
+      "targets": [
+        ["name=price", "name"],
+        ["css=.van-cell:nth-child(4) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='price']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[4]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "22"
+    }, {
+      "id": "a07dfa32-0567-471a-b83c-bacfe33748cf",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-cell--clickable",
+      "targets": [
+        ["css=.van-cell--clickable", "css:finder"],
+        ["xpath=//div[@id='this_page']/form/div[5]", "xpath:idRelative"],
+        ["xpath=//div[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "aa0233fb-e10c-4ca4-89c2-064b88e8b1d6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.dismissButton",
+      "targets": [
+        ["css=.dismissButton", "css:finder"],
+        ["xpath=//div[@id='bike_map']/div[2]/table/tr/td[2]/button", "xpath:idRelative"],
+        ["xpath=//td[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'확인')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1e884077-3855-421d-8ea0-92c44a1c27c6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-button--default",
+      "targets": [
+        ["css=.van-button--default", "css:finder"],
+        ["xpath=//div[@id='this_page']/div[3]/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Confirm')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4b8d32c4-1b3a-4780-bf58-65cf56d71eb7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-button--info",
+      "targets": [
+        ["css=.van-button--info", "css:finder"],
+        ["xpath=//button[@type='onSubmit']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[7]/button", "xpath:idRelative"],
+        ["xpath=//form/div[7]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Submit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fe40dde4-cb35-4bb9-bff6-e94df231b32f",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.van-field__error-message",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "96bc8f46-27b1-4460-a18f-b7cee2f2157c",
+    "name": "6. Create a bike without description",
+    "commands": [{
+      "id": "7242df55-d1ff-468e-bd50-8c57428d9c1d",
+      "comment": "",
+      "command": "open",
+      "target": "http://bike.kaka888.net/user/bike/add",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4eb282f7-390a-498a-89ed-2a37765b6962",
+      "comment": "",
+      "command": "click",
+      "target": "name=title",
+      "targets": [
+        ["name=title", "name"],
+        ["css=.van-cell:nth-child(1) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='title']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4ace2ddc-67ca-4464-9151-138c34efac0c",
+      "comment": "",
+      "command": "type",
+      "target": "name=title",
+      "targets": [
+        ["name=title", "name"],
+        ["css=.van-cell:nth-child(1) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='title']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "ABC"
+    }, {
+      "id": "49c9b0f4-b25a-4d4c-a439-31f1b5adf96a",
+      "comment": "",
+      "command": "click",
+      "target": "name=deposit",
+      "targets": [
+        ["name=deposit", "name"],
+        ["css=.van-cell:nth-child(3) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='deposit']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[3]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bab2c654-6248-4274-93a4-cd1ceab59eb0",
+      "comment": "",
+      "command": "type",
+      "target": "name=deposit",
+      "targets": [
+        ["name=deposit", "name"],
+        ["css=.van-cell:nth-child(3) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='deposit']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[3]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "55"
+    }, {
+      "id": "9dff3c32-4028-40d9-8643-874e306ed664",
+      "comment": "",
+      "command": "click",
+      "target": "name=price",
+      "targets": [
+        ["name=price", "name"],
+        ["css=.van-cell:nth-child(4) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='price']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[4]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c2600eb0-1c4c-4790-8019-620c46d8cbb9",
+      "comment": "",
+      "command": "type",
+      "target": "name=price",
+      "targets": [
+        ["name=price", "name"],
+        ["css=.van-cell:nth-child(4) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='price']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[4]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "44"
+    }, {
+      "id": "9f35f3b6-6456-491d-a9f8-d9443d6c80db",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-cell__value--alone",
+      "targets": [
+        ["css=.van-cell__value--alone", "css:finder"],
+        ["xpath=//div[@id='this_page']/form/div[5]/div", "xpath:idRelative"],
+        ["xpath=//div[5]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3b58fedd-1fa4-4776-9d43-8382149bce7e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.gm-style > div:nth-child(1) > div:nth-child(3)",
+      "targets": [
+        ["css=.gm-style > div:nth-child(1) > div:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='bike_map']/div/div/div/div[3]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div/div/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "29146af0-34de-485a-8e83-6d62eb5f662b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-button--default",
+      "targets": [
+        ["css=.van-button--default", "css:finder"],
+        ["xpath=//div[@id='this_page']/div[3]/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Confirm')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5d888ea8-d774-4bf5-a033-b87ef5f9b3f1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-button--info",
+      "targets": [
+        ["css=.van-button--info", "css:finder"],
+        ["xpath=//button[@type='onSubmit']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[7]/button", "xpath:idRelative"],
+        ["xpath=//form/div[7]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Submit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "79c8385d-85e6-42a9-9bb2-3524fb7892d3",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.van-field__error-message",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "6dd42d5b-df82-4b35-85db-f6504223684e",
+    "name": "6. Create a bike without deposit",
+    "commands": [{
+      "id": "e14d74e8-4a4f-4c4f-8ed8-2f7f6b08eb39",
+      "comment": "",
+      "command": "open",
+      "target": "http://bike.kaka888.net/user/bike/add",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "68a9697e-3978-40bd-a2e5-e36ed7f11dce",
+      "comment": "",
+      "command": "click",
+      "target": "name=title",
+      "targets": [
+        ["name=title", "name"],
+        ["css=.van-cell:nth-child(1) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='title']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "68d2a79b-c668-43be-bbdf-81b5a3b40558",
+      "comment": "",
+      "command": "type",
+      "target": "name=title",
+      "targets": [
+        ["name=title", "name"],
+        ["css=.van-cell:nth-child(1) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='title']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "AB"
+    }, {
+      "id": "40e08ca8-ad6f-4968-974e-448547256e1e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-cell:nth-child(2) .van-field__control",
+      "targets": [
+        ["css=.van-cell:nth-child(2) .van-field__control", "css:finder"],
+        ["xpath=//textarea[@name='description']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[2]/div[2]/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "db991857-6b46-4631-bc2b-a4b2b542b255",
+      "comment": "",
+      "command": "type",
+      "target": "css=.van-field__body:nth-child(3) > .van-field__control",
+      "targets": [
+        ["css=.van-field__body:nth-child(3) > .van-field__control", "css:finder"],
+        ["xpath=//textarea[@name='description']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[2]/div[2]/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "CC"
+    }, {
+      "id": "ab4a6e37-b92b-4177-83e2-7e87365ae0b3",
+      "comment": "",
+      "command": "click",
+      "target": "name=price",
+      "targets": [
+        ["name=price", "name"],
+        ["css=.van-cell:nth-child(4) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='price']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[4]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "24df4ecd-91c9-45ee-833e-dd8d0609026a",
+      "comment": "",
+      "command": "type",
+      "target": "name=price",
+      "targets": [
+        ["name=price", "name"],
+        ["css=.van-cell:nth-child(4) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='price']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[4]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "22"
+    }, {
+      "id": "69035f8e-0946-4436-b8a8-13f3575f0e87",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-cell__value--alone",
+      "targets": [
+        ["css=.van-cell__value--alone", "css:finder"],
+        ["xpath=//div[@id='this_page']/form/div[5]/div", "xpath:idRelative"],
+        ["xpath=//div[5]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4a80a741-9e2b-482e-8330-b00564046b6b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.gm-style > div:nth-child(1) > div:nth-child(3)",
+      "targets": [
+        ["css=.gm-style > div:nth-child(1) > div:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='bike_map']/div/div/div/div[3]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div/div/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fbd705e6-9a58-4933-9d82-09b6473a935b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-button--default",
+      "targets": [
+        ["css=.van-button--default", "css:finder"],
+        ["xpath=//div[@id='this_page']/div[3]/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Confirm')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "07fd8aa7-e61f-4f06-8df5-33c7d77bd512",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-button--info",
+      "targets": [
+        ["css=.van-button--info", "css:finder"],
+        ["xpath=//button[@type='onSubmit']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[7]/button", "xpath:idRelative"],
+        ["xpath=//form/div[7]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Submit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "003fe0b0-62b7-4a17-a970-685510eafff4",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.van-field__error-message",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "0cb06426-a6c7-42e1-9cec-3a31503f8c9c",
+    "name": "6. Create a bike without price",
+    "commands": [{
+      "id": "755e83d1-ad62-4f9e-b1d6-36edd9bcc2e2",
+      "comment": "",
+      "command": "open",
+      "target": "http://bike.kaka888.net/user/bike/add",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3e2e7c7a-9eed-4abb-bf92-18e06884c816",
+      "comment": "",
+      "command": "click",
+      "target": "name=title",
+      "targets": [
+        ["name=title", "name"],
+        ["css=.van-cell:nth-child(1) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='title']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "50de0345-1dfe-4181-babb-32a3a67e5b22",
+      "comment": "",
+      "command": "type",
+      "target": "name=title",
+      "targets": [
+        ["name=title", "name"],
+        ["css=.van-cell:nth-child(1) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='title']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "a"
+    }, {
+      "id": "0288688a-f58d-428d-a268-60a05023d89c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-cell:nth-child(2) .van-field__control",
+      "targets": [
+        ["css=.van-cell:nth-child(2) .van-field__control", "css:finder"],
+        ["xpath=//textarea[@name='description']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[2]/div[2]/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1045ba3b-6b60-4f13-ba53-a5d9e24cefe0",
+      "comment": "",
+      "command": "type",
+      "target": "css=.van-field__body:nth-child(3) > .van-field__control",
+      "targets": [
+        ["css=.van-field__body:nth-child(3) > .van-field__control", "css:finder"],
+        ["xpath=//textarea[@name='description']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[2]/div[2]/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Hello"
+    }, {
+      "id": "87319824-f989-43bd-b8c1-659e11b9a7d6",
+      "comment": "",
+      "command": "click",
+      "target": "name=deposit",
+      "targets": [
+        ["name=deposit", "name"],
+        ["css=.van-cell:nth-child(3) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='deposit']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[3]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9f14fc44-816b-493a-b6ce-30d2ba352035",
+      "comment": "",
+      "command": "type",
+      "target": "name=deposit",
+      "targets": [
+        ["name=deposit", "name"],
+        ["css=.van-cell:nth-child(3) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='deposit']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[3]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "333"
+    }, {
+      "id": "3a757cf2-3c3e-4d30-b29a-3002d8e75118",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-cell__value--alone",
+      "targets": [
+        ["css=.van-cell__value--alone", "css:finder"],
+        ["xpath=//div[@id='this_page']/form/div[5]/div", "xpath:idRelative"],
+        ["xpath=//div[5]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "69abf58a-5873-46e7-90fd-fdc5f72bf6a1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.gm-style > div:nth-child(1) > div:nth-child(3)",
+      "targets": [
+        ["css=.gm-style > div:nth-child(1) > div:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='bike_map']/div/div/div/div[3]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div/div/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5d76a44c-6e33-4022-9292-2f96881d7179",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-button--default",
+      "targets": [
+        ["css=.van-button--default", "css:finder"],
+        ["xpath=//div[@id='this_page']/div[3]/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Confirm')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3eb5d5d3-3c0e-4864-9f01-2236fc1c0103",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-button--info",
+      "targets": [
+        ["css=.van-button--info", "css:finder"],
+        ["xpath=//button[@type='onSubmit']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[7]/button", "xpath:idRelative"],
+        ["xpath=//form/div[7]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Submit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b0ab2d35-1d75-429a-808f-4af986d99835",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.van-field__error-message",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "4b5be759-ea1c-4fa7-bbc1-a33dc603e3f0",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["747b0c11-f9ee-4980-915c-5a1c41a078da"]
+  }],
+  "urls": ["http://bike.kaka888.net/user/bike/add", "http://bike.kaka888.net/user/", "http://bike.kaka888.net/user/main/bikes", "http://bike.kaka888.net/"],
+  "plugins": []
+}
