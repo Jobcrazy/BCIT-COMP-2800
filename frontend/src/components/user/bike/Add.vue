@@ -180,11 +180,6 @@ export default {
 
     onSubmit(values) {
       let self = this;
-
-      if (this.dataToSubmit.photos == null) {
-        this.dataToSubmit.photos = [];
-      }
-
       this.$axios({
         method: "POST",
         url: "/api/bike/add",
