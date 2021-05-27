@@ -4127,6 +4127,505 @@
       ],
       "value": ""
     }]
+  }, {
+    "id": "04533039-2952-467d-82cc-c622fe06636e",
+    "name": "11.field_filled_correctly",
+    "commands": [{
+      "id": "b5289c5c-25d5-4b99-9dd4-6d291d345d45",
+      "comment": "",
+      "command": "open",
+      "target": "/user/main/bikes",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6c44590e-fc3a-46aa-9beb-efcadc80b1d0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "960x1055",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "07381a60-f151-4adf-8414-c017ca510cb6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.dismissButton",
+      "targets": [
+        ["css=.dismissButton", "css:finder"],
+        ["xpath=//div[@id='bike_map']/div[2]/table/tr/td[2]/button", "xpath:idRelative"],
+        ["xpath=//td[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'확인')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "42e6a2be-0f04-4dff-af16-8b89c2594366",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(3) > div:nth-child(3) > img",
+      "targets": [
+        ["css=div:nth-child(3) > div:nth-child(4) > img", "css:finder"],
+        ["xpath=//img[contains(@src,'https://maps.gstatic.com/mapfiles/transparent.png')]", "xpath:img"],
+        ["xpath=//div[@id='bike_map']/div/div/div/div[3]/div/div[3]/div[4]/img", "xpath:idRelative"],
+        ["xpath=//div[3]/div[4]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "77b6355c-6b50-4d1c-8271-11a9b003b699",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a9f98843-eff5-4f7d-9f4b-d9cb3a05474f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-button",
+      "targets": [
+        ["css=.van-button", "css:finder"],
+        ["xpath=//div[@id='rent_bar']/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Rent')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4a601c1b-34e2-46f8-91fb-7e3f534fd573",
+      "comment": "",
+      "command": "click",
+      "target": "name=number",
+      "targets": [
+        ["name=number", "name"],
+        ["css=.van-cell:nth-child(2) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='number']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[2]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8898efa2-e317-4592-9003-24e932771234",
+      "comment": "",
+      "command": "type",
+      "target": "name=number",
+      "targets": [
+        ["name=number", "name"],
+        ["css=.van-cell:nth-child(2) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='number']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[2]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "8c86c64c-a30d-4ee9-add1-e07d429945a3",
+      "comment": "",
+      "command": "click",
+      "target": "name=cvc",
+      "targets": [
+        ["name=cvc", "name"],
+        ["css=.van-cell:nth-child(4) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='cvc']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[4]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "33edf431-c97b-4ee2-87ae-95c1c5b326c9",
+      "comment": "",
+      "command": "click",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.van-cell:nth-child(3) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[3]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "adcfb133-184c-4786-9369-e975995899c7",
+      "comment": "",
+      "command": "type",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.van-cell:nth-child(3) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[3]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "abc"
+    }, {
+      "id": "19f355ef-df2a-47d8-80de-6e7cdc8d0f12",
+      "comment": "",
+      "command": "click",
+      "target": "name=cvc",
+      "targets": [
+        ["name=cvc", "name"],
+        ["css=.van-field--error .van-field__control", "css:finder"],
+        ["xpath=//input[@name='cvc']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[4]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9a6635d0-3e06-4c60-9a90-d98844d1c5f6",
+      "comment": "",
+      "command": "type",
+      "target": "name=cvc",
+      "targets": [
+        ["name=cvc", "name"],
+        ["css=.van-cell:nth-child(4) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='cvc']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[4]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "7af223c2-d07e-4d73-b47d-63e70fee6289",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-button",
+      "targets": [
+        ["css=.van-button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[6]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Pay for Deposit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "95b8530e-faf9-4ff5-9612-59aa5cef7fcb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-card:nth-child(6) .van-image__img",
+      "targets": [
+        ["css=.van-card:nth-child(6) .van-image__img", "css:finder"],
+        ["xpath=(//img[contains(@src,'http://bike.kaka888.net//uploads/bb/8b/bb5a35522432682f5f006ffe5cf8928b.png')])[2]", "xpath:img"],
+        ["xpath=//div[@id='this_page']/div[2]/div[2]/div/div[6]/div/a/div/img", "xpath:idRelative"],
+        ["xpath=//div[6]/div/a/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "9b0be953-79f6-477a-a262-945fd8785f5c",
+    "name": "11.name_field_empty",
+    "commands": [{
+      "id": "47f454cf-a917-434f-8ad5-dcd4eda0b497",
+      "comment": "",
+      "command": "open",
+      "target": "/user/main/bikes",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3ab0f6be-ea19-4601-9eb7-8e5d0c6948dc",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "960x1055",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "be5e4882-149e-4153-9092-f2f981b47b81",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5c9162d7-0285-4dbe-82a3-bb942a6b620f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.dismissButton",
+      "targets": [
+        ["css=.dismissButton", "css:finder"],
+        ["xpath=//div[@id='bike_map']/div[2]/table/tr/td[2]/button", "xpath:idRelative"],
+        ["xpath=//td[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'확인')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "488a7021-e9b4-46cd-9578-afddcace7ccc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.cluster:nth-child(2) span",
+      "targets": [
+        ["css=.cluster:nth-child(2) span", "css:finder"],
+        ["xpath=//div[@id='bike_map']/div/div/div/div[3]/div/div[3]/div[2]/div/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fd55ac6a-088e-4381-86c8-506af81a711e",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(3) > div:nth-child(3) > img",
+      "targets": [
+        ["css=div:nth-child(3) > div:nth-child(3) > img", "css:finder"],
+        ["xpath=//img[contains(@src,'https://maps.gstatic.com/mapfiles/transparent.png')]", "xpath:img"],
+        ["xpath=//div[@id='bike_map']/div/div/div/div[3]/div/div[3]/div[3]/img", "xpath:idRelative"],
+        ["xpath=//div[3]/div[3]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "04b263a5-a62d-453d-8033-14e4ba42d006",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-button",
+      "targets": [
+        ["css=.van-button", "css:finder"],
+        ["xpath=//div[@id='rent_bar']/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Rent')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9f6c8388-98ba-4d97-af76-cab1a0007173",
+      "comment": "",
+      "command": "click",
+      "target": "name=number",
+      "targets": [
+        ["name=number", "name"],
+        ["css=.van-cell:nth-child(2) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='number']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[2]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "15d5153e-a1c6-49ad-861e-78919cb39ae7",
+      "comment": "",
+      "command": "type",
+      "target": "name=number",
+      "targets": [
+        ["name=number", "name"],
+        ["css=.van-cell:nth-child(2) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='number']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[2]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "0f779974-fbca-46db-80a3-4d5713e07b06",
+      "comment": "",
+      "command": "click",
+      "target": "name=cvc",
+      "targets": [
+        ["name=cvc", "name"],
+        ["css=.van-cell:nth-child(4) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='cvc']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[4]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ccf156bd-c3a5-438a-8610-c7cd0108a557",
+      "comment": "",
+      "command": "type",
+      "target": "name=cvc",
+      "targets": [
+        ["name=cvc", "name"],
+        ["css=.van-cell:nth-child(4) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='cvc']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[4]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "4b1d4c5f-fad0-4971-a5fa-c1c90d507ccb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-button",
+      "targets": [
+        ["css=.van-button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[6]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Pay for Deposit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b2275680-6f71-4b2e-a992-42047fe3fce2",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.van-button",
+      "targets": [
+        ["css=.van-button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[6]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Pay for Deposit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "72b06fe4-d00a-44fc-a6e2-c4b44d050912",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.van-button",
+      "targets": [
+        ["css=.van-button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[6]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Pay for Deposit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "a9e621e6-1996-4021-af9c-5fe31c6922dc",
+    "name": "11.card_info_empty",
+    "commands": [{
+      "id": "7272cbc4-4743-44fc-b928-ebab5729276a",
+      "comment": "",
+      "command": "open",
+      "target": "/user/main/bikes",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a2b4beb4-8882-4759-8cd6-8477cb152d27",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "960x1055",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9bfa3149-156a-4ec4-9e46-ce9536de3833",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3ee3a398-f326-4968-a09d-19d17c534bf3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.dismissButton",
+      "targets": [
+        ["css=.dismissButton", "css:finder"],
+        ["xpath=//div[@id='bike_map']/div[2]/table/tr/td[2]/button", "xpath:idRelative"],
+        ["xpath=//td[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'확인')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f2ea06bc-7a3a-423f-929e-b7286b017ed1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.cluster:nth-child(2) span",
+      "targets": [
+        ["css=.cluster:nth-child(2) span", "css:finder"],
+        ["xpath=//div[@id='bike_map']/div/div/div/div[3]/div/div[3]/div[2]/div/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a1831059-d525-4b3e-aa9f-4122bad93526",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(3) > div:nth-child(3) > img",
+      "targets": [
+        ["css=div:nth-child(3) > div:nth-child(3) > img", "css:finder"],
+        ["xpath=//img[contains(@src,'https://maps.gstatic.com/mapfiles/transparent.png')]", "xpath:img"],
+        ["xpath=//div[@id='bike_map']/div/div/div/div[3]/div/div[3]/div[3]/img", "xpath:idRelative"],
+        ["xpath=//div[3]/div[3]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "47a44a37-a9bf-46b0-9bcc-bad36c678d36",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-button",
+      "targets": [
+        ["css=.van-button", "css:finder"],
+        ["xpath=//div[@id='rent_bar']/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Rent')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6d7eebc4-bf36-40b6-b0ea-38fa5d6a2a0b",
+      "comment": "",
+      "command": "click",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.van-cell:nth-child(3) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[3]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "db06b838-37af-4061-8417-0f6130d0fe20",
+      "comment": "",
+      "command": "type",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.van-cell:nth-child(3) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[3]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "hyerim"
+    }, {
+      "id": "9d30f7fc-c6d0-4ac7-b425-c5d1c8f7c0e9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-cell:nth-child(5)",
+      "targets": [
+        ["css=.van-cell:nth-child(5)", "css:finder"],
+        ["xpath=//div[@id='this_page']/form/div[5]", "xpath:idRelative"],
+        ["xpath=//div[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4ee368f9-3a02-482b-9de2-dbdfa1d1dadd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-overlay",
+      "targets": [
+        ["css=.van-overlay", "css:finder"],
+        ["xpath=//div[@id='this_page']/form/div[7]", "xpath:idRelative"],
+        ["xpath=//div[7]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e4cfc531-7d02-4734-8b6a-f5ad7b83aca1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-button",
+      "targets": [
+        ["css=.van-button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[6]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Pay for Deposit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c35abfe6-6b27-4f35-8b35-406e20b12f25",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.van-button",
+      "targets": [
+        ["css=.van-button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[6]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Pay for Deposit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e2c783d6-9b85-44d4-891b-84eabd8b6b4f",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.van-button",
+      "targets": [
+        ["css=.van-button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[6]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Pay for Deposit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "c66ab1c8-b50a-4aad-9182-15d9a040e279",
