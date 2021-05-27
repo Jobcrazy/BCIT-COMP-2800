@@ -1,27 +1,11 @@
 ## Introduction
-
 Backend source code for BCIT COMP 2800 (Downtown Campus Team 8).
 
 ## Develop Environment
-
 - **IDE**: _Webstorm 2018.3.5_
 - **Runtime**: _Node.js 10.19.0_
 
-## Deployment
-
-1. Install and config Node.js (10.19.0 or above)
-2. Launch CLI and run commands below:
-   ```
-   cd /your/path/to/BCIT-COMP-2800/backend/
-   npm install
-   node ./bin/www
-   ```
-3. Launch Chrome and visit: [http://127.0.0.1:3000](http://127.0.0.1:3000)
-
----
-
-## REST API
-
+## RESTful APIs
 ### 1. Login with Google ID
 
 - **URI**: /api/user/login
@@ -82,14 +66,14 @@ Backend source code for BCIT COMP 2800 (Downtown Campus Team 8).
 - **URI**: /api/bike/add
 - **Method**: POST
 
-  | Name | Description | 
-  | ---- | ---- | 
-  | title |  Advertisement title |
-  | description | Advertisement description | 
-  | location.lat | Bike's location latitude | 
-  | location.long | Bike's location longitude| 
-  | deposit | Bike's deposit | 
-  | price | Bike's rental fee |
+  | Name          | Description               |
+  | ------------- | ------------------------- |
+  | title         | Advertisement title       |
+  | description   | Advertisement description |
+  | location.lat  | Bike's location latitude  |
+  | location.long | Bike's location longitude |
+  | deposit       | Bike's deposit            |
+  | price         | Bike's rental fee         |
 
 - **Return Value**
 
@@ -109,19 +93,19 @@ Backend source code for BCIT COMP 2800 (Downtown Campus Team 8).
 - **URI**: /api/bike/find
 - **Method**: POST
 
-| Name | Description | 
-| ---- |---- | 
-| location | Current location | 
-| distance |  Limit distance |
+| Name     | Description      |
+| -------- | ---------------- |
+| location | Current location |
+| distance | Limit distance   |
 
 - **Return Value**
 
-| Name | Description |
-| ---- | ----------- |
-| code | 0: success  |
-| data | See description below | 
-| id  | Post ID |
-| location | Bike Location      |
+| Name     | Description           |
+| -------- | --------------------- |
+| code     | 0: success            |
+| data     | See description below |
+| id       | Post ID               |
+| location | Bike Location         |
 
 ```
 {
@@ -147,14 +131,14 @@ Backend source code for BCIT COMP 2800 (Downtown Campus Team 8).
 
 - **Return Value**
 
-| Name | Description |
-| ---- | ----------- |
-| code | 0: success  |
-| data | See description below | 
-| title  | Advertisement title |
+| Name        | Description               |
+| ----------- | ------------------------- |
+| code        | 0: success                |
+| data        | See description below     |
+| title       | Advertisement title       |
 | description | Advertisement description |
-| photos | Photo IDs |
-| price | Bike Rental Fee |
+| photos      | Photo IDs                 |
+| price       | Bike Rental Fee           |
 
 ```
 {
@@ -175,9 +159,9 @@ Backend source code for BCIT COMP 2800 (Downtown Campus Team 8).
 - **URI**: /api/bike/remove
 - **Method**: POST
 
-| Name | Description | 
-| ---- |---- | 
-| bid | Advertisement ID |
+| Name | Description      |
+| ---- | ---------------- |
+| bid  | Advertisement ID |
 
 - **Return Value**
 
@@ -197,24 +181,24 @@ Backend source code for BCIT COMP 2800 (Downtown Campus Team 8).
 - **URI**: /api/bike/detail
 - **Method**: POST
 
-| Name | Description |
-| ---- | ----------- |
-| bid | Advertisement ID  |
+| Name | Description      |
+| ---- | ---------------- |
+| bid  | Advertisement ID |
 
 - **Return Value**
 
-| Name | Description |
-| ---- | ----------- |
-| code | 0: success  | 
-| data | See description below |
-| title  | Advertisement title |
+| Name        | Description               |
+| ----------- | ------------------------- |
+| code        | 0: success                |
+| data        | See description below     |
+| title       | Advertisement title       |
 | description | Advertisement description |
-| photos | Photo IDs |
-| deposit | Bike Deposit Fee |
-| price | Bike Rental Fee |
-| fname | Full owner's name |
-| head | Owner's Head Image URL |
-| email | Owner's Email |
+| photos      | Photo IDs                 |
+| deposit     | Bike Deposit Fee          |
+| price       | Bike Rental Fee           |
+| fname       | Full owner's name         |
+| head        | Owner's Head Image URL    |
+| email       | Owner's Email             |
 
 ```
 {
@@ -239,9 +223,9 @@ Backend source code for BCIT COMP 2800 (Downtown Campus Team 8).
 - **URI**: /api/bookmark/add
 - **Method**: POST
 
-| Name | Description |
-| ---- | ----------- |
-| bid | Advertisement ID  |
+| Name | Description      |
+| ---- | ---------------- |
+| bid  | Advertisement ID |
 
 - **Return Value**
 
@@ -260,9 +244,9 @@ Backend source code for BCIT COMP 2800 (Downtown Campus Team 8).
 - **URI**: /api/bookmark/remove
 - **Method**: POST
 
-| Name | Description |
-| ---- | ----------- |
-| bid | Advertisement ID  |
+| Name | Description      |
+| ---- | ---------------- |
+| bid  | Advertisement ID |
 
 - **Return Value**
 
@@ -284,15 +268,15 @@ Backend source code for BCIT COMP 2800 (Downtown Campus Team 8).
 
 - **Return Value**
 
-| Name | Description |
-| ---- | ----------- |
-| code | 0: success  |
-| data | See desription below |
-| id | Advertisement ID  |
-| title | Advertisement title  |
-| description | Advertisement description  |
-| photos | Photo IDs  |
-| price | Bike Rental Fee |
+| Name        | Description               |
+| ----------- | ------------------------- |
+| code        | 0: success                |
+| data        | See desription below      |
+| id          | Advertisement ID          |
+| title       | Advertisement title       |
+| description | Advertisement description |
+| photos      | Photo IDs                 |
+| price       | Bike Rental Fee           |
 
 ```
 {
@@ -316,7 +300,7 @@ Backend source code for BCIT COMP 2800 (Downtown Campus Team 8).
 
 | Name | Description |
 | ---- | ----------- |
-| id | Bike id  |
+| id   | Bike id     |
 - **Return Value**
 
 | Name | Description |
@@ -344,7 +328,7 @@ Backend source code for BCIT COMP 2800 (Downtown Campus Team 8).
 
 | Name | Description |
 | ---- | ----------- |
-| id | Order id  |
+| id   | Order id    |
 - **Return Value**
 ```print the result to see the data```
 ---

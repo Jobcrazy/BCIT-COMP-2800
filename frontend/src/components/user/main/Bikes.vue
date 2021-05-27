@@ -57,7 +57,7 @@ export default {
             // Create makers
             let marker = new google.maps.Marker({
               position: { lng: bike.location.x, lat: bike.location.y },
-              icon: "static/images/bike.png",
+              icon: "../../static/images/bike.png",
             });
 
             // Add an event listener for markers

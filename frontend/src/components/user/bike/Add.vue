@@ -91,7 +91,7 @@ export default {
     return {
       rawPhotos: [],
       dataToSubmit: {
-        photos: null,
+        photos: [],
         title: "",
         description: "",
         deposit: "",
@@ -141,9 +141,6 @@ export default {
           // Set the unique id for this file
           file.id = res.data.data[0].id;
 
-          if (!self.dataToSubmit.photos) {
-            self.dataToSubmit.photos = [];
-          }
           self.dataToSubmit.photos.push(file.id);
         })
         .catch(function (error) {
