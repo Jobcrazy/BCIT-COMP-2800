@@ -13,7 +13,7 @@ router.post("/add", auth, async function (req, res, next) {
     if (photos.length === 0){
         photos = JSON.stringify([3]);
     }else{
-        photos = JSON.stringify(photos);
+        photos = JSON.stringify(req.body.photos);
     }
     let location = req.body.location;
     let deposit = req.body.deposit;
