@@ -12,6 +12,8 @@ router.post("/add", auth, async function (req, res, next) {
     //set default photo list to [3]
     if (photos.length === 0){
         photos = JSON.stringify([3]);
+    }else{
+        photos = JSON.stringify(photos);
     }
     let location = req.body.location;
     let deposit = req.body.deposit;
