@@ -67,7 +67,7 @@
             <van-row class="name">Joon</van-row>
             <van-row class="position">Backend Developer</van-row>
             <van-row class="description"
-              >1. A jonior developer<br />2. Loves watching movies</van-row
+              >1. A "Joonior" developer<br />2. Loves watching movies</van-row
             >
             <van-divider />
           </van-col>
