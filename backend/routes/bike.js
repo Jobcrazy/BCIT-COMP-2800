@@ -96,13 +96,11 @@ router.post("/detail", auth, async function (req, res, next) {
     try {
         let SQL =
             "SELECT title, description, photos, deposit, price, " +
-            "fname, head, email, bk_bookmark.bid FROM bk_bike " +
+            "fname, head, email FROM bk_bike " +
             "LEFT JOIN bk_user " +
             "ON bk_bike.uid = bk_user.id " +
-            "LEFT JOIN bk_bookmark " +
-            "ON bk_bookmark.bid = ? and bk_bookmark.uid = ? " +
             "WHERE bk_bike.id = ?";
-        let Params = [req.body.bid, req.session.uid, req.body.bid];
+        let Params = [req.body.bid];
         let result = await database.QueryMySQL(SQL, Params);
 
         if (result.length && result[0].photos) {

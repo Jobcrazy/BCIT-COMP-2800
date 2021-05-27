@@ -178,9 +178,9 @@ export default {
 
         this.photos.splice(0, this.photos.length);
         for (let index = 0; index < res.data.data[0].photos.length; index++) {
-          //let url =
-          //  "http://bike.kaka888.net/" + res.data.data[0].photos[index].path;
-          this.photos.push(res.data.data[0].photos[index].path);
+          let url =
+            "http://bike.kaka888.net/" + res.data.data[0].photos[index].path;
+          this.photos.push(url);
         }
 
         self.$toast.clear();

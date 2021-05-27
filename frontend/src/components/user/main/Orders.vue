@@ -11,7 +11,7 @@
           :price="list.price"
           currency="$"
           :thumb="list.photos[0].path"
-          @click="showBikeDetail(list.id)"
+          @click="showBikeDetail(list.bid)"
         >
           <template #tags>
             <van-tag plain :type="list.return_at ? 'success' : 'danger'">
