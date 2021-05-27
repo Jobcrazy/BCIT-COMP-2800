@@ -1,7 +1,7 @@
 {
-  "id": "e0044a89-3839-4138-9966-858db41249af",
+  "id": "d7f2b858-3466-4c32-87f1-09fe13c02dbd",
   "version": "2.0",
-  "name": "Bike2Go",
+  "name": "Order page - renting out",
   "url": "http://bike.kaka888.net",
   "tests": [{
     "id": "747b0c11-f9ee-4980-915c-5a1c41a078da",
@@ -2902,14 +2902,1239 @@
     "id": "c63191d7-dbb0-45ea-bea5-0c5b51397a8e",
     "name": "0b ---- After this point assume user is signed in ---",
     "commands": []
+  }, {
+    "id": "317e695e-2374-4634-8655-c1b43db5bd51",
+    "name": "9.order_page_renting_out_list",
+    "commands": [{
+      "id": "a9a844b6-2fff-46ae-a8e0-a2a7efa32041",
+      "comment": "",
+      "command": "open",
+      "target": "/user/main/orders",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2af4b7d1-a2ad-49fe-bee7-d33d3d5e9c46",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "713x753",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2edd39c1-e6f8-4109-afa1-89557d590138",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-icon-shopping-cart-o",
+      "targets": [
+        ["css=.van-icon-shopping-cart-o", "css:finder"],
+        ["xpath=//div[@id='main_tab_view']/div[2]/div[2]/div/i", "xpath:idRelative"],
+        ["xpath=//div[2]/div/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "999ed3c4-a21c-4d1a-b0e9-c859b609dc6b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-tab:nth-child(2) > .van-tab__text",
+      "targets": [
+        ["css=.van-tab:nth-child(2) > .van-tab__text", "css:finder"],
+        ["xpath=//div[@id='this_page']/div[2]/div/div/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Rented out')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "60c4cf80-e262-45c4-9a44-6708a503e0c9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-tab__pane:nth-child(2) > .van-card:nth-child(1) .van-card__content",
+      "targets": [
+        ["css=.van-tab__pane:nth-child(2) > .van-card:nth-child(1) .van-card__content", "css:finder"],
+        ["xpath=//div[@id='this_page']/div[2]/div[2]/div[2]/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div[2]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "368d9973-3be7-4c7f-9bbf-0f0a91f035b3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-nav-bar__text",
+      "targets": [
+        ["css=.van-nav-bar__text", "css:finder"],
+        ["xpath=//div[@id='this_page']/div/div/div/span", "xpath:idRelative"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'Back')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "82230a63-5ab1-4041-ae51-feb30f2a5704",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-tab:nth-child(2) > .van-tab__text",
+      "targets": [
+        ["css=.van-tab:nth-child(2) > .van-tab__text", "css:finder"],
+        ["xpath=//div[@id='this_page']/div[2]/div/div/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Rented out')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dc795c90-a1b7-463d-9ac0-dfb56d9798de",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-card:nth-child(2) .van-card__content",
+      "targets": [
+        ["css=.van-card:nth-child(2) .van-card__content", "css:finder"],
+        ["xpath=//div[@id='this_page']/div[2]/div[2]/div[2]/div[2]/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div[2]/div[2]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "94cb2eef-8e28-4cac-8fd7-1eecc9ead9da",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-nav-bar__text",
+      "targets": [
+        ["css=.van-nav-bar__text", "css:finder"],
+        ["xpath=//div[@id='this_page']/div/div/div/span", "xpath:idRelative"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'Back')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "715796df-6c68-4f72-a581-2992e37b4d3d",
+    "name": "10.order_page_rented_in",
+    "commands": [{
+      "id": "65f976d3-a197-4155-b8f9-3344b657df62",
+      "comment": "",
+      "command": "open",
+      "target": "/user/main/bikes",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2e5f9c16-f513-4cd3-aa28-6f14e8a1253b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "960x979",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "24a617ed-8a5c-4061-9bce-634f4af3b822",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e07c3597-b28f-49d6-8bd6-146e5a27302b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.dismissButton",
+      "targets": [
+        ["css=.dismissButton", "css:finder"],
+        ["xpath=//div[@id='bike_map']/div[2]/table/tr/td[2]/button", "xpath:idRelative"],
+        ["xpath=//td[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'확인')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d24a05d5-0908-47cc-bc40-7768a46eb466",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-icon-shopping-cart-o",
+      "targets": [
+        ["css=.van-icon-shopping-cart-o", "css:finder"],
+        ["xpath=//div[@id='main_tab_view']/div[2]/div[2]/div/i", "xpath:idRelative"],
+        ["xpath=//div[2]/div/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "58ecad15-aefb-40e8-ade3-9b505afb8f0f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-image__img",
+      "targets": [
+        ["css=.van-image__img", "css:finder"],
+        ["xpath=//img[contains(@src,'http://bike.kaka888.net//uploads/92/99/92fe981a1c547ca7966490a86e52d799.jpg')]", "xpath:img"],
+        ["xpath=//div[@id='this_page']/div[2]/div[2]/div/div/div/a/div/img", "xpath:idRelative"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "49d72404-a936-4fe9-be59-fea97edcdd25",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-nav-bar__text",
+      "targets": [
+        ["css=.van-nav-bar__text", "css:finder"],
+        ["xpath=//div[@id='this_page']/div/div/div/span", "xpath:idRelative"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'Back')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "d899d999-6b2a-4ee6-8df2-2f2d36ae6562",
+    "name": "9.order_current_status_renting_out",
+    "commands": []
+  }, {
+    "id": "1162f06c-f7be-4747-aeb4-a508ae825442",
+    "name": "11.correct_charge_amount",
+    "commands": [{
+      "id": "1e86e45a-d796-475c-b20a-0ff4ad8131cf",
+      "comment": "",
+      "command": "open",
+      "target": "/user/main/bikes",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c634e6b0-c721-4640-946b-1cb275c70b9a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1049x975",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d5a74252-01c2-4f21-9549-1b91077e0593",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b81728ea-aef9-4bd2-82f1-fdd9cd040978",
+      "comment": "",
+      "command": "click",
+      "target": "css=.dismissButton",
+      "targets": [
+        ["css=.dismissButton", "css:finder"],
+        ["xpath=//div[@id='bike_map']/div[2]/table/tr/td[2]/button", "xpath:idRelative"],
+        ["xpath=//td[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'확인')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9edb9fe2-c989-437e-a0ae-8e832292d23d",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(3) > div:nth-child(5) > img",
+      "targets": [
+        ["css=div:nth-child(3) > div:nth-child(5) > img", "css:finder"],
+        ["xpath=//img[contains(@src,'https://maps.gstatic.com/mapfiles/transparent.png')]", "xpath:img"],
+        ["xpath=//div[@id='bike_map']/div/div/div/div[3]/div/div[3]/div[5]/img", "xpath:idRelative"],
+        ["xpath=//div[3]/div[5]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "84099b14-a8cf-479c-b174-fba682a9c45c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-button",
+      "targets": [
+        ["css=.van-button", "css:finder"],
+        ["xpath=//div[@id='rent_bar']/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Rent')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "780ea4ab-6ce3-407b-bf59-83d574c5dfc4",
+      "comment": "",
+      "command": "click",
+      "target": "name=number",
+      "targets": [
+        ["name=number", "name"],
+        ["css=.van-cell:nth-child(2) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='number']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[2]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "10854c26-02f4-491b-8d77-8ce71abc26e4",
+      "comment": "",
+      "command": "click",
+      "target": "css=html",
+      "targets": [
+        ["css=html", "css:finder"],
+        ["xpath=//html", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4a7e51ef-a876-404d-bc29-9ae763082160",
+      "comment": "",
+      "command": "type",
+      "target": "name=number",
+      "targets": [
+        ["name=number", "name"],
+        ["css=.van-cell:nth-child(2) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='number']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[2]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "2322"
+    }, {
+      "id": "80f58e2b-fa26-4998-a001-943378d4b36e",
+      "comment": "",
+      "command": "click",
+      "target": "id=app",
+      "targets": [
+        ["id=app", "id"],
+        ["css=#app", "css:finder"],
+        ["xpath=//div[@id='app']", "xpath:attributes"],
+        ["xpath=//div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e6a643a5-db76-4c1f-8d0a-391b48671014",
+      "comment": "",
+      "command": "executeScript",
+      "target": " window.location.href.indexOf(\"deposit=1\") == -1",
+      "targets": [],
+      "value": "false"
+    }]
+  }, {
+    "id": "faac1318-e3f9-418e-8e2a-a3bc7cc88cc1",
+    "name": "10.order_list_redirect_order_detail_page",
+    "commands": [{
+      "id": "c136594c-cfaa-4162-8fa9-4a89d20fd05e",
+      "comment": "",
+      "command": "open",
+      "target": "/user/main/bikes",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cc486e60-44f6-4202-a533-86f0f963facb",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "949x975",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e5953ef7-ef11-484b-971e-c13e0e0dcd67",
+      "comment": "",
+      "command": "click",
+      "target": "css=.dismissButton",
+      "targets": [
+        ["css=.dismissButton", "css:finder"],
+        ["xpath=//div[@id='bike_map']/div[2]/table/tr/td[2]/button", "xpath:idRelative"],
+        ["xpath=//td[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'확인')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6a3c9176-930e-4d0b-8f85-ebe72f59cfb3",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e9729040-9e79-4062-8761-ba61a6bb944b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-tabbar-item:nth-child(2) > .van-tabbar-item__text",
+      "targets": [
+        ["css=.van-tabbar-item:nth-child(2) > .van-tabbar-item__text", "css:finder"],
+        ["xpath=//div[@id='main_tab_view']/div[2]/div[2]/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a6188399-03d2-4319-ba26-2672eee38699",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-tab:nth-child(1)",
+      "targets": [
+        ["css=.van-tab:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='this_page']/div[2]/div/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6ea83353-1626-43ad-8e54-389fd6697693",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-card:nth-child(1) .van-image__img",
+      "targets": [
+        ["css=.van-card:nth-child(2) .van-image__img", "css:finder"],
+        ["xpath=//img[contains(@src,'http://bike.kaka888.net//uploads/df/09/df9c491408910d2a1736b97bde5b7209.png')]", "xpath:img"],
+        ["xpath=//div[@id='this_page']/div[2]/div[2]/div[2]/div[2]/div/a/div/img", "xpath:idRelative"],
+        ["xpath=//div[2]/div/a/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "9ee848c5-c187-4176-9583-00d83bc60d52",
+    "name": "10.complete_when_reting_over",
+    "commands": [{
+      "id": "a0ed6931-809d-4216-9627-106b54f08141",
+      "comment": "",
+      "command": "open",
+      "target": "/user/main/bikes",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "57e64962-9a48-47c3-a224-3f512bc25b71",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "919x836",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5a2f8086-c597-4722-ba88-b351266d95ef",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-icon-user-o",
+      "targets": [
+        ["css=.van-icon-user-o", "css:finder"],
+        ["xpath=//div[@id='main_tab_view']/div[2]/div[3]/div/i", "xpath:idRelative"],
+        ["xpath=//div[3]/div/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "952a4425-7e88-4895-9105-a585b0aa00b5",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d18de302-4984-4eb9-8daa-9fe98e0077bc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-icon-shopping-cart-o",
+      "targets": [
+        ["css=.van-icon-shopping-cart-o", "css:finder"],
+        ["xpath=//div[@id='main_tab_view']/div[2]/div[2]/div/i", "xpath:idRelative"],
+        ["xpath=//div[2]/div/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "86beb90f-0610-4b2e-83c5-d3f586eb1919",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-tab:nth-child(2)",
+      "targets": [
+        ["css=.van-tab:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='this_page']/div[2]/div/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "638cdeee-d156-40f9-9fce-ecc5f29d479e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-tab__pane:nth-child(2) .van-image__img",
+      "targets": [
+        ["css=.van-tab__pane:nth-child(2) .van-image__img", "css:finder"],
+        ["xpath=//img[contains(@src,'http://bike.kaka888.net//uploads/df/09/df9c491408910d2a1736b97bde5b7209.png')]", "xpath:img"],
+        ["xpath=//div[@id='this_page']/div[2]/div[2]/div[2]/div/div/a/div/img", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/a/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "90efa9df-706e-4c07-8745-f9cf69640f78",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-button",
+      "targets": [
+        ["css=.van-button", "css:finder"],
+        ["xpath=//div[@id='complete_bar']/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Complete')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "df2cf8dc-6234-478b-88f7-2ee091f99154",
+    "name": "EasterEgg_click_5_times_correctly",
+    "commands": [{
+      "id": "4a91af59-f827-4758-b49a-73e451666370",
+      "comment": "",
+      "command": "open",
+      "target": "/user/main/bikes",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "202682f5-036d-4ced-9933-0bbce98359dd",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1021x875",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0a22e91c-6c5e-4437-b042-7ec7a2c92461",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2cb6a576-d995-4459-b100-eb28621f14c4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.dismissButton",
+      "targets": [
+        ["css=.dismissButton", "css:finder"],
+        ["xpath=//div[@id='bike_map']/div[2]/table/tr/td[2]/button", "xpath:idRelative"],
+        ["xpath=//td[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'확인')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d26b93ad-fda0-4f67-8052-adaa6fecec8c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-tabbar-item__text > span",
+      "targets": [
+        ["css=.van-tabbar-item__text > span", "css:finder"],
+        ["xpath=//div[@id='main_tab_view']/div[2]/div[3]/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Me')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0c71a4c8-32a6-495c-8b1f-b99778e9e84e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-cell:nth-child(4) span",
+      "targets": [
+        ["css=.van-cell:nth-child(4) span", "css:finder"],
+        ["xpath=//div[@id='main_tab_view']/div/div[3]/div[4]/div/span", "xpath:idRelative"],
+        ["xpath=//div[4]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'About Us')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c5b09756-b848-4112-b7d7-82df8e353210",
+      "comment": "",
+      "command": "click",
+      "target": "css=#topImage .van-image__img",
+      "targets": [
+        ["css=#topImage .van-image__img", "css:finder"],
+        ["xpath=//div[@id='topImage']/div/img", "xpath:idRelative"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b44d028f-04cf-49a9-82d1-ab0e27558af0",
+      "comment": "",
+      "command": "click",
+      "target": "css=#topImage .van-image__img",
+      "targets": [
+        ["css=#topImage .van-image__img", "css:finder"],
+        ["xpath=//div[@id='topImage']/div/img", "xpath:idRelative"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a6c8696f-20af-4603-9aa6-928369496bf6",
+      "comment": "",
+      "command": "click",
+      "target": "css=#topImage .van-image__img",
+      "targets": [
+        ["css=#topImage .van-image__img", "css:finder"],
+        ["xpath=//div[@id='topImage']/div/img", "xpath:idRelative"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f1a67bf5-fee3-47d9-b706-a3937635f644",
+      "comment": "",
+      "command": "click",
+      "target": "css=#topImage .van-image__img",
+      "targets": [
+        ["css=#topImage .van-image__img", "css:finder"],
+        ["xpath=//div[@id='topImage']/div/img", "xpath:idRelative"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "269a4e27-6fdd-4ef3-8b51-1bd7f0cf7e25",
+      "comment": "",
+      "command": "click",
+      "target": "css=#topImage .van-image__img",
+      "targets": [
+        ["css=#topImage .van-image__img", "css:finder"],
+        ["xpath=//div[@id='topImage']/div/img", "xpath:idRelative"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "9e76b80b-6587-4528-8112-92edfcc10f94",
+    "name": "EasterEgg_click_wrong_place",
+    "commands": [{
+      "id": "17d4b0dc-5585-4cda-80d0-93357f8f6961",
+      "comment": "",
+      "command": "open",
+      "target": "/user/main/bikes",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4c6b63b0-70dd-47a4-9e16-d49467834eb9",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1021x875",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "41d580fb-3424-483b-a005-b7c2c16568f5",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "de3b1aea-3b47-4091-b05e-172d1bb59c85",
+      "comment": "",
+      "command": "click",
+      "target": "css=.dismissButton",
+      "targets": [
+        ["css=.dismissButton", "css:finder"],
+        ["xpath=//div[@id='bike_map']/div[2]/table/tr/td[2]/button", "xpath:idRelative"],
+        ["xpath=//td[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'확인')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8e1b2d75-9a6f-4bcf-a48f-0243b52be5d1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-tabbar-item__text > span",
+      "targets": [
+        ["css=.van-tabbar-item__text > span", "css:finder"],
+        ["xpath=//div[@id='main_tab_view']/div[2]/div[3]/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Me')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "979a063d-7af0-48eb-98c1-bbeeeae1d8f5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-cell:nth-child(4) > .van-cell__title",
+      "targets": [
+        ["css=.van-cell:nth-child(4) > .van-cell__title", "css:finder"],
+        ["xpath=//div[@id='main_tab_view']/div/div[3]/div[4]/div", "xpath:idRelative"],
+        ["xpath=//div[4]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "555ec7b6-052f-4c9e-94a0-7d431005fdc7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-row:nth-child(3) > .van-col > .position",
+      "targets": [
+        ["css=.van-row:nth-child(3) > .van-col > .position", "css:finder"],
+        ["xpath=//div[@id='this_page']/div[3]/div[2]/div[2]/div[2]/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div[2]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "91494b92-69ea-4c35-83a7-cc03853bd72e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-row:nth-child(3) > .van-col > .position",
+      "targets": [
+        ["css=.van-row:nth-child(3) > .van-col > .position", "css:finder"],
+        ["xpath=//div[@id='this_page']/div[3]/div[2]/div[2]/div[2]/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div[2]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f3193e3c-832e-4ec7-8fb8-6af024a9479d",
+      "comment": "",
+      "command": "doubleClick",
+      "target": "css=.van-row:nth-child(3) > .van-col > .position",
+      "targets": [
+        ["css=.van-row:nth-child(3) > .van-col > .position", "css:finder"],
+        ["xpath=//div[@id='this_page']/div[3]/div[2]/div[2]/div[2]/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div[2]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c46b1fbc-0906-4825-a0ad-1496c4f3fac2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-row:nth-child(3) > .van-col > .position",
+      "targets": [
+        ["css=.van-row:nth-child(3) > .van-col > .position", "css:finder"],
+        ["xpath=//div[@id='this_page']/div[3]/div[2]/div[2]/div[2]/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div[2]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7693e1ad-d1df-4ce9-b405-7b7e3fb401b5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-row:nth-child(3) > .van-col > .position",
+      "targets": [
+        ["css=.van-row:nth-child(3) > .van-col > .position", "css:finder"],
+        ["xpath=//div[@id='this_page']/div[3]/div[2]/div[2]/div[2]/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div[2]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3db69deb-5245-4234-add2-f9c8865b7e90",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-row:nth-child(3) > .van-col > .position",
+      "targets": [
+        ["css=.van-row:nth-child(3) > .van-col > .position", "css:finder"],
+        ["xpath=//div[@id='this_page']/div[3]/div[2]/div[2]/div[2]/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div[2]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "77b63f38-75d3-4ab8-9f65-8318126e0033",
+    "name": "EasterEgg_click_profile_image",
+    "commands": [{
+      "id": "e8ace123-0c3a-47ec-b8ac-b7608208f519",
+      "comment": "",
+      "command": "open",
+      "target": "/user/main/bikes",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e2190fe3-eb93-4595-b786-97dbba0d3153",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1021x875",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b6be7f9d-3746-4f63-8681-31ff883cb90f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.dismissButton",
+      "targets": [
+        ["css=.dismissButton", "css:finder"],
+        ["xpath=//div[@id='bike_map']/div[2]/table/tr/td[2]/button", "xpath:idRelative"],
+        ["xpath=//td[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'확인')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "db72b9c9-3f69-4bc5-8a37-169f83f1d877",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8f954579-bedb-454e-905f-6d52a174cd96",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-icon-user-o",
+      "targets": [
+        ["css=.van-icon-user-o", "css:finder"],
+        ["xpath=//div[@id='main_tab_view']/div[2]/div[3]/div/i", "xpath:idRelative"],
+        ["xpath=//div[3]/div/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "708ef0f3-2c02-4cb8-ad7d-4f041aec01ae",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-cell:nth-child(4) > .van-cell__title",
+      "targets": [
+        ["css=.van-cell:nth-child(4) > .van-cell__title", "css:finder"],
+        ["xpath=//div[@id='main_tab_view']/div/div[3]/div[4]/div", "xpath:idRelative"],
+        ["xpath=//div[4]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ce08448e-1836-4a8c-9d74-23467c84cf29",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-row:nth-child(3) > .van-col > .van-image > .van-image__img",
+      "targets": [
+        ["css=.van-row:nth-child(3) > .van-col > .van-image > .van-image__img", "css:finder"],
+        ["xpath=//div[@id='this_page']/div[3]/div[2]/div[2]/div/div/img", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b4afde26-4dab-4802-a9b5-a2acba9eed46",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-row:nth-child(3) > .van-col > .van-image > .van-image__img",
+      "targets": [
+        ["css=.van-row:nth-child(3) > .van-col > .van-image > .van-image__img", "css:finder"],
+        ["xpath=//div[@id='this_page']/div[3]/div[2]/div[2]/div/div/img", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c492e0a6-2b1c-4ccc-a00a-bc2e5a5af293",
+      "comment": "",
+      "command": "doubleClick",
+      "target": "css=.van-row:nth-child(3) > .van-col > .van-image > .van-image__img",
+      "targets": [
+        ["css=.van-row:nth-child(3) > .van-col > .van-image > .van-image__img", "css:finder"],
+        ["xpath=//div[@id='this_page']/div[3]/div[2]/div[2]/div/div/img", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e10fb913-07c4-410d-8b66-eb3e205fe21f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-row:nth-child(3) > .van-col > .van-image > .van-image__img",
+      "targets": [
+        ["css=.van-row:nth-child(3) > .van-col > .van-image > .van-image__img", "css:finder"],
+        ["xpath=//div[@id='this_page']/div[3]/div[2]/div[2]/div/div/img", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "74e6c1a9-7054-497a-b29d-b61874350b3f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-row:nth-child(3) > .van-col > .van-image > .van-image__img",
+      "targets": [
+        ["css=.van-row:nth-child(3) > .van-col > .van-image > .van-image__img", "css:finder"],
+        ["xpath=//div[@id='this_page']/div[3]/div[2]/div[2]/div/div/img", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4b930ec3-d441-406b-a9d4-0e41f6781109",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-row:nth-child(3) > .van-col > .van-image > .van-image__img",
+      "targets": [
+        ["css=.van-row:nth-child(3) > .van-col > .van-image > .van-image__img", "css:finder"],
+        ["xpath=//div[@id='this_page']/div[3]/div[2]/div[2]/div/div/img", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "1c7cf3fa-1b0a-4d9d-895e-1f2899bf6e27",
+    "name": "11.payment_status_ongoing",
+    "commands": [{
+      "id": "804f34e5-a9e9-466b-9d09-b42eff755433",
+      "comment": "",
+      "command": "open",
+      "target": "/user/main/bikes",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "998475a8-79c4-47e3-b55c-85d4090ac2b4",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "960x1055",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "edf4a2e9-a718-4bbb-8e22-236defb4f539",
+      "comment": "",
+      "command": "click",
+      "target": "css=.dismissButton",
+      "targets": [
+        ["css=.dismissButton", "css:finder"],
+        ["xpath=//div[@id='bike_map']/div[2]/table/tr/td[2]/button", "xpath:idRelative"],
+        ["xpath=//td[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'확인')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a81f940b-66f1-436e-8c67-ecbe5f0ff6d5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-tabbar-item:nth-child(2)",
+      "targets": [
+        ["css=.van-tabbar-item:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='main_tab_view']/div[2]/div[2]", "xpath:idRelative"],
+        ["xpath=//body/div/div/div[2]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "59dcac54-3107-49d8-8bdd-24a1f85ce2a3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-icon-apps-o",
+      "targets": [
+        ["css=.van-icon-apps-o", "css:finder"],
+        ["xpath=//div[@id='main_tab_view']/div[2]/div/div/i", "xpath:idRelative"],
+        ["xpath=//i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8d4eb3f8-e1a6-4d4d-87af-94f85641ca32",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "28a16ebc-16d7-494f-876a-3587233bf049",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(3) > div:nth-child(7) > img",
+      "targets": [
+        ["css=div:nth-child(3) > div:nth-child(7) > img", "css:finder"],
+        ["xpath=//img[contains(@src,'https://maps.gstatic.com/mapfiles/transparent.png')]", "xpath:img"],
+        ["xpath=//div[@id='bike_map']/div/div/div/div[3]/div/div[3]/div[7]/img", "xpath:idRelative"],
+        ["xpath=//div[3]/div[7]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9b9690b6-03f4-4899-8798-9d11c4e3b0eb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-button",
+      "targets": [
+        ["css=.van-button", "css:finder"],
+        ["xpath=//div[@id='rent_bar']/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Rent')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "847b91c3-611f-42be-af49-ac626a17f2be",
+      "comment": "",
+      "command": "click",
+      "target": "name=number",
+      "targets": [
+        ["name=number", "name"],
+        ["css=.van-cell:nth-child(2) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='number']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[2]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5e4854ad-2fd6-48c3-b4fb-64928823c7ee",
+      "comment": "",
+      "command": "type",
+      "target": "name=number",
+      "targets": [
+        ["name=number", "name"],
+        ["css=.van-cell:nth-child(2) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='number']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[2]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "222"
+    }, {
+      "id": "f5c23c03-d0d4-41a6-bc94-38bbf1497b7d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-cell:nth-child(3)",
+      "targets": [
+        ["css=.van-cell:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='this_page']/form/div[3]", "xpath:idRelative"],
+        ["xpath=//div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e3daaccd-6330-4eb8-80c4-77eb864cccb0",
+      "comment": "",
+      "command": "click",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.van-cell:nth-child(3) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[3]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4aad4a87-fdae-4187-8ed7-5578a5209360",
+      "comment": "",
+      "command": "type",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.van-cell:nth-child(3) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[3]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "hee"
+    }, {
+      "id": "b4dabaf2-1e35-4300-b119-4ebdf1f99d4e",
+      "comment": "",
+      "command": "click",
+      "target": "name=cvc",
+      "targets": [
+        ["name=cvc", "name"],
+        ["css=.van-cell:nth-child(4) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='cvc']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[4]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "34b3acb5-569f-43d9-a97d-0b4e33e54c11",
+      "comment": "",
+      "command": "type",
+      "target": "name=cvc",
+      "targets": [
+        ["name=cvc", "name"],
+        ["css=.van-cell:nth-child(4) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='cvc']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[4]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "122"
+    }, {
+      "id": "24af8025-f88a-45aa-a553-c2a9b4285d07",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-button",
+      "targets": [
+        ["css=.van-button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[6]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Pay for Deposit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "21354f48-c542-44f3-99a5-8d1b230980ac",
+    "name": "11.pay_correct_bike",
+    "commands": [{
+      "id": "12305a76-3a15-48d9-853f-97dbb8102f67",
+      "comment": "",
+      "command": "open",
+      "target": "/user/main/bikes",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1ae5a90b-800b-4b5d-94ad-eeee75aef9b7",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "764x1055",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d2ff9faa-9bd8-418c-9df5-e7659ab23e5e",
+      "comment": "",
+      "command": "mouseDown",
+      "target": "css=.vsc-initialized",
+      "targets": [
+        ["css=.vsc-initialized", "css:finder"],
+        ["xpath=//body", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d14a4316-95e8-4232-a070-4acbb1ad53f3",
+      "comment": "",
+      "command": "mouseUp",
+      "target": "css=.dismissButton",
+      "targets": [
+        ["css=.dismissButton", "css:finder"],
+        ["xpath=//div[@id='bike_map']/div[2]/table/tr/td[2]/button", "xpath:idRelative"],
+        ["xpath=//td[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'확인')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ea38e909-29fd-468b-87ce-955a94a85935",
+      "comment": "",
+      "command": "click",
+      "target": "css=.vsc-initialized",
+      "targets": [
+        ["css=.vsc-initialized", "css:finder"],
+        ["xpath=//body", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5499c6e8-d8c0-4a2f-831a-627f8b60617f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.dismissButton",
+      "targets": [
+        ["css=.dismissButton", "css:finder"],
+        ["xpath=//div[@id='bike_map']/div[2]/table/tr/td[2]/button", "xpath:idRelative"],
+        ["xpath=//td[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'확인')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f1f10608-f7ca-4c13-8be0-acba09ee7173",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(3) > div:nth-child(6) > img",
+      "targets": [
+        ["css=div:nth-child(3) > div:nth-child(6) > img", "css:finder"],
+        ["xpath=(//img[contains(@src,'https://maps.gstatic.com/mapfiles/transparent.png')])[2]", "xpath:img"],
+        ["xpath=//div[@id='bike_map']/div/div/div/div[3]/div/div[3]/div[6]/img", "xpath:idRelative"],
+        ["xpath=//div[3]/div[6]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bbfdc074-3399-4100-98f8-e2f4bcd333f4",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "80e1297f-a038-418e-ad7b-f43753b9b14e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-button",
+      "targets": [
+        ["css=.van-button", "css:finder"],
+        ["xpath=//div[@id='rent_bar']/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Rent')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "57d7afbb-f730-4359-95f5-807e29c4db2d",
+      "comment": "",
+      "command": "click",
+      "target": "name=number",
+      "targets": [
+        ["name=number", "name"],
+        ["css=.van-cell:nth-child(2) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='number']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[2]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f5a60622-6663-41ee-95c6-d000ef898b47",
+      "comment": "",
+      "command": "type",
+      "target": "name=number",
+      "targets": [
+        ["name=number", "name"],
+        ["css=.van-cell:nth-child(2) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='number']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[2]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "222"
+    }, {
+      "id": "18170a4c-cd54-4986-8c55-78d160d6ecdb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-cell:nth-child(4)",
+      "targets": [
+        ["css=.van-cell:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='this_page']/form/div[4]", "xpath:idRelative"],
+        ["xpath=//div[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6532e951-c6a7-4651-bfe2-7a80df4f85d3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-cell:nth-child(3)",
+      "targets": [
+        ["css=.van-cell:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='this_page']/form/div[3]", "xpath:idRelative"],
+        ["xpath=//div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f966de18-8531-4eeb-b3cc-0c8a200c42fc",
+      "comment": "",
+      "command": "click",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.van-cell:nth-child(3) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[3]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3ccc3dbc-67fa-4aec-bffd-3fc3710cb0a6",
+      "comment": "",
+      "command": "type",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.van-cell:nth-child(3) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[3]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "ddd"
+    }, {
+      "id": "713e132e-14c9-4dc1-ab45-339281eccdc6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-cell:nth-child(4)",
+      "targets": [
+        ["css=.van-cell:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='this_page']/form/div[4]", "xpath:idRelative"],
+        ["xpath=//div[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "50c1df3f-11c6-452b-8173-174a6ecbea62",
+      "comment": "",
+      "command": "click",
+      "target": "name=cvc",
+      "targets": [
+        ["name=cvc", "name"],
+        ["css=.van-cell:nth-child(4) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='cvc']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[4]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3de1e8c3-24d9-4927-92b7-0f0a3a8afc90",
+      "comment": "",
+      "command": "type",
+      "target": "name=cvc",
+      "targets": [
+        ["name=cvc", "name"],
+        ["css=.van-cell:nth-child(4) .van-field__control", "css:finder"],
+        ["xpath=//input[@name='cvc']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[4]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "121"
+    }, {
+      "id": "b18cd448-7135-4035-b87d-f6eec303003a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-button",
+      "targets": [
+        ["css=.van-button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='this_page']/form/div[6]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Pay for Deposit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "af592fea-d4f6-4b9b-bf4a-4b14851bea37",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-card:nth-child(5) .van-image__img",
+      "targets": [
+        ["css=.van-card:nth-child(5) .van-image__img", "css:finder"],
+        ["xpath=//img[contains(@src,'http://bike.kaka888.net//uploads/b4/bd/b45412fd9d13291d88d4fcec5e0969bd.jpg')]", "xpath:img"],
+        ["xpath=//div[@id='this_page']/div[2]/div[2]/div/div[5]/div/a/div/img", "xpath:idRelative"],
+        ["xpath=//div[5]/div/a/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }]
   }],
   "suites": [{
-    "id": "20a6dc3c-e721-4f0e-a24a-90354f3cb6dd",
+    "id": "c66ab1c8-b50a-4aad-9182-15d9a040e279",
     "name": "Default Suite",
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["4b2b4ca1-3648-4491-9634-c63e715fb744"]
+    "tests": ["317e695e-2374-4634-8655-c1b43db5bd51"]
   }],
   "urls": ["http://bike.kaka888.net/"],
   "plugins": []
