@@ -8,7 +8,7 @@ const auth = require("../common/auth");
 router.post("/add", auth, async function (req, res, next) {
     let title = req.body.title;
     let description = req.body.description;
-    let photos = JSON.stringify(req.body.photos);
+    let photos = req.body.photos;
     //set default photo list to [3]
     if (photos.length === 0){
         photos = JSON.stringify([3]);
