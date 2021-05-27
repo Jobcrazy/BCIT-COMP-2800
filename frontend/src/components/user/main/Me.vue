@@ -79,7 +79,7 @@
           </van-row>
           <van-row class="iconName"> Facebook </van-row>
         </van-grid-item>
-        <van-grid-item>
+        <van-grid-item @click="shareTwitter">
           <van-row>
             <van-icon
               class="iconfont"
@@ -124,6 +124,9 @@ export default {
         },
         function (response) {}
       );
+    },
+    shareTwitter: function () {
+      console.log("fuck");
     },
     getProfile: function () {
       let self = this;

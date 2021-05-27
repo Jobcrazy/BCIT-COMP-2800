@@ -1,4 +1,6 @@
 let express = require("express");
+let request = require('request');
+let qs = require('querystring');
 let router = express.Router();
 let utils = require("../common/utils");
 let database = require("../common/database");
@@ -118,6 +120,67 @@ router.post("/email/register", async function (req, res, next) {
 
         req.session.uid = result.insertId;
         return utils.SendResult(res);
+    } catch (e) {
+        utils.SendError(res, e);
+    }
+});
+
+// Twitter
+const CONSUMER_KEY = "5He4PeGxLLuGUFHKS0UQCGaeU";
+const CONSUMER_SECRET = "xRQEsWrKWpEqQjYUorLXGbaJJXwHw75d3UU0hrr3No2z2f5WjI";
+
+router.get("/callback", async function (req, res, next) {
+    const oauth =
+            {
+                consumer_key: CONSUMER_KEY,
+                consumer_secret: CONSUMER_SECRET,
+                token: req.query.oauth_token,
+                token_secret: req.session.oauth_token_secret,
+                verifier: req.query.oauth_verifier
+            },
+        url = 'https://api.twitter.com/oauth/access_token';
+
+    request.post({url: url, oauth: oauth}, function (e, r, body) {
+        // ready to make signed requests on behalf of the user
+        const perm_data = require('querystring').parse(body);
+        const oauth =
+                {
+                    consumer_key: CONSUMER_KEY,
+                    consumer_secret: CONSUMER_SECRET,
+                    token: perm_data.oauth_token,
+                    token_secret: perm_data.oauth_token_secret
+                },
+            url = 'https://api.twitter.com/1.1/statuses/update.json',
+            qs = {
+                //screen_name: perm_data.screen_name,
+                //user_id: perm_data.user_id
+                status: "Bike2Go is an application that allows users to lend or rent a bike from other users. " +
+                    "User’s pay a deposit upon renting a bike, and pay a small fee upon returning the bike. " +
+                    "http://bike.kaka888.net"
+            };
+        request.post({url: url, oauth: oauth, qs: qs, json: true}, function (e, r, user) {
+            res.redirect("http://bike.kaka888.net/user/main/me?shared=1")
+        })
+    })
+});
+
+router.get("/twitter/auth", async function (req, res, next) {
+    try {
+        const oauth =
+                {
+                    callback: 'http://bike.kaka888.net/api/user/callback',
+                    consumer_key: "5He4PeGxLLuGUFHKS0UQCGaeU",
+                    consumer_secret: "xRQEsWrKWpEqQjYUorLXGbaJJXwHw75d3UU0hrr3No2z2f5WjI"
+                },
+            url = 'https://api.twitter.com/oauth/request_token';
+
+        request.post({url: url, oauth: oauth}, function (e, r, body) {
+            const req_data = qs.parse(body);
+            req.session.oauth_token_secret = req_data.oauth_token_secret;
+            const uri = 'https://api.twitter.com/oauth/authenticate'
+                + '?' + qs.stringify({oauth_token: req_data.oauth_token});
+            res.redirect(uri);
+        })
     } catch (e) {
         utils.SendError(res, e);
     }
