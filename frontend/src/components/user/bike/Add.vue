@@ -140,8 +140,8 @@ export default {
           file.status = "done";
           // Set the unique id for this file
           file.id = res.data.data[0].id;
-          
-          if(!self.dataToSubmit.photos){
+
+          if (!self.dataToSubmit.photos) {
             self.dataToSubmit.photos = [];
           }
           self.dataToSubmit.photos.push(file.id);
@@ -183,6 +183,11 @@ export default {
 
     onSubmit(values) {
       let self = this;
+
+      if (this.dataToSubmit.photos == null) {
+        this.dataToSubmit.photos = [];
+      }
+
       this.$axios({
         method: "POST",
         url: "/api/bike/add",
@@ -225,7 +230,7 @@ export default {
   height: 100%;
 }
 
-#this_page{
+#this_page {
   padding-top: 46px;
   padding-bottom: 20px;
 }
