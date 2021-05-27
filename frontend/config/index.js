@@ -12,8 +12,8 @@ module.exports = {
     proxyTable: {
       "/": {
         changeOrigin: true,
-        //target: "http://bike.kaka888.net",
-        target: "http://localhost:3000",
+        target: "http://bike.kaka888.net",
+        //target: "http://localhost:3000",
         pathRewrite: {
           "^": ""
         }
