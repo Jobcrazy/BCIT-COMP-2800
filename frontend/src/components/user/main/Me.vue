@@ -126,7 +126,7 @@ export default {
       );
     },
     shareTwitter: function () {
-      window.location.href = "http://bike.kaka888.net/api/user/auth";
+      window.location.href = "http://bike.kaka888.net/api/user/twitter/auth";
     },
     getProfile: function () {
       let self = this;
@@ -172,15 +172,7 @@ export default {
       version: "v2.8",
     });
 
-    if (this.$route.query == "1") {
-      Dialog.alert({
-        message: "Success shared",
-      }).then(() => {
-        this.getProfile();
-      });
-    } else {
-      this.getProfile();
-    }
+    this.getProfile();
   },
 };
 </script>
