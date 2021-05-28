@@ -4,6 +4,99 @@
   "name": "Order page - renting out",
   "url": "http://bike.kaka888.net",
   "tests": [{
+    "id": "e226632a-bd16-4d50-8bac-e24a48f7f716",
+    "name": "9.order_current_status",
+    "commands": [{
+      "id": "c9d527cd-0515-4aad-baaf-47a0ba47e559",
+      "comment": "",
+      "command": "open",
+      "target": "/user/main/bikes",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8247d768-ff15-42fa-ac8c-398e4ff85453",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "960x1055",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8f1b1c28-83d8-4c36-adeb-97fd7fffa034",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-toast--unclickable",
+      "targets": [
+        ["css=.van-toast--unclickable", "css:finder"],
+        ["xpath=//body", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f8d5eef4-0c3d-4fd8-8794-fc66d46abf06",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "742b89df-24f8-4763-a0d8-0dbbbde59a68",
+      "comment": "",
+      "command": "click",
+      "target": "css=.dismissButton",
+      "targets": [
+        ["css=.dismissButton", "css:finder"],
+        ["xpath=//div[@id='bike_map']/div[2]/table/tr/td[2]/button", "xpath:idRelative"],
+        ["xpath=//td[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'확인')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8dfdd9b3-e3a4-4186-92a6-f1605abf423d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-icon-shopping-cart-o",
+      "targets": [
+        ["css=.van-icon-shopping-cart-o", "css:finder"],
+        ["xpath=//div[@id='main_tab_view']/div[2]/div[2]/div/i", "xpath:idRelative"],
+        ["xpath=//div[2]/div/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b0283f1b-2008-4cb5-b47f-4234c719f9ec",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-tab:nth-child(2) > .van-tab__text",
+      "targets": [
+        ["css=.van-tab:nth-child(2) > .van-tab__text", "css:finder"],
+        ["xpath=//div[@id='this_page']/div[2]/div/div/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Rented out')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "08eb9144-ff6b-4506-ae62-c35878fb3789",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-tab:nth-child(1) > .van-tab__text",
+      "targets": [
+        ["css=.van-tab:nth-child(1) > .van-tab__text", "css:finder"],
+        ["xpath=//div[@id='this_page']/div[2]/div/div/div/span", "xpath:idRelative"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'Rented in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1f43924b-05e7-4f2c-8b0a-10893d05da27",
+      "comment": "",
+      "command": "click",
+      "target": "css=.van-tab:nth-child(2)",
+      "targets": [
+        ["css=.van-tab:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='this_page']/div[2]/div/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
     "id": "747b0c11-f9ee-4980-915c-5a1c41a078da",
     "name": "5. File upload with Maximum 6 images",
     "commands": [{
@@ -1637,7 +1730,7 @@
       ],
       "value": "AB"
     }, {
-      "id": "40e08ca8-ad6f-4968-974e-448547256e1e",
+      "id": "64f9e4a2-fd52-4c88-894a-cc6e2350728c",
       "comment": "",
       "command": "click",
       "target": "css=.van-cell:nth-child(2) .van-field__control",
@@ -1649,17 +1742,17 @@
       ],
       "value": ""
     }, {
-      "id": "db991857-6b46-4631-bc2b-a4b2b542b255",
+      "id": "ef2c1dc0-5293-4e6a-92af-283368ae5ce3",
       "comment": "",
       "command": "type",
-      "target": "css=.van-field__body:nth-child(3) > .van-field__control",
+      "target": "css=.van-cell:nth-child(2) .van-field__control",
       "targets": [
-        ["css=.van-field__body:nth-child(3) > .van-field__control", "css:finder"],
+        ["css=.van-cell:nth-child(2) .van-field__control", "css:finder"],
         ["xpath=//textarea[@name='description']", "xpath:attributes"],
         ["xpath=//div[@id='this_page']/form/div[2]/div[2]/div/textarea", "xpath:idRelative"],
         ["xpath=//textarea", "xpath:position"]
       ],
-      "value": "CC"
+      "value": "BB"
     }, {
       "id": "ab4a6e37-b92b-4177-83e2-7e87365ae0b3",
       "comment": "",
@@ -1778,7 +1871,7 @@
       ],
       "value": "a"
     }, {
-      "id": "0288688a-f58d-428d-a268-60a05023d89c",
+      "id": "87f7171c-0bcd-4253-b457-fe80050bfe86",
       "comment": "",
       "command": "click",
       "target": "css=.van-cell:nth-child(2) .van-field__control",
@@ -1790,17 +1883,17 @@
       ],
       "value": ""
     }, {
-      "id": "1045ba3b-6b60-4f13-ba53-a5d9e24cefe0",
+      "id": "9114ad7b-1ab5-4686-9eb9-a10eebc88e57",
       "comment": "",
       "command": "type",
-      "target": "css=.van-field__body:nth-child(3) > .van-field__control",
+      "target": "css=.van-cell:nth-child(2) .van-field__control",
       "targets": [
-        ["css=.van-field__body:nth-child(3) > .van-field__control", "css:finder"],
+        ["css=.van-cell:nth-child(2) .van-field__control", "css:finder"],
         ["xpath=//textarea[@name='description']", "xpath:attributes"],
         ["xpath=//div[@id='this_page']/form/div[2]/div[2]/div/textarea", "xpath:idRelative"],
         ["xpath=//textarea", "xpath:position"]
       ],
-      "value": "Hello"
+      "value": "BB"
     }, {
       "id": "87319824-f989-43bd-b8c1-659e11b9a7d6",
       "comment": "",
@@ -1967,17 +2060,10 @@
     "id": "6be3c70b-589f-40b6-9aea-08ae0b9f7e3c",
     "name": "4. Add Bookmark",
     "commands": [{
-      "id": "86548bbd-39dd-4d00-b852-c7bcc38160fd",
-      "comment": "",
-      "command": "close",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "9c5537a9-de1e-4247-9702-d73b3d2520ba",
       "comment": "",
       "command": "open",
-      "target": "/user/bike/detail?bid=67",
+      "target": "/user/bike/detail?bid=83",
       "targets": [],
       "value": ""
     }, {
@@ -2067,7 +2153,7 @@
       "id": "83767d46-070d-46ee-a580-9a1aad20ba9b",
       "comment": "",
       "command": "open",
-      "target": "/user/bike/detail?bid=67",
+      "target": "/user/bike/detail?bid=83",
       "targets": [],
       "value": ""
     }, {
@@ -2107,22 +2193,17 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "81425e69-7eab-475a-8e0c-d52b31777d6a",
+      "id": "c82a1dd2-94b8-46d0-a3e1-a4618ddd4734",
       "comment": "",
-      "command": "click",
-      "target": "css=div:nth-child(3) > div:nth-child(12) > img",
-      "targets": [
-        ["css=div:nth-child(3) > div:nth-child(12) > img", "css:finder"],
-        ["xpath=(//img[contains(@src,'https://maps.gstatic.com/mapfiles/transparent.png')])[4]", "xpath:img"],
-        ["xpath=//div[@id='bike_map']/div/div/div/div[3]/div/div[3]/div[12]/img", "xpath:idRelative"],
-        ["xpath=//div[3]/div[12]/img", "xpath:position"]
-      ],
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
       "value": ""
     }, {
-      "id": "253e7c1e-2aba-4d24-95fd-7f640c0b00b8",
+      "id": "bcf733cb-e07e-491f-8ce2-aec7ab8f8950",
       "comment": "",
       "command": "open",
-      "target": "http://bike.kaka888.net/user/bike/detail?bid=67",
+      "target": "/user/bike/detail?bid=83",
       "targets": [],
       "value": ""
     }]
@@ -2318,13 +2399,6 @@
         ["xpath=//div[2]/div/span", "xpath:position"],
         ["xpath=//span[contains(.,'Favourites')]", "xpath:innerText"]
       ],
-      "value": ""
-    }, {
-      "id": "f849668c-b7c4-4406-b92a-573417f8e461",
-      "comment": "",
-      "command": "assertElementPresent",
-      "target": "css=.bookmark.van-card",
-      "targets": [],
       "value": ""
     }]
   }, {
@@ -3074,10 +3148,6 @@
       "value": ""
     }]
   }, {
-    "id": "d899d999-6b2a-4ee6-8df2-2f2d36ae6562",
-    "name": "9.order_current_status_renting_out",
-    "commands": []
-  }, {
     "id": "1162f06c-f7be-4747-aeb4-a508ae825442",
     "name": "11.correct_charge_amount",
     "commands": [{
@@ -3266,7 +3336,7 @@
     }]
   }, {
     "id": "9ee848c5-c187-4176-9583-00d83bc60d52",
-    "name": "10.complete_when_reting_over",
+    "name": "10.complete_when_renting_over",
     "commands": [{
       "id": "a0ed6931-809d-4216-9627-106b54f08141",
       "comment": "",
@@ -4626,6 +4696,21 @@
       ],
       "value": ""
     }]
+<<<<<<< HEAD
+  }, {
+    "id": "018db14e-586b-4ab1-8994-70d625b33274",
+    "name": "00 Test with mobile view (Iphone 6/7/8)",
+    "commands": []
+  }, {
+    "id": "29b249b5-9d1d-4d6a-b870-facf0b8dc51c",
+    "name": "0c Some Test may not work with your views because of empty lists or somethings, ",
+    "commands": []
+  }, {
+    "id": "01176a17-af16-443c-ac60-08b106531f05",
+    "name": "0d If you want to test that is failed, Please contact Bike2Go team",
+    "commands": []
+=======
+>>>>>>> 9361257fad2c70d9fb32c8eb16fdb2571f187012
   }],
   "suites": [{
     "id": "c66ab1c8-b50a-4aad-9182-15d9a040e279",
