@@ -4696,6 +4696,7 @@
       ],
       "value": ""
     }]
+<<<<<<< HEAD
   }, {
     "id": "018db14e-586b-4ab1-8994-70d625b33274",
     "name": "00 Test with mobile view (Iphone 6/7/8)",
@@ -4708,6 +4709,8 @@
     "id": "01176a17-af16-443c-ac60-08b106531f05",
     "name": "0d If you want to test that is failed, Please contact Bike2Go team",
     "commands": []
+=======
+>>>>>>> 9361257fad2c70d9fb32c8eb16fdb2571f187012
   }],
   "suites": [{
     "id": "c66ab1c8-b50a-4aad-9182-15d9a040e279",
