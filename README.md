@@ -12,19 +12,19 @@ This project is divided into two parts: the frontend and the backend. They commu
 
 ## 3rd party packages (Node.js dependencies)
 ### Backend
-*   config: 3.3.6,
-*   cookie-parser: 1.4.4,
-*   debug: 2.6.9,
-*   express: 4.16.1,
-*   express-session: 1.17.1,
-*   formidable: 1.2.2,
-*   morgan: 1.9.1,
-*   mysql: 2.18.1,
+*   config: 3.3.6
+*   cookie-parser: 1.4.4
+*   debug: 2.6.9
+*   express: 4.16.1
+*   express-session: 1.17.1
+*   formidable: 1.2.2
+*   morgan: 1.9.1
+*   mysql: 2.18.1
 *   request: 2.88.2 
 ### Frontend
-*   axios: 0.21.1,
-*   vant: 2.12.15,
-*   vue: 2.5.2,
+*   axios: 0.21.1
+*   vant: 2.12.15
+*   vue: 2.5.2
 *   vue-router: 3.0.1
 
 ## How to assemble the development environment
