@@ -1,3 +1,6 @@
+## Video Summary
+[Click here to watch the YouTube video](https://youtu.be/3NK6d8WD1oc)
+
 ## Introduction
 Bike2Go allows a user to rent a bike from other users. The user pays a deposit upon renting a bike, and pays a small fee upon returning the bike.
 
